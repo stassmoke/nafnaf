@@ -1,0 +1,249 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+.collections
+    padding-top: 41px
+    z-index: 3
+    .collections__list
+        display: flex
+        flex-wrap: wrap
+        margin-left: -30px
+    .collections__item
+        margin-bottom: 30px
+        margin-left: 30px
+        width: calc(50% - 30px)
+        max-height: 293px
+        position: relative
+        .image-holder__img
+            &._mobile
+                display: none
+        &.collections__item--full
+            width: 100%
+            height: 600px
+            max-height: 600px
+            -webkit-background-size: cover !important
+            background-size: cover !important
+            .collection-text
+                padding: 43px 40px
+        &:hover
+            color: inherit
+            .collection-name
+                color: #EDBBD9!important
+        .image-holder
+            height: 100%
+    .collection-text
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        padding: 11px 30px
+
+    .collection-label
+        font-weight: 600
+        font-size: 10px
+        line-height: 12px
+        letter-spacing: 0.05em
+        text-transform: uppercase
+        max-width: 308px
+        margin-bottom: 8px
+    .collection-name
+        font-weight: 600
+        font-size: 18px
+        line-height: 24px
+        max-width: 308px
+        margin-bottom: 10px
+
+    .collection-desc
+        color: $font_color
+        font-size: 13px
+        line-height: 24px
+        max-width: 308px
+
+.subscription
+    padding-top: 120px
+    margin-bottom: 76px
+    position: relative
+
+.subscription-content
+    position: relative
+    z-index: 3
+    border: 2px $accent_pink solid
+    max-width: 595px
+    margin: auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 58px 70px 69px
+    background-color: #ffffff
+    &:before
+        content: ""
+        position: absolute
+        top: -2px
+        right: -2px
+        z-index: 2
+        border-width: 0 23px 23px 0
+        border-style: solid
+        display: block
+        width: 0
+        box-shadow: -2px 2px 0 $accent_pink
+        border-color: #fff #fff transparent transparent
+        background: 0
+        background-color: #fff
+    &::after
+        content: ""
+        position: absolute
+        top: 9px
+        right: -5px
+        z-index: 2
+        display: block
+        width: 32px
+        height: 2px
+        background: 0
+        background-color: $accent_pink
+        transform: rotate(45deg)
+
+
+    .subscription__icon
+        width: 55px
+        height: 46px
+        margin-bottom: 28px
+    .subscription__title
+        font-weight: 600
+        font-size: 12px
+        line-height: 16px
+        text-align: center
+        letter-spacing: 0.05em
+        text-transform: uppercase
+        margin-bottom: 10px
+    .subscription__desc
+        font-size: 13px
+        line-height: 24px
+        text-align: center
+        color: $font_color
+        margin-bottom: 20px
+    .subscription__form
+        width: 100%
+        text-align: center
+    .input-holder
+        width: 100%
+        max-width: 282px
+        margin: auto auto 30px
+        border-bottom: 1px solid $borders
+        input
+            font-size: 13px
+            line-height: 24px
+            //text-align: center
+            color: $black
+            border: none
+            width: 100%
+            margin-bottom: 4px
+            &::placeholder
+                text-align: center
+    .btn
+        width: 100%
+        max-width: 200px
+
+@media (max-width: 1200px)
+    .subscription
+        &:before
+            left: calc(50% - 390px)
+            width: 300px
+            background-size: contain
+        &:after
+            right: calc(50% - 370px)
+            width: 290px
+            background-size: contain
+
+@media (max-width: 1000px)
+    .collections
+        padding-top: 34px
+        .collections__list
+            margin-left: -10px
+        .collections__item
+            width: calc(50% - 10px)
+            margin-left: 10px
+            margin-bottom: 10px
+            &.collections__item--full
+                margin-bottom: 30px
+                height: 420px
+                .collection-text
+                    padding: 22px 30px
+                .collection-name
+                    font-size: 18px
+                    line-height: 24px
+        .collection-name
+            font-size: 13px
+            line-height: 16px
+        .collection-text
+            padding: 4px 20px
+    .subscription
+        padding-top: 80px
+        margin-bottom: 55px
+
+        .subscription-content
+            padding: 31px 18% 36px
+            clip-path: polygon(0 0, 97% 0, 100% 6%, 100% 100%, 0 100%)
+
+        .subscription__desc
+            margin-bottom: 22px
+
+@media (max-width: 800px)
+    .subscription
+        &:after
+            right: 67px
+        .subscription-content
+            max-width: 100%
+    .collections
+        .collections__item
+            &.collections__item--full
+                height: 348px
+
+@media (max-width: 520px)
+    .collections
+        padding-top: 29px
+        .collections__list
+            margin-left: 0
+        .collections__item
+            margin-left: 0
+            height: 240px
+            width: 100%
+            margin-bottom: 15px
+            .image-holder__img
+                display: none
+                &._mobile
+                    display: block
+            &.collections__item--full
+                background-position: 65% 0!important
+                margin-left: 0
+                margin-bottom: 15px
+                height: 420px
+                .collection-text
+                    padding: 32px 15px
+        .collection-text
+            width: 62%
+            padding: 22px 15px
+        .collection-name
+            margin-bottom: 14px
+            font-size: 18px
+        .collection-desc
+            line-height: 18px
+    .subscription
+        padding-top: 15px
+        margin-bottom: 46px
+
+        .subscription-content
+            padding: 38px 13px 46px
+@media (max-width: 375px)
+    .collections
+        padding-top: 29px
+        .collections__list
+            .collections__item
+                .image-holder__img
+                    display: none
+                    &._mobile
+                        display: block

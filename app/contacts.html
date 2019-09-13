@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+
+<head>
+    <meta charset="utf-8">
+    <title>Naf Naf</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon//favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon//favicon-16x16.png"/>
+    <link rel="manifest" href="img/favicon//site.webmanifest"/>
+    <link rel="mask-icon" href="img/favicon//safari-pinned-tab.svg" color="#5bbad5"/>
+    <meta name="msapplication-TileColor" content="#da532c"/>
+    <meta name="theme-color" content="#ffffff"/>
+    <link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body class="body-wrap" >
+    
+    <header class="header container">
+        <div class="header__top" id="header__top">
+            <a class="phone" href="tel:+380444215579">044 421 55 79</a>
+            <div class="header__top-nav">
+                <a class="header__top-nav-item" href="shops.html">Магазины</a>
+                <a class="header__top-nav-item" href="contacts.html">Контакты</a>
+                <a class="header__top-nav-item" href="help.html">Помощь</a>
+            </div>
+        </div>
+        <div class="header-main" id="header-main">
+            <div class="header-main-wrap">
+                <div class="hamburger-menu catalog-js">
+                    <div class="bar"></div>
+                    <span>меню</span>
+                </div>
+                <div class="header__main-nav">
+                    <span class="header__main-nav-item catalog-js">каталог</span>
+                    <a class="header__main-nav-item" href="#">новинки</a>
+                    <a class="header__main-nav-item" href="#">
+                        <span class="_accent_pink">% </span>скидки</a>
+                </div>
+                <a class="header__logo" href="/">
+                    <img src="img/logo.svg" alt="logo">
+                </a>
+                <div class="header__nav-icon">
+                    <div class="search search-js">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 9L12.5748 12.57" stroke="#1F2226" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+                            <circle cx="5.5" cy="5.5" r="4.75" stroke="#1F2226" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+                        <svg class="hover-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 9L12.5748 12.57" stroke="#EDBBD9" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
+                            <circle cx="5.5" cy="5.5" r="4.75" stroke="#EDBBD9" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></circle>
+                        </svg>
+                    </div>
+                    <!--<div class="user">-->
+                    <!--<svg width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+                    <!--<path d="M12 14V14.75H12.75V14H12ZM0.75 14H0V14.75H0.75V14ZM1.5 14C1.5 11.7334 3.59713 9.75 6.375 9.75V8.25C2.93967 8.25 0 10.7438 0 14H1.5ZM6.375 9.75C9.15287 9.75 11.25 11.7334 11.25 14H12.75C12.75 10.7438 9.81033 8.25 6.375 8.25V9.75ZM0.75 14.75H12V13.25H0.75V14.75Z" fill="#1F2226"/>-->
+                    <!--<path d="M9 4C9 5.38071 7.88071 6.5 6.5 6.5C5.11929 6.5 4 5.38071 4 4C4 2.61929 5.11929 1.5 6.5 1.5C7.88071 1.5 9 2.61929 9 4Z" stroke="#1F2226" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>-->
+                    <!--</svg>-->
+                    <!--<svg class="hover-icon" width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+                    <!--<path d="M12 14V14.75H12.75V14H12ZM0.75 14H0V14.75H0.75V14ZM1.5 14C1.5 11.7334 3.59713 9.75 6.375 9.75V8.25C2.93967 8.25 0 10.7438 0 14H1.5ZM6.375 9.75C9.15287 9.75 11.25 11.7334 11.25 14H12.75C12.75 10.7438 9.81033 8.25 6.375 8.25V9.75ZM0.75 14.75H12V13.25H0.75V14.75Z" fill="#EDBBD9"></path>-->
+                    <!--<path d="M9 4C9 5.38071 7.88071 6.5 6.5 6.5C5.11929 6.5 4 5.38071 4 4C4 2.61929 5.11929 1.5 6.5 1.5C7.88071 1.5 9 2.61929 9 4Z" stroke="#EDBBD9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>-->
+                    <!--</svg>-->
+                    <!--</div>-->
+                    <!--<div class="fav">-->
+                    <!--<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+                    <!--<path d="M8 3.46245L7.27886 3.66849C7.37085 3.99047 7.66514 4.21245 8 4.21245C8.33486 4.21245 8.62915 3.99047 8.72114 3.66849L8 3.46245ZM8 12.7124C8.0236 12.7124 7.93149 12.7072 7.68247 12.6109C7.46168 12.5256 7.17694 12.3924 6.84861 12.2099C6.19234 11.8454 5.39614 11.3034 4.62908 10.6071C3.08029 9.20127 1.75 7.26244 1.75 4.96244H0.25C0.25 7.86245 1.91971 10.1736 3.62092 11.7178C4.47886 12.4965 5.37016 13.1045 6.12014 13.5212C6.49493 13.7294 6.84301 13.8946 7.14175 14.0101C7.41226 14.1146 7.7264 14.2124 8 14.2124V12.7124ZM1.75 4.96244C1.75 3.86815 2.07495 3.11687 2.51294 2.62562C2.95519 2.12958 3.56013 1.8451 4.21097 1.77C5.54743 1.6158 6.89942 2.34044 7.27886 3.66849L8.72114 3.25641C8.10058 1.08445 5.95257 0.0590979 4.03903 0.27989C3.06487 0.392293 2.10731 0.826564 1.39331 1.6274C0.675047 2.43302 0.25 3.55673 0.25 4.96244H1.75ZM8 14.2124C8.2736 14.2124 8.58774 14.1146 8.85825 14.0101C9.15699 13.8946 9.50507 13.7294 9.87986 13.5212C10.6298 13.1045 11.5211 12.4965 12.3791 11.7178C14.0803 10.1736 15.75 7.86245 15.75 4.96244H14.25C14.25 7.26244 12.9197 9.20127 11.3709 10.6071C10.6039 11.3034 9.80766 11.8454 9.15139 12.2099C8.82306 12.3924 8.53832 12.5256 8.31753 12.6109C8.06851 12.7072 7.9764 12.7124 8 12.7124V14.2124ZM15.75 4.96244C15.75 3.55673 15.325 2.43302 14.6067 1.6274C13.8927 0.826564 12.9351 0.392293 11.961 0.27989C10.0474 0.0590979 7.89942 1.08445 7.27886 3.25641L8.72114 3.66849C9.10058 2.34044 10.4526 1.6158 11.789 1.77C12.4399 1.8451 13.0448 2.12958 13.4871 2.62562C13.925 3.11687 14.25 3.86815 14.25 4.96244H15.75Z" fill="#1F2226"/>-->
+                    <!--</svg>-->
+                    <!--<svg class="hover-icon" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+                    <!--<path d="M8 3.46245L7.27886 3.66849C7.37085 3.99047 7.66514 4.21245 8 4.21245C8.33486 4.21245 8.62915 3.99047 8.72114 3.66849L8 3.46245ZM8 12.7124C8.0236 12.7124 7.93149 12.7072 7.68247 12.6109C7.46168 12.5256 7.17694 12.3924 6.84861 12.2099C6.19234 11.8454 5.39614 11.3034 4.62908 10.6071C3.08029 9.20127 1.75 7.26244 1.75 4.96244H0.25C0.25 7.86245 1.91971 10.1736 3.62092 11.7178C4.47886 12.4965 5.37016 13.1045 6.12014 13.5212C6.49493 13.7294 6.84301 13.8946 7.14175 14.0101C7.41226 14.1146 7.7264 14.2124 8 14.2124V12.7124ZM1.75 4.96244C1.75 3.86815 2.07495 3.11687 2.51294 2.62562C2.95519 2.12958 3.56013 1.8451 4.21097 1.77C5.54743 1.6158 6.89942 2.34044 7.27886 3.66849L8.72114 3.25641C8.10058 1.08445 5.95257 0.0590979 4.03903 0.27989C3.06487 0.392293 2.10731 0.826564 1.39331 1.6274C0.675047 2.43302 0.25 3.55673 0.25 4.96244H1.75ZM8 14.2124C8.2736 14.2124 8.58774 14.1146 8.85825 14.0101C9.15699 13.8946 9.50507 13.7294 9.87986 13.5212C10.6298 13.1045 11.5211 12.4965 12.3791 11.7178C14.0803 10.1736 15.75 7.86245 15.75 4.96244H14.25C14.25 7.26244 12.9197 9.20127 11.3709 10.6071C10.6039 11.3034 9.80766 11.8454 9.15139 12.2099C8.82306 12.3924 8.53832 12.5256 8.31753 12.6109C8.06851 12.7072 7.9764 12.7124 8 12.7124V14.2124ZM15.75 4.96244C15.75 3.55673 15.325 2.43302 14.6067 1.6274C13.8927 0.826564 12.9351 0.392293 11.961 0.27989C10.0474 0.0590979 7.89942 1.08445 7.27886 3.25641L8.72114 3.66849C9.10058 2.34044 10.4526 1.6158 11.789 1.77C12.4399 1.8451 13.0448 2.12958 13.4871 2.62562C13.925 3.11687 14.25 3.86815 14.25 4.96244H15.75Z" fill="#EDBBD9"></path>-->
+                    <!--</svg>-->
+                    <!--</div>-->
+                    <!--<div class="basket">-->
+                    <!--<svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+                    <!--<path d="M4 4.64516H2.00195L1.00195 14.0606H12.9979L11.9979 4.64516H10M4 4.64516V4C4 2.34315 5.34315 1 7 1V1C8.65685 1 10 2.34315 10 4V4.64516M4 4.64516H10" stroke="#1F2226" stroke-width="1.5"/>-->
+                    <!--</svg>-->
+                    <!--<svg class="hover-icon" width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+                    <!--<path d="M4 4.64516H2.00195L1.00195 14.0606H12.9979L11.9979 4.64516H10M4 4.64516V4C4 2.34315 5.34315 1 7 1V1C8.65685 1 10 2.34315 10 4V4.64516M4 4.64516H10" stroke="#EDBBD9" stroke-width="1.5"></path>-->
+                    <!--</svg>-->
+                    <!--</div>-->
+                </div>
+            </div>
+            <form class="search-wrap">
+                <div class="input-holder">
+                    <input type="text" class="search-input" name="search" placeholder="Платья">
+                    <button name="button"></button>
+                </div>
+                <div class="search-close">
+                    <svg width="12" height="12" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 21L1 1M1 21L21 1" stroke="#1F2226" stroke-width="2"/>
+                    </svg>
+                </div>
+            </form>
+            <div class="catalog-nav-wrap">
+                 <div class="catalog-nav-container">
+                     <div class="catalog-nav-list-wrap">
+                         <div class="catalog-nav-list">
+                             <a class="catalog-nav-title _mobile" href="collection.html">новинки</a>
+                             <a class="catalog-nav-title _mobile" href="collection.html"><span class="_accent_pink">% </span>скидки</a>
+    
+                             <a class="catalog-nav-title" href="collection.html">Одежда</a>
+                             <a class="catalog-nav-item" href="collection.html">Платья</a>
+                             <a class="catalog-nav-item" href="collection.html">Топы и блузки</a>
+                             <a class="catalog-nav-item" href="collection.html">Свитера и кардиганы</a>
+                             <a class="catalog-nav-item" href="collection.html">Юбки</a>
+                             <a class="catalog-nav-item" href="collection.html">Брюки и шорты</a>
+                             <a class="catalog-nav-item" href="collection.html">Комбинезоны</a>
+                             <a class="catalog-nav-item" href="collection.html">Куртки и пальто</a>
+                             <a class="catalog-nav-item" href="collection.html">Аксессуары</a>
+                             <a class="catalog-nav-item _more" href="collection.html">Смотреть все</a>
+                         </div>
+                         <div class="catalog-nav-list">
+                             <a class="catalog-nav-title" href="collection.html">коллекции</a>
+                             <a class="catalog-nav-item" href="collection.html">Коллекция 1</a>
+                             <a class="catalog-nav-item" href="collection.html">Коллекция 2</a>
+                             <a class="catalog-nav-item" href="collection.html">Линия Les Collectionistas</a>
+                             <a class="catalog-nav-item" href="collection.html">Transitional</a>
+                             <a class="catalog-nav-item" href="collection.html">Flash</a>
+                             <a class="catalog-nav-item _more" href="collection.html">Смотреть все</a>
+                         </div>
+                     </div>
+    
+                     <div class="catalog-nav-image">
+                         <div class="image-holder">
+                             <img src="img/collection-image-1.png" alt="" class="image-holder__img">
+                         </div>
+                         <a href="catalog.html" class="collection-text">
+                             <span class="collection-label">новая коллекция</span>
+                             <span class="collection-name">Линия Les Collectionistas</span>
+                         </a>
+                     </div>
+                 </div>
+    
+            </div>
+        </div>
+        <div class="filters-modal__mobile filters-modal__mobile--main mobile-nav__type--filters" id="nav-mobile">
+            <a href="#" class="close-modal__mobile  image-holder">
+                <img class="image-holder__img" src="/img/icons/close-modal__mobile.svg" alt="close">
+            </a>
+            <div class="body-filters__mobile">
+                <ul class="main-body">
+                    <li class="main-link">
+                        <a href="#" class="head-link__js">Каталог</a>
+                        <div class="body-link">
+                            <a href="#">Коллекция 1</a>
+                            <a href="#">Линия Les Collectionistas</a>
+                            <a href="#">Transitional</a>
+                            <a href="#">Коллекция NAF NAF 2019</a>
+                            <a href="#">Transitional</a>
+                            <a href="#">Flash</a>
+                            <a href="#">Все коллекции</a>
+                        </div>
+                    </li>
+                    <li class="main-link no-arrow">
+                        <a href="#" class="head-link__js">Новинки</a>
+                        <div class="body-link">
+                            <a href="#">Коллекция 1</a>
+                            <a href="#">Линия Les Collectionistas</a>
+                            <a href="#">Transitional</a>
+                            <a href="#">Коллекция NAF NAF 2019</a>
+                            <a href="#">Transitional</a>
+                            <a href="#">Flash</a>
+                            <a href="#">Все коллекции</a>
+                        </div>
+                    </li>
+                    <li class="main-link no-arrow">
+                        <a href="#" class="head-link__js"><span>%</span>Скидки</a>
+                        <div class="body-link">
+                            <a href="#">Коллекция 1</a>
+                            <a href="#">Линия Les Collectionistas</a>
+                            <a href="#">Transitional</a>
+                            <a href="#">Коллекция NAF NAF 2019</a>
+                            <a href="#">Transitional</a>
+                            <a href="#">Flash</a>
+                            <a href="#">Все коллекции</a>
+                        </div>
+                    </li>
+                    <li class="main-link">
+                        <a href="#" class="head-link__js">Коллекции</a>
+                        <div class="body-link">
+                            <a href="#">Коллекция 1</a>
+                            <a href="#">Линия Les Collectionistas</a>
+                            <a href="#">Transitional</a>
+                            <a href="#">Коллекция NAF NAF 2019</a>
+                            <a href="#">Transitional</a>
+                            <a href="#">Flash</a>
+                            <a href="#">Все коллекции</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="wrap-btn__modal--footer">
+                    <div class="login-account">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.5485 14V14.75H14.2985V14H13.5485ZM2.39062 14H1.64062V14.75H2.39062V14ZM3.14062 14C3.14062 11.728 5.22322 9.75 7.96954 9.75V8.25C4.55357 8.25 1.64062 10.7492 1.64062 14H3.14062ZM7.96954 9.75C10.7159 9.75 12.7985 11.728 12.7985 14H14.2985C14.2985 10.7492 11.3855 8.25 7.96954 8.25V9.75ZM2.39062 14.75H13.5485V13.25H2.39062V14.75Z" fill="#1F2226"/>
+                            <path d="M10.5728 4C10.5728 5.38071 9.46265 6.5 8.09326 6.5C6.72388 6.5 5.61377 5.38071 5.61377 4C5.61377 2.61929 6.72388 1.5 8.09326 1.5C9.46265 1.5 10.5728 2.61929 10.5728 4Z" stroke="#1F2226" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Войти в аккаунт</span>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+        <div class="bg-mobile__nav"></div>
+    </header>
+
+    <div class="contacts-info container">
+        <div class="section-title">контакты</div>
+        <div class="contact-text">Напишите нам на почту, если у вас возникли вопросы по поводу работы нашего сайта или магазинов, а так же по поводу сотрудничества и предложений</div>
+        <a class="contact-email" href="mailto:support@nafnaf.ua" >support@nafnaf.ua</a>
+        <div class="social-list">
+            <a class="social-item" href="#">
+                <img src="img/icons/facebook-icon.svg" alt="" >
+                <img class="hover-icon" src="img/icons/facebook-icon-pink.svg" alt="">
+            </a>
+            <a class="social-item" href="#">
+                <img src="img/icons/telegram-icon.svg" alt="" >
+                <img class="hover-icon" src="img/icons/telegram-icon-pink.svg" alt="">
+            </a>
+            <a class="social-item" href="#">
+                <img src="img/icons/instagram-icon.svg" alt="" >
+                <img class="hover-icon" src="img/icons/instagram-icon-pink.svg" alt="">
+            </a>
+            <a class="social-item" href="#">
+                <img src="img/icons/youtube-icon.svg" alt="" >
+                <img class="hover-icon" src="img/icons/youtube-icon-pink.svg" alt="">
+            </a>
+            <a class="social-item" href="#">
+                <svg width="22" height="15" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.51834 4.71429V6.6H8.64803C8.52189 7.40929 7.70203 8.97286 5.51834 8.97286C3.63422 8.97286 2.09697 7.41714 2.09697 5.5C2.09697 3.58286 3.63422 2.02714 5.51834 2.02714C6.59048 2.02714 7.30786 2.48286 7.71779 2.87571L9.21563 1.43786C8.25386 0.542143 7.00829 0 5.51834 0C2.46749 0 0 2.45929 0 5.5C0 8.54071 2.46749 11 5.51834 11C8.70321 11 10.8159 8.76857 10.8159 5.62571C10.8159 5.26429 10.7765 4.98929 10.7292 4.71429H5.51834Z" fill="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3423 4.71425H15.7656V3.14282H14.189V4.71425H12.6123V6.28568H14.189V7.85711H15.7656V6.28568H17.3423" fill="black"/>
+                </svg>
+                <svg class="hover-icon" width="22" height="15" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.51834 4.71429V6.6H8.64803C8.52189 7.40929 7.70203 8.97286 5.51834 8.97286C3.63422 8.97286 2.09697 7.41714 2.09697 5.5C2.09697 3.58286 3.63422 2.02714 5.51834 2.02714C6.59048 2.02714 7.30786 2.48286 7.71779 2.87571L9.21563 1.43786C8.25386 0.542143 7.00829 0 5.51834 0C2.46749 0 0 2.45929 0 5.5C0 8.54071 2.46749 11 5.51834 11C8.70321 11 10.8159 8.76857 10.8159 5.62571C10.8159 5.26429 10.7765 4.98929 10.7292 4.71429H5.51834Z" fill="#EDBBD9"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3423 4.71425H15.7656V3.14282H14.189V4.71425H12.6123V6.28568H14.189V7.85711H15.7656V6.28568H17.3423" fill="#EDBBD9"/>
+                </svg>
+            </a>
+            <a class="social-item" href="#">
+                <svg width="21" height="17" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.63832 3.4582L7.67242 4.02049L7.10409 3.95164C5.03538 3.68771 3.2281 2.79264 1.69361 1.28938L0.943423 0.543493L0.750192 1.0943C0.340996 2.32216 0.602427 3.61886 1.45492 4.49098C1.90958 4.97294 1.80728 5.04179 1.02299 4.75491C0.750192 4.6631 0.511494 4.59425 0.488761 4.62868C0.409196 4.709 0.681993 5.75325 0.897957 6.16636C1.19349 6.74012 1.79591 7.30241 2.45517 7.63519L3.01213 7.89912L2.35287 7.9106C1.71635 7.9106 1.69361 7.92207 1.76181 8.16305C1.98914 8.90894 2.8871 9.70073 3.88736 10.045L4.59208 10.286L3.97829 10.6532C3.06897 11.181 2.00051 11.4794 0.932056 11.5023C0.420562 11.5138 0 11.5597 0 11.5941C0 11.7089 1.38672 12.3515 2.19374 12.604C4.61482 13.3499 7.49055 13.0286 9.65019 11.7548C11.1847 10.8483 12.7192 9.04665 13.4353 7.30241C13.8217 6.37291 14.2082 4.67458 14.2082 3.85984C14.2082 3.33198 14.2423 3.26312 14.8788 2.63199C15.2539 2.26478 15.6063 1.86315 15.6745 1.74839C15.7881 1.53036 15.7768 1.53036 15.1971 1.72544C14.2309 2.0697 14.0945 2.0238 14.5719 1.50741C14.9243 1.14021 15.3448 0.474642 15.3448 0.279563C15.3448 0.245137 15.1743 0.302513 14.9811 0.40579C14.7765 0.520543 14.3218 0.692671 13.9808 0.795948L13.3671 0.991027L12.8101 0.612345C12.5032 0.40579 12.0713 0.176285 11.8439 0.107434C11.2642 -0.0532193 10.3777 -0.0302688 9.85479 0.153335C8.43397 0.669721 7.53602 2.00085 7.63832 3.4582Z" fill="#1F2226"/>
+                </svg>
+                <svg class="hover-icon" width="21" height="17" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.63832 3.4582L7.67242 4.02049L7.10409 3.95164C5.03538 3.68771 3.2281 2.79264 1.69361 1.28938L0.943423 0.543493L0.750192 1.0943C0.340996 2.32216 0.602427 3.61886 1.45492 4.49098C1.90958 4.97294 1.80728 5.04179 1.02299 4.75491C0.750192 4.6631 0.511494 4.59425 0.488761 4.62868C0.409196 4.709 0.681993 5.75325 0.897957 6.16636C1.19349 6.74012 1.79591 7.30241 2.45517 7.63519L3.01213 7.89912L2.35287 7.9106C1.71635 7.9106 1.69361 7.92207 1.76181 8.16305C1.98914 8.90894 2.8871 9.70073 3.88736 10.045L4.59208 10.286L3.97829 10.6532C3.06897 11.181 2.00051 11.4794 0.932056 11.5023C0.420562 11.5138 0 11.5597 0 11.5941C0 11.7089 1.38672 12.3515 2.19374 12.604C4.61482 13.3499 7.49055 13.0286 9.65019 11.7548C11.1847 10.8483 12.7192 9.04665 13.4353 7.30241C13.8217 6.37291 14.2082 4.67458 14.2082 3.85984C14.2082 3.33198 14.2423 3.26312 14.8788 2.63199C15.2539 2.26478 15.6063 1.86315 15.6745 1.74839C15.7881 1.53036 15.7768 1.53036 15.1971 1.72544C14.2309 2.0697 14.0945 2.0238 14.5719 1.50741C14.9243 1.14021 15.3448 0.474642 15.3448 0.279563C15.3448 0.245137 15.1743 0.302513 14.9811 0.40579C14.7765 0.520543 14.3218 0.692671 13.9808 0.795948L13.3671 0.991027L12.8101 0.612345C12.5032 0.40579 12.0713 0.176285 11.8439 0.107434C11.2642 -0.0532193 10.3777 -0.0302688 9.85479 0.153335C8.43397 0.669721 7.53602 2.00085 7.63832 3.4582Z" fill="#EDBBD9"/>
+                </svg>
+            </a>
+        </div>
+        <a href="shops.html" class="go-shops"><span>Карта магазинов NAF NAF&nbsp;</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="16" viewBox="0 0 23 16" fill="none">
+                <path d="M21 8L21.5303 8.53033L22.0607 8L21.5303 7.46967L21 8ZM15.5303 1.46967L15 0.93934L13.9393 2L14.4697 2.53033L15.5303 1.46967ZM14.4697 13.4697L13.9393 14L15 15.0607L15.5303 14.5303L14.4697 13.4697ZM1 7.25H0.25V8.75H1V7.25ZM21.5303 7.46967L15.5303 1.46967L14.4697 2.53033L20.4697 8.53033L21.5303 7.46967ZM20.4697 7.46967L14.4697 13.4697L15.5303 14.5303L21.5303 8.53033L20.4697 7.46967ZM21 7.25H1V8.75H21V7.25Z" fill="#1F2226"/>
+            </svg>
+        </a>
+    </div>
+    <form action="" class="contact-form">
+        <div class="contact-form-text">А также вы можете отправить нам ваше сообщение или пожелание нам через форму обратной связи и мы обязательно свяжемся с вами</div>
+        <div class="contact-form-wrap">
+            <div class="input-holder _col-2">
+                <input type="text" name="first-name" placeholder="Имя *" data-validate="name">
+				<div class="error-text">Это поле обязательно к заполнению</div>
+            </div>
+            <div class="input-holder _col-2">
+                <input type="text" name="last-name" placeholder="Фамилия *" data-validate="name">
+                <div class="error-text">Это поле обязательно к заполнению</div>
+            </div>
+            <div class="input-holder _col-2">
+                <input type="text" name="phone" placeholder="+ 380 (__) ___–__–__" data-inputmask="'mask': '+ 380 (99) 999–99–99'">
+            </div>
+            <div class="input-holder _col-2">
+                <input type="text" name="city" placeholder="Ваш город *" data-validate="name">
+				<div class="error-text">Это поле обязательно к заполнению</div>
+            </div>
+            <div class="input-holder _col-2">
+                <input type="text" name="email" placeholder="Email *" data-validate="email">
+                <div class="error-text">Проверьте правильность ввода адреса эл. почты. Пример — mail@mail.com</div>
+            </div>
+			<div class="input-holder _col-1">
+				<select class="js-nice_select">
+					<option value="1"disabled="disabled" selected="selected">Работа магазинов</option>
+					<option value="2">Another option</option>
+					<option value="3">A disabled option</option>
+					<option value="4">Potato</option>
+				</select>
+			</div>
+			<div class="input-holder  _col-1">
+				<textarea name="text" rows="1" placeholder="Сообщение"></textarea>
+			</div>
+			<div class="input-holder checkbox _col-1">
+				<input type="checkbox" name="accept1" id="accept1" data-validate="checkbox"/>
+				<label for="accept1">Я прочел (прочла) юридические условия <a href="#">Политика конфиденциальности</a></label>
+                <div class="error-text">Это поле обязательно к заполнению</div>
+			</div>
+			<div class="input-holder checkbox _col-1">
+				<input type="checkbox" name="accept2" id="accept2" data-validate="checkbox"/>
+				<label for="accept2">Я ознакомился (-ась) с политикой конфиденциальности и согласен (-на) получать новости, сообщения и специальные предложения от NAF NAF.</label>
+                <div class="error-text">Это поле обязательно к заполнению</div>
+			</div>
+			<button class="btn btn-border submit" type="submit">отправить</button>
+
+        </div>
+    </form>
+
+    <!--<div class="container">-->
+        <div class="breadkrumbs container">
+            <a class="breadkrumbs_item" href="/">главная</a>
+            <a class="breadkrumbs_item _active" href="/">контакты</a>
+        </div>
+    <!--</div>-->
+
+
+    
+    <footer class="footer container">
+    
+        <div class="footer__nav">
+            <div class="footer__nav-list">
+                <div class="footer__nav-list-title">магазин</div>
+                <div class="show-list">
+                    <a class="footer__nav-item" href="#">Каталог</a>
+                    <a class="footer__nav-item" href="#">Коллекции</a>
+                </div>
+            </div>
+            <div class="footer__nav-list">
+                <div class="footer__nav-list-title">наша Компания</div>
+                <div class="show-list">
+                    <a class="footer__nav-item" href="about.html">О бренде</a>
+                    <a class="footer__nav-item" href="#">Школа моды NAF NAF</a>
+                    <a class="footer__nav-item" href="#">Афиша мероприятий</a>
+                    <a class="footer__nav-item" href="blogs.html">Блог</a>
+                    <a class="footer__nav-item" href="#">NAF NAF 45 лет 🎀</a>
+                </div>
+            </div>
+            <div class="footer__nav-list">
+                <div class="footer__nav-list-title">обслуживание клиентов</div>
+                <div class="show-list">
+                    <a class="footer__nav-item" href="shops.html">Магазины</a>
+                    <a class="footer__nav-item" href="contacts.html">Контакты</a>
+                    <a class="footer__nav-item" href="help.html">Помощь</a>
+                    <a class="footer__nav-item" href="policy.html">Политика конфиденциальности</a>
+                    <a class="footer__nav-item" href="#">Правила пользования</a>
+    
+                    <div class="_mobile-show footer__social-list">
+                        <div class="footer__social-title">присоединяйтесь к нам</div>
+                        <div class="social-list-wrap">
+                            <a class="footer__social-item" href="#">
+                                <svg width="7" height="14" viewBox="0 0 7 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23206 13.64V6.8192H6.11489L6.36441 4.46872H4.23206L4.23525 3.29228C4.23525 2.67923 4.2935 2.35075 5.17401 2.35075H6.35108V0H4.46798C2.20606 0 1.40993 1.14024 1.40993 3.05776V4.46898H0V6.81947H1.40993V13.64H4.23206Z" fill="#1F2226"/>
+                                </svg>
+                                <svg class="hover-icon" width="7" height="14" viewBox="0 0 7 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23206 13.64V6.8192H6.11489L6.36441 4.46872H4.23206L4.23525 3.29228C4.23525 2.67923 4.2935 2.35075 5.17401 2.35075H6.35108V0H4.46798C2.20606 0 1.40993 1.14024 1.40993 3.05776V4.46898H0V6.81947H1.40993V13.64H4.23206Z" fill="#EDBBD9"/>
+                                </svg>
+                            </a>
+                            <a class="footer__social-item" href="#">
+                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.07665 8.58577L11.8251 12.8328C12.4811 13.1947 12.9545 13.0073 13.1179 12.2238L15.4578 1.19726C15.6974 0.23679 15.0917 -0.198836 14.4641 0.0860656L0.72424 5.38411C-0.213637 5.76029 -0.208169 6.28353 0.553285 6.51668L4.07925 7.61719L12.2422 2.46726C12.6276 2.23357 12.9813 2.35921 12.691 2.61684" fill="#1F2226"/>
+                                </svg>
+                                <svg class="hover-icon" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.07665 8.58577L11.8251 12.8328C12.4811 13.1947 12.9545 13.0073 13.1179 12.2238L15.4578 1.19726C15.6974 0.23679 15.0917 -0.198836 14.4641 0.0860656L0.72424 5.38411C-0.213637 5.76029 -0.208169 6.28353 0.553285 6.51668L4.07925 7.61719L12.2422 2.46726C12.6276 2.23357 12.9813 2.35921 12.691 2.61684" fill="#EDBBD9"/>
+                                </svg>
+                            </a>
+                            <a class="footer__social-item" href="#">
+                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5314 0H4.46858C2.0046 0 0 2.0046 0 4.46858V10.5314C0 12.9954 2.0046 15 4.46858 15H10.5314C12.9954 15 15 12.9954 15 10.5314V4.46858C15 2.0046 12.9954 0 10.5314 0ZM13.491 10.5314C13.491 12.1659 12.1659 13.491 10.5314 13.491H4.46858C2.83406 13.491 1.509 12.1659 1.509 10.5314V4.46858C1.509 2.83404 2.83406 1.509 4.46858 1.509H10.5314C12.1659 1.509 13.491 2.83404 13.491 4.46858V10.5314Z" fill="#1F2226"/>
+                                    <path d="M7.5 3.62047C5.36082 3.62047 3.62047 5.36082 3.62047 7.49997C3.62047 9.63912 5.36082 11.3795 7.5 11.3795C9.63918 11.3795 11.3795 9.63915 11.3795 7.49997C11.3795 5.36079 9.63918 3.62047 7.5 3.62047ZM7.5 9.87053C6.19078 9.87053 5.12947 8.80922 5.12947 7.5C5.12947 6.19078 6.19081 5.12947 7.5 5.12947C8.80922 5.12947 9.87053 6.19078 9.87053 7.5C9.87053 8.80919 8.80919 9.87053 7.5 9.87053Z" fill="#1F2226"/>
+                                    <path d="M11.387 4.57921C11.9005 4.57921 12.3167 4.163 12.3167 3.64959C12.3167 3.13618 11.9005 2.71998 11.387 2.71998C10.8736 2.71998 10.4574 3.13618 10.4574 3.64959C10.4574 4.163 10.8736 4.57921 11.387 4.57921Z" fill="#1F2226"/>
+                                </svg>
+                                <svg class="hover-icon" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5314 0H4.46858C2.0046 0 0 2.0046 0 4.46858V10.5314C0 12.9954 2.0046 15 4.46858 15H10.5314C12.9954 15 15 12.9954 15 10.5314V4.46858C15 2.0046 12.9954 0 10.5314 0ZM13.491 10.5314C13.491 12.1659 12.1659 13.491 10.5314 13.491H4.46858C2.83406 13.491 1.509 12.1659 1.509 10.5314V4.46858C1.509 2.83404 2.83406 1.509 4.46858 1.509H10.5314C12.1659 1.509 13.491 2.83404 13.491 4.46858V10.5314Z" fill="#EDBBD9"/>
+                                    <path d="M7.5 3.62047C5.36082 3.62047 3.62047 5.36082 3.62047 7.49997C3.62047 9.63912 5.36082 11.3795 7.5 11.3795C9.63918 11.3795 11.3795 9.63915 11.3795 7.49997C11.3795 5.36079 9.63918 3.62047 7.5 3.62047ZM7.5 9.87053C6.19078 9.87053 5.12947 8.80922 5.12947 7.5C5.12947 6.19078 6.19081 5.12947 7.5 5.12947C8.80922 5.12947 9.87053 6.19078 9.87053 7.5C9.87053 8.80919 8.80919 9.87053 7.5 9.87053Z" fill="#EDBBD9"/>
+                                    <path d="M11.387 4.57921C11.9005 4.57921 12.3167 4.163 12.3167 3.64959C12.3167 3.13618 11.9005 2.71998 11.387 2.71998C10.8736 2.71998 10.4574 3.13618 10.4574 3.64959C10.4574 4.163 10.8736 4.57921 11.387 4.57921Z" fill="#EDBBD9"/>
+                                </svg>
+                            </a>
+                            <a class="footer__social-item" href="#">
+                                <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6601 1.90975C16.4644 1.158 15.8878 0.566032 15.1556 0.365125C13.8288 0 8.50783 0 8.50783 0C8.50783 0 3.18686 0 1.85993 0.365125C1.12777 0.566032 0.551172 1.158 0.355492 1.90975C0 3.27222 0 6.115 0 6.115C0 6.115 0 8.95769 0.355492 10.3202C0.551172 11.072 1.12777 11.664 1.85993 11.865C3.18686 12.23 8.50783 12.23 8.50783 12.23C8.50783 12.23 13.8288 12.23 15.1556 11.865C15.8878 11.664 16.4644 11.072 16.6601 10.3202C17.0157 8.95769 17.0157 6.115 17.0157 6.115C17.0157 6.115 17.0157 3.27222 16.6601 1.90975Z" fill="#1F2226"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.91309 9.04029V3.7229L11.167 6.3817L6.91309 9.04029Z" fill="white"/>
+                                </svg>
+                                <svg class="hover-icon" width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6601 1.90975C16.4644 1.158 15.8878 0.566032 15.1556 0.365125C13.8288 0 8.50783 0 8.50783 0C8.50783 0 3.18686 0 1.85993 0.365125C1.12777 0.566032 0.551172 1.158 0.355492 1.90975C0 3.27222 0 6.115 0 6.115C0 6.115 0 8.95769 0.355492 10.3202C0.551172 11.072 1.12777 11.664 1.85993 11.865C3.18686 12.23 8.50783 12.23 8.50783 12.23C8.50783 12.23 13.8288 12.23 15.1556 11.865C15.8878 11.664 16.4644 11.072 16.6601 10.3202C17.0157 8.95769 17.0157 6.115 17.0157 6.115C17.0157 6.115 17.0157 3.27222 16.6601 1.90975Z" fill="#EDBBD9"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.91309 9.04029V3.7229L11.167 6.3817L6.91309 9.04029Z" fill="white"/>
+                                </svg>
+                            </a>
+                            <a class="footer__social-item" href="#">
+                                <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.51834 4.71429V6.6H8.64803C8.52189 7.40929 7.70203 8.97286 5.51834 8.97286C3.63422 8.97286 2.09697 7.41714 2.09697 5.5C2.09697 3.58286 3.63422 2.02714 5.51834 2.02714C6.59048 2.02714 7.30786 2.48286 7.71779 2.87571L9.21563 1.43786C8.25386 0.542143 7.00829 0 5.51834 0C2.46749 0 0 2.45929 0 5.5C0 8.54071 2.46749 11 5.51834 11C8.70321 11 10.8159 8.76857 10.8159 5.62571C10.8159 5.26429 10.7765 4.98929 10.7292 4.71429H5.51834Z" fill="black"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3423 4.71425H15.7656V3.14282H14.189V4.71425H12.6123V6.28568H14.189V7.85711H15.7656V6.28568H17.3423" fill="black"/>
+                                </svg>
+                                <svg class="hover-icon" width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.51834 4.71429V6.6H8.64803C8.52189 7.40929 7.70203 8.97286 5.51834 8.97286C3.63422 8.97286 2.09697 7.41714 2.09697 5.5C2.09697 3.58286 3.63422 2.02714 5.51834 2.02714C6.59048 2.02714 7.30786 2.48286 7.71779 2.87571L9.21563 1.43786C8.25386 0.542143 7.00829 0 5.51834 0C2.46749 0 0 2.45929 0 5.5C0 8.54071 2.46749 11 5.51834 11C8.70321 11 10.8159 8.76857 10.8159 5.62571C10.8159 5.26429 10.7765 4.98929 10.7292 4.71429H5.51834Z" fill="#EDBBD9"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3423 4.71425H15.7656V3.14282H14.189V4.71425H12.6123V6.28568H14.189V7.85711H15.7656V6.28568H17.3423" fill="#EDBBD9"/>
+                                </svg>
+                            </a>
+                            <a class="footer__social-item" href="#">
+                                <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.63832 3.4582L7.67242 4.02049L7.10409 3.95164C5.03538 3.68771 3.2281 2.79264 1.69361 1.28938L0.943423 0.543493L0.750192 1.0943C0.340996 2.32216 0.602427 3.61886 1.45492 4.49098C1.90958 4.97294 1.80728 5.04179 1.02299 4.75491C0.750192 4.6631 0.511494 4.59425 0.488761 4.62868C0.409196 4.709 0.681993 5.75325 0.897957 6.16636C1.19349 6.74012 1.79591 7.30241 2.45517 7.63519L3.01213 7.89912L2.35287 7.9106C1.71635 7.9106 1.69361 7.92207 1.76181 8.16305C1.98914 8.90894 2.8871 9.70073 3.88736 10.045L4.59208 10.286L3.97829 10.6532C3.06897 11.181 2.00051 11.4794 0.932056 11.5023C0.420562 11.5138 0 11.5597 0 11.5941C0 11.7089 1.38672 12.3515 2.19374 12.604C4.61482 13.3499 7.49055 13.0286 9.65019 11.7548C11.1847 10.8483 12.7192 9.04665 13.4353 7.30241C13.8217 6.37291 14.2082 4.67458 14.2082 3.85984C14.2082 3.33198 14.2423 3.26312 14.8788 2.63199C15.2539 2.26478 15.6063 1.86315 15.6745 1.74839C15.7881 1.53036 15.7768 1.53036 15.1971 1.72544C14.2309 2.0697 14.0945 2.0238 14.5719 1.50741C14.9243 1.14021 15.3448 0.474642 15.3448 0.279563C15.3448 0.245137 15.1743 0.302513 14.9811 0.40579C14.7765 0.520543 14.3218 0.692671 13.9808 0.795948L13.3671 0.991027L12.8101 0.612345C12.5032 0.40579 12.0713 0.176285 11.8439 0.107434C11.2642 -0.0532193 10.3777 -0.0302688 9.85479 0.153335C8.43397 0.669721 7.53602 2.00085 7.63832 3.4582Z" fill="#1F2226"/>
+                                </svg>
+                                <svg class="hover-icon" width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.63832 3.4582L7.67242 4.02049L7.10409 3.95164C5.03538 3.68771 3.2281 2.79264 1.69361 1.28938L0.943423 0.543493L0.750192 1.0943C0.340996 2.32216 0.602427 3.61886 1.45492 4.49098C1.90958 4.97294 1.80728 5.04179 1.02299 4.75491C0.750192 4.6631 0.511494 4.59425 0.488761 4.62868C0.409196 4.709 0.681993 5.75325 0.897957 6.16636C1.19349 6.74012 1.79591 7.30241 2.45517 7.63519L3.01213 7.89912L2.35287 7.9106C1.71635 7.9106 1.69361 7.92207 1.76181 8.16305C1.98914 8.90894 2.8871 9.70073 3.88736 10.045L4.59208 10.286L3.97829 10.6532C3.06897 11.181 2.00051 11.4794 0.932056 11.5023C0.420562 11.5138 0 11.5597 0 11.5941C0 11.7089 1.38672 12.3515 2.19374 12.604C4.61482 13.3499 7.49055 13.0286 9.65019 11.7548C11.1847 10.8483 12.7192 9.04665 13.4353 7.30241C13.8217 6.37291 14.2082 4.67458 14.2082 3.85984C14.2082 3.33198 14.2423 3.26312 14.8788 2.63199C15.2539 2.26478 15.6063 1.86315 15.6745 1.74839C15.7881 1.53036 15.7768 1.53036 15.1971 1.72544C14.2309 2.0697 14.0945 2.0238 14.5719 1.50741C14.9243 1.14021 15.3448 0.474642 15.3448 0.279563C15.3448 0.245137 15.1743 0.302513 14.9811 0.40579C14.7765 0.520543 14.3218 0.692671 13.9808 0.795948L13.3671 0.991027L12.8101 0.612345C12.5032 0.40579 12.0713 0.176285 11.8439 0.107434C11.2642 -0.0532193 10.3777 -0.0302688 9.85479 0.153335C8.43397 0.669721 7.53602 2.00085 7.63832 3.4582Z" fill="#EDBBD9"/>
+                                </svg>
+                            </a>
+                        </div>
+    
+                    </div>
+    
+                </div>
+            </div>
+            <div class="footer__nav-list social-list">
+                <div class="footer__nav-list-title">присоединяйтесь к нам</div>
+                <div class="show-list">
+                    <a class="footer__nav-item" href="#">
+                        <img src="img/icons/facebook-icon.svg" alt="" >
+                        <img class="hover-icon" src="img/icons/facebook-icon-pink.svg" alt="">
+                    </a>
+                    <a class="footer__nav-item" href="#">
+                        <img src="img/icons/telegram-icon.svg" alt="" >
+                        <img class="hover-icon" src="img/icons/telegram-icon-pink.svg" alt="">
+                    </a>
+                    <a class="footer__nav-item" href="#">
+                        <img src="img/icons/instagram-icon.svg" alt="" >
+                        <img class="hover-icon" src="img/icons/instagram-icon-pink.svg" alt="">
+                    </a>
+                    <a class="footer__nav-item" href="#">
+                        <img src="img/icons/youtube-icon.svg" alt="" >
+                        <img class="hover-icon" src="img/icons/youtube-icon-pink.svg" alt="">
+                    </a>
+                    <a class="footer__nav-item" href="#">
+                        <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.51834 4.71429V6.6H8.64803C8.52189 7.40929 7.70203 8.97286 5.51834 8.97286C3.63422 8.97286 2.09697 7.41714 2.09697 5.5C2.09697 3.58286 3.63422 2.02714 5.51834 2.02714C6.59048 2.02714 7.30786 2.48286 7.71779 2.87571L9.21563 1.43786C8.25386 0.542143 7.00829 0 5.51834 0C2.46749 0 0 2.45929 0 5.5C0 8.54071 2.46749 11 5.51834 11C8.70321 11 10.8159 8.76857 10.8159 5.62571C10.8159 5.26429 10.7765 4.98929 10.7292 4.71429H5.51834Z" fill="black"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3423 4.71425H15.7656V3.14282H14.189V4.71425H12.6123V6.28568H14.189V7.85711H15.7656V6.28568H17.3423" fill="black"/>
+                        </svg>
+                        <svg class="hover-icon" width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.51834 4.71429V6.6H8.64803C8.52189 7.40929 7.70203 8.97286 5.51834 8.97286C3.63422 8.97286 2.09697 7.41714 2.09697 5.5C2.09697 3.58286 3.63422 2.02714 5.51834 2.02714C6.59048 2.02714 7.30786 2.48286 7.71779 2.87571L9.21563 1.43786C8.25386 0.542143 7.00829 0 5.51834 0C2.46749 0 0 2.45929 0 5.5C0 8.54071 2.46749 11 5.51834 11C8.70321 11 10.8159 8.76857 10.8159 5.62571C10.8159 5.26429 10.7765 4.98929 10.7292 4.71429H5.51834Z" fill="#EDBBD9"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3423 4.71425H15.7656V3.14282H14.189V4.71425H12.6123V6.28568H14.189V7.85711H15.7656V6.28568H17.3423" fill="#EDBBD9"/>
+                        </svg>
+                    </a>
+                    <a class="footer__nav-item" href="#">
+                        <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.63832 3.4582L7.67242 4.02049L7.10409 3.95164C5.03538 3.68771 3.2281 2.79264 1.69361 1.28938L0.943423 0.543493L0.750192 1.0943C0.340996 2.32216 0.602427 3.61886 1.45492 4.49098C1.90958 4.97294 1.80728 5.04179 1.02299 4.75491C0.750192 4.6631 0.511494 4.59425 0.488761 4.62868C0.409196 4.709 0.681993 5.75325 0.897957 6.16636C1.19349 6.74012 1.79591 7.30241 2.45517 7.63519L3.01213 7.89912L2.35287 7.9106C1.71635 7.9106 1.69361 7.92207 1.76181 8.16305C1.98914 8.90894 2.8871 9.70073 3.88736 10.045L4.59208 10.286L3.97829 10.6532C3.06897 11.181 2.00051 11.4794 0.932056 11.5023C0.420562 11.5138 0 11.5597 0 11.5941C0 11.7089 1.38672 12.3515 2.19374 12.604C4.61482 13.3499 7.49055 13.0286 9.65019 11.7548C11.1847 10.8483 12.7192 9.04665 13.4353 7.30241C13.8217 6.37291 14.2082 4.67458 14.2082 3.85984C14.2082 3.33198 14.2423 3.26312 14.8788 2.63199C15.2539 2.26478 15.6063 1.86315 15.6745 1.74839C15.7881 1.53036 15.7768 1.53036 15.1971 1.72544C14.2309 2.0697 14.0945 2.0238 14.5719 1.50741C14.9243 1.14021 15.3448 0.474642 15.3448 0.279563C15.3448 0.245137 15.1743 0.302513 14.9811 0.40579C14.7765 0.520543 14.3218 0.692671 13.9808 0.795948L13.3671 0.991027L12.8101 0.612345C12.5032 0.40579 12.0713 0.176285 11.8439 0.107434C11.2642 -0.0532193 10.3777 -0.0302688 9.85479 0.153335C8.43397 0.669721 7.53602 2.00085 7.63832 3.4582Z" fill="#1F2226"/>
+                        </svg>
+                        <svg class="hover-icon" width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.63832 3.4582L7.67242 4.02049L7.10409 3.95164C5.03538 3.68771 3.2281 2.79264 1.69361 1.28938L0.943423 0.543493L0.750192 1.0943C0.340996 2.32216 0.602427 3.61886 1.45492 4.49098C1.90958 4.97294 1.80728 5.04179 1.02299 4.75491C0.750192 4.6631 0.511494 4.59425 0.488761 4.62868C0.409196 4.709 0.681993 5.75325 0.897957 6.16636C1.19349 6.74012 1.79591 7.30241 2.45517 7.63519L3.01213 7.89912L2.35287 7.9106C1.71635 7.9106 1.69361 7.92207 1.76181 8.16305C1.98914 8.90894 2.8871 9.70073 3.88736 10.045L4.59208 10.286L3.97829 10.6532C3.06897 11.181 2.00051 11.4794 0.932056 11.5023C0.420562 11.5138 0 11.5597 0 11.5941C0 11.7089 1.38672 12.3515 2.19374 12.604C4.61482 13.3499 7.49055 13.0286 9.65019 11.7548C11.1847 10.8483 12.7192 9.04665 13.4353 7.30241C13.8217 6.37291 14.2082 4.67458 14.2082 3.85984C14.2082 3.33198 14.2423 3.26312 14.8788 2.63199C15.2539 2.26478 15.6063 1.86315 15.6745 1.74839C15.7881 1.53036 15.7768 1.53036 15.1971 1.72544C14.2309 2.0697 14.0945 2.0238 14.5719 1.50741C14.9243 1.14021 15.3448 0.474642 15.3448 0.279563C15.3448 0.245137 15.1743 0.302513 14.9811 0.40579C14.7765 0.520543 14.3218 0.692671 13.9808 0.795948L13.3671 0.991027L12.8101 0.612345C12.5032 0.40579 12.0713 0.176285 11.8439 0.107434C11.2642 -0.0532193 10.3777 -0.0302688 9.85479 0.153335C8.43397 0.669721 7.53602 2.00085 7.63832 3.4582Z" fill="#EDBBD9"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-row">
+            <div class="footer__dropdown-list">
+                <div class="footer__language">
+                    <div class="footer__language-selected">Русский</div>
+                    <div class="footer__language-list">
+                        <span class="footer__language-item _selected">Русский</span>
+                        <a class="footer__language-item" href="#">Українська</a>
+                        <a class="footer__language-item" href="#">English</a>
+                        <a class="footer__language-item" href="#">Français</a>
+                    </div>
+                </div>
+                <div class="footer__city">
+                    <div class="footer__city-selected">Киев</div>
+                    <div class="footer__city-list">
+                        <span class="footer__city-item  _selected" >Киев</span>
+                        <a class="footer__city-item" href="#">Черкассы</a>
+                        <a class="footer__city-item" href="#">Львов</a>
+                        <a class="footer__city-item" href="#">Днепро</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright"><span>© 2019, NAFNAF. </span><span>Все права защищены.</span></div>
+            <div class="footer__developed">
+                <span>Оформление </span>
+                <a href="https://goodface.agency/" target="_blank">Goodface</a>
+            </div>
+        </div>
+    
+        <div class="up-btn" id="up-btn">
+            <span>Наверх</span>
+            <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.70938 3.90687L8.11625 4.19749L8.69749 3.38375L8.29062 3.09313L7.70938 3.90687ZM4.5 1L4.79062 0.593133C4.61677 0.468956 4.38323
+                 0.468956 4.20938 0.593133L4.5 1ZM0.709382 3.09313L0.302515 3.38375L0.883753 4.19749L1.29062 3.90687L0.709382 3.09313ZM4
+                 11.5L4 12L5 12L5 11.5L4 11.5ZM8.29062 3.09313L4.79062 0.593133L4.20938 1.40687L7.70938 3.90687L8.29062 3.09313ZM4.20938 0.593133L0.709382
+                 3.09313L1.29062 3.90687L4.79062 1.40687L4.20938 0.593133ZM4 1L4 11.5L5 11.5L5 1L4 1Z" fill="#1F2226"/>
+            </svg>
+        </div>
+    </footer>
+    
+    <div class="preloader" id="js_preloader">
+        <div class="circle">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="23" stroke="#F1F3F6" stroke-width="2"></circle>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 24a1 1 0 1 0 2 0A22 22 0 0 1 24 2a1 1 0 1 0 0-2A24 24 0 0 0 0 24zm48 0a1 1 0 1 0-2 0 22 22 0 0 1-22 22 1 1 0 1 0 0 2 24 24 0 0 0 24-24z" fill="#EDBBD9"/>
+            </svg>
+        </div>
+    </div>
+
+    
+    <script src="js/scripts.min.js"></script>
+    <script>
+        //preloader, always at the end
+        $(window).on('load', function () {
+            setTimeout(function() {
+                $(function(){
+                    $('#js_preloader').fadeOut('slow');
+                });
+            }, 100);
+        })
+    </script>
+    <script type="text/javascript" src="js/map.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD09gZY2fkBhBp213AAKuNXU7rOHnV1uz4&amp;callback=initMap" async="async" defer="defer"></script>
+
+</body>
+</html>

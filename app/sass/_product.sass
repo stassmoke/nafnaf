@@ -1,0 +1,550 @@
+.product
+    padding-top: 35px
+    padding-bottom: 35px
+    transition: none
+    .row
+        margin-bottom: 80px
+    .col-1
+        width: 48%
+        transition: none
+
+    .col-2
+        width: 43.7%
+        padding-left: 130px
+        transition: none
+
+    .product-image-list
+        position: relative
+        transition: none
+
+        .swiper-slide
+            transition: none
+            transition: opacity 0.8s
+            &.swiper-slide-duplicate-active
+                opacity: 1
+        .swiper-pagination
+            transition: none
+            width: auto!important
+        &._mobile
+            //display: none
+            //visibility: hidden
+            transition: none
+            height: 1px
+            opacity: 0
+            overflow: hidden
+    .product-image-item
+        height: 468px
+    //    width: calc(50% - 5px)
+    //    margin-right: 0
+    //    margin-bottom: 10px
+    //    cursor: url(../img/icons/zoom.svg), auto
+    //    opacity: 1
+    //    .image-holder__img
+    //        pointer-events: none
+
+    .product-name
+        font-size: 18px
+        line-height: 29px
+        font-weight: 600
+        color: #1F2226
+        margin-bottom: 18px
+
+    .error-red
+        margin-bottom: 18px
+
+    .product-article
+        font-weight: 600
+        font-size: 10px
+        line-height: 13px
+        letter-spacing: 0.05em
+        margin-bottom: 32px
+        color: #1F2226
+        span
+            font-weight: normal
+
+    .product-price
+        display: inline-flex
+        flex-direction: row
+        position: relative
+        align-items: flex-start
+        justify-content: flex-start
+        margin-bottom: 30px
+
+        .price-now
+            font-size: 18px
+            color: #14171A
+            line-height: 24px
+            font-weight: 500
+            margin-right: 15px
+
+        .price-old
+            color: #9DA2A6
+            line-height: 24px
+            font-weight: 500
+            font-size: 18px
+            text-decoration: line-through
+
+        .product-discount
+            position: absolute
+            right: -40px
+            top: -7px
+
+            background-color: #FAEBF4
+            padding: 1px 5px
+            font-size: 10px
+            letter-spacing: 0.05em
+            line-height: 13px
+            font-weight: 500
+            color: #17181A
+            &:before
+                content: ''
+                border-top: 7.5px solid transparent
+                border-right: 3px solid #FAEBF4
+                border-bottom: 7.5px solid transparent
+                position: absolute
+                top: 0
+                left: -3px
+                height: 0
+                width: 0
+
+    .product-color
+        .color-title
+            display: flex
+            flex-direction: row
+            justify-content: flex-start
+            align-items: flex-start
+            margin-bottom: 14px
+
+        .color
+            font-size: 11px
+            font-weight: 600
+            color: #1F2226
+            line-height: 15px
+            margin-right: 12px
+
+        .color-select
+            font-size: 11px
+            line-height: 15px
+            font-weight: normal
+            color: #1F2226
+
+    .color-radio
+        display: flex
+        flex-direction: row
+        padding-left: 5px
+
+    .block-color
+        padding-bottom: 43px
+        border-bottom: 1px solid #E6E6E6
+        margin-bottom: 31px
+
+    .size-error
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        margin-bottom: 14px
+        .size-text
+            font-size: 11px
+            font-weight: 600
+            color: #1F2226
+            line-height: 15px
+        .error-red
+            display: inline-block
+            width: auto
+            padding: 2px 7px
+            margin: 0 0 0 15px
+    .select-size
+        display: flex
+        flex-direction: row
+        justify-content: flex-start
+        margin: 0 0 14px 0
+
+        .container-input__big
+            height: 40px
+            margin-bottom: 6px
+            padding: 0
+            margin-right: 5px
+
+        .checkmark-big
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: center
+            font-size: 11px
+            height: 100% !important
+            width: 100% !important
+            font-weight: 600
+            line-height: 15px
+            text-align: center
+            transition: .2s all ease-in-out
+            position: relative
+            top: auto
+            left: auto
+            background-color: transparent !important
+            min-width: 34px
+            max-width: 34px
+            max-height: 34px
+            border: 1px solid transparent !important
+        .container-input__big
+            input:checked ~ .checkmark-big
+                border: 1px solid #1F2226 !important
+                transition: .2s all ease-in-out
+                background-color: transparent
+                opacity: 1
+            &._no-model
+                .checkmark-big
+                    text-decoration: line-through
+                    color: #9DA2A6
+                    cursor: not-allowed
+                    pointer-events: none
+                input
+                    pointer-events: none
+
+            &._last-model
+                .checkmark-big
+                    &:before
+                        content: '!'
+                        position: absolute
+                        right: 0
+                        top: 0
+                        width: 12px
+                        height: 12px
+                        display: inline-block
+                        background-color: #FAEBF4
+                        font-size: 10px
+                        line-height: 1.3
+                        color: #1F2226
+
+    .block-size
+        margin-bottom: 36px
+
+    .btn-vertical
+        margin-bottom: 16px
+        .btn
+            height: 60px
+            width: 100%
+            display: block
+            &:first-of-type
+                margin-bottom: 10px
+
+    .btns
+        text-align: center
+        .btn-clear
+            font-weight: 500
+            font-size: 11px
+            border: 1px solid #E5E5E5
+            line-height: 40px
+            margin-left: 0
+            max-width: 394px
+            width: 100%
+            color: #1F2226
+            text-transform: none
+            margin-bottom: 40px
+            &:hover
+                border: 1px solid #1F2226!important
+
+    .product-desc
+        font-size: 11px
+        line-height: 24px
+        padding-top: 20px
+    .product-desc-wrap
+        //margin-bottom: 35px
+        transition: none
+        .text-more
+            display: none
+            transition: height 0.3s cubic-bezier(0,0,0,1)
+
+        .more-btn
+            font-weight: 500
+            font-size: 13px
+            line-height: 16px
+            position: relative
+            border-bottom: 1px solid $borders2
+            padding-bottom: 12px
+            margin-bottom: 23px
+            padding-top: 13px
+            cursor: pointer
+            .icon-more
+                position: absolute
+                z-index: 2
+                top: 21px
+                right: 4px
+                width: 8px
+                height: 2px
+                background-color: $black
+                display: inline-block
+                cursor: pointer
+                &:before
+                    position: absolute
+                    content: ""
+                    top: -3px
+                    right: 3px
+                    height: 8px
+                    width: 2px
+                    background-color: black
+                    display: inline-block
+                    opacity: 1
+                    transition: 0.25s
+
+            &._open
+                z-index: 2
+                .icon-more
+                    &:before
+                        opacity: 0
+                        transition: 0.25s
+
+    .product-desc-label
+        font-weight: 600
+
+    .care-info
+        display: flex
+        margin: 12px 0
+    .care-info-item
+        width: 18px
+        margin-right: 9px
+        outline: none
+
+    .like-list
+        margin-bottom: 0!important
+    .like-slider
+        margin-bottom: 0!important
+        .item-catalog
+            height: inherit
+        .image-holder
+            max-height: 460px
+
+#product-gallery
+    justify-content: center
+    overflow: hidden
+.product-gallery-slider
+    //max-width: 100vw
+    width: 100%
+    max-width: 440px
+    overflow: visible
+    .slider-item
+        width: 440px
+        max-height: 720px
+        height: 100%
+        transition: none
+        transition: opacity 0.8s
+        &.swiper-slide-duplicate-active
+            opacity: 1
+
+    .swiper-button-next, .swiper-button-prev
+        background: none
+        margin-top: 0
+        svg
+            width: 52px
+            height: 35px
+
+    .swiper-button-next
+        margin-top: 0
+        background-image: none
+        position: absolute
+        left: 60%
+        right: 0
+        top: 40px
+        bottom: 40px
+        width: auto
+        height: auto
+        cursor: pointer
+        svg
+            position: absolute
+            top: 50%
+            right: 31px
+            margin-top: -11px
+            opacity: 0
+            cursor: pointer
+        &:hover
+            svg
+                opacity: 1
+    .swiper-button-prev
+        margin-top: 0
+        background-image: none
+        position: absolute
+        right: 60%
+        left: 0
+        top: 0
+        bottom: 0
+        width: auto
+        height: auto
+        cursor: pointer
+        svg
+            position: absolute
+            top: 50%
+            left: 31px
+            margin-top: -11px
+            opacity: 0
+            cursor: pointer
+        &:hover
+            svg
+                opacity: 1
+
+
+    .gallery-pagination
+        bottom: 0
+        font-weight: 600
+        font-size: 18px
+        line-height: 24px
+
+@media (max-width: 1200px)
+    .product
+        .col-2
+            padding-left: 60px
+        .product-image-item
+            height: 400px
+
+@media (max-width: 1200px)
+    .product
+        .col-2
+            width: 52%
+
+@media (max-width: 1000px)
+    .product
+        .col-2
+            padding-left: 30px
+
+        .error-red
+            text-align: left
+            padding-left: 8px
+        .product-image-item
+            height: 360px
+
+@media (max-width: 860px)
+    .product
+        .product-image-item
+            height: 320px
+
+@media (max-width: 800px)
+    .product
+        .product-image-item
+            height: 280px
+@media (max-width: 700px)
+    .product
+        .product-image-item
+            height: 260px
+
+@media (min-width: 641px)
+    .product
+        .product-image-list._off
+            .swiper-wrapper
+                transform: none !important
+            .swiper-pagination
+                display: none
+            .swiper-wrapper
+                display: flex
+                flex-wrap: wrap
+                justify-content: space-between
+            .product-image-item
+                width: calc(50% - 5px) !important
+                margin-right: 0 !important
+                &.swiper-slide-duplicate-prev,
+                &.swiper-slide-duplicate
+                    display: none
+            .product-image-item
+                width: calc(50% - 5px)
+                margin-right: 0
+                margin-bottom: 10px
+                cursor: url(../img/icons/zoom.svg), auto
+                opacity: 1
+                //height: 468px
+                .image-holder__img
+                    pointer-events: none
+
+
+@media (max-width: 640px)
+    .product
+        padding-top: 30px
+        padding-bottom: 40px
+        .row
+            margin-bottom: 48px
+        .col-1
+            width: 100%
+        .col-2
+            width: 100%
+            padding-left: 0
+
+        .product-image-list
+            overflow: hidden
+            margin-bottom: 20px
+            display: none
+            visibility: hidden
+            &:before
+                content: ""
+                position: absolute
+                z-index: 2
+                top: 40px
+                right: 20px
+                width: 24px
+                height: 24px
+                display: block
+                background-image: url("../img/icons/zoom.svg")
+                background-position: center
+                background-repeat: no-repeat
+                background-size: contain
+            &._mobile
+                display: block
+                visibility: visible
+                transition: none
+                height: auto
+                opacity: 1
+            .swiper-wrapper
+                flex-wrap: nowrap
+            .product-image-item
+                max-height: 440px
+                height: auto
+                margin-bottom: 0
+        .product-name
+            margin-bottom: 15px
+        .product-article
+            margin-bottom: 38px
+        .product-color
+            .color-title
+                margin-bottom: 19px
+
+        .block-color
+            margin-bottom: 30px
+        .btns .btn-clear
+            border: 1px solid #1f2226
+            margin-bottom: 5px
+
+
+    .viewed-list
+        margin-bottom: 28px !important
+
+@media (max-width: 520px)
+    .product-gallery-slider
+        max-width: 100%
+        .gallery-pagination
+            bottom: 17px
+            font-size: 18px
+        .swiper-button-next, .swiper-button-prev
+            svg
+                width: 48px
+                height: 34px
+                opacity: 1
+                *
+                    fill: $black
+        .swiper-button-next
+            svg
+                right: 17px
+        .swiper-button-prev
+            svg
+                left: 17px
+
+    #product-gallery
+        padding-top: 0
+        padding-bottom: 50px
+        max-height: 100%
+        height: 100%
+    .modal_wrapper .modal_close
+        background-color: #ffffff
+        border-radius: 50%
+        padding: 8px 14px
+        top: 15px
+        right: 15px
+        width: 40px
+        height: 40px
+
+.product-image-item.image-holder.swiper-slide.swiper-slide-duplicate-prev
+    display: block

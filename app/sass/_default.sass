@@ -1,0 +1,2057 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+*
+    box-sizing: border-box
+    -webkit-tap-highlight-color: transparent
+    transition: all .25s
+    webkit-tap-highlight-color: transparent
+
+html
+    overflow-x: hidden
+    transition: none
+//scroll-behavior: smooth
+
+.body-wrap
+    font-family: $default-font
+    font-size: 14px
+    color: $black
+    position: relative
+    margin: 0
+    background-color: $white
+    overflow-x: hidden
+    scroll-behavior: smooth
+    border: 5px $accent_pink solid
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    transition: none
+    > *
+        flex-grow: 1
+        transition: none
+    .header, .breadkrumbs, .footer
+        flex-grow: inherit
+    &.courses-wrap
+        background-color: #ffffff
+    @media (max-width: 520px)
+        border-width: 3px
+
+img
+    border: none
+    outline: none
+    width: 100%
+    height: 100%
+    vertical-align: middle
+    object-fit: contain
+    transition: none
+
+.image-border
+    box-shadow: 6px 6px 0 -1px #edbbd9
+
+.image-holder
+    overflow: hidden
+    position: relative
+    text-align: center
+    vertical-align: middle
+    width: 100%
+
+.image-holder__img
+    -o-object-fit: cover
+    object-fit: cover
+    vertical-align: middle
+    height: 100%
+    width: 100%
+    position: relative
+    transition: opacity 0.35s
+    &._hover
+        position: absolute !important
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        opacity: 0
+        transition: opacity 0.35s
+
+.centered
+    text-align: center
+
+a
+    border: none
+    outline: none
+    text-decoration: none
+    display: inline-block
+    color: inherit
+    &:hover
+        color: $accent_pink
+
+ul, figure
+    padding: 0
+    margin: 0
+
+ul li
+    list-style: none
+
+p
+    margin-top: 0
+    color: #3D454D
+    &:last-child
+        margin-bottom: 0
+
+u
+    text-decoration: none
+    padding-bottom: 2px
+    border-bottom: 1px solid #000
+
+b,
+strong
+    font-weight: 600
+
+select
+    appearance: none
+    option[disabled]
+        display: none
+
+input
+    outline: none
+    &:hover, &:focus
+//border: 1px solid #39A31F!important
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none
+    margin: 0
+/* <-- Apparently some margin are still there even though it's hidden */
+
+
+input,
+textarea
+    outline: none
+    border-radius: 0
+    resize: none
+    &:focus, &:active, &:visited
+        outline: none
+
+    &::placeholder
+        color: $innactive
+        font-family: Montserrat
+        font-size: 13px
+        line-height: 24px
+        text-align: center
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus
+    background: inherit
+    transition: background-color 5000s ease-in-out 0s
+
+input
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+
+input[type='number']
+    -moz-appearance: textfield
+
+//radio button  //
+
+[type="radio"]
+    &:checked, &:not(:checked)
+        position: absolute
+        left: -9999px
+    &:checked + label, &:not(:checked) + label
+        position: relative
+        padding-left: 28px
+        cursor: pointer
+        line-height: 20px
+        display: inline-block
+        color: #666
+    &:checked + label:before, &:not(:checked) + label:before
+        content: ''
+        position: absolute
+        left: 0
+        top: 0
+        width: 18px
+        height: 18px
+        border: 1px solid #ddd
+        border-radius: 100%
+        background: #fff
+    &:checked + label:after
+        content: ''
+        width: 12px
+        height: 12px
+        background: #F87DA9
+        position: absolute
+        top: 4px
+        left: 4px
+        border-radius: 100%
+        -webkit-transition: all 0.2s ease
+        transition: all 0.2s ease
+    &:not(:checked) + label:after
+        content: ''
+        width: 12px
+        height: 12px
+        background: #F87DA9
+        position: absolute
+        top: 4px
+        left: 4px
+        border-radius: 100%
+        -webkit-transition: all 0.2s ease
+        transition: all 0.2s ease
+        opacity: 0
+        -webkit-transform: scale(0)
+        transform: scale(0)
+    &:checked + label:after
+        opacity: 1
+        -webkit-transform: scale(1)
+        transform: scale(1)
+
+// radio button //
+
+// radio button color//
+.color-radio
+    .container-color
+        display: block
+        position: relative
+        padding-left: 32px
+        margin-bottom: 12px
+        cursor: pointer
+        font-size: 22px
+        -webkit-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
+        input
+            position: absolute
+            opacity: 0
+            cursor: pointer
+            height: 0
+            width: 0
+
+    .checkmark
+        position: absolute
+        top: 0
+        left: 0
+        height: 20px
+        width: 20px
+        background-color: #eee
+        border-radius: 50%
+        border: none
+
+    .checkmark:after
+        content: ""
+        position: absolute
+        opacity: 0
+        display: block
+        -webkit-transform: scale(0)
+        transform: scale(0)
+        transition: all 0.2s ease
+        border: 1px solid #1F2226
+
+    .container-color
+        input:checked ~ .checkmark:after
+            top: -5px
+            left: -5px
+            opacity: 1
+            -webkit-transform: scale(1)
+            transform: scale(1)
+            transition: all 0.2s ease
+
+        .checkmark:after
+            top: 0
+            left: 0
+            width: 28px
+            height: 28px
+            border-radius: 50%
+            background: transparent
+
+    @media (max-width: 640px)
+        .container-color
+            padding-left: 50px
+            .checkmark
+                height: 30px
+                width: 30px
+                &:after
+                    width: 38px
+                    height: 38px
+
+// radio button color//
+
+
+
+.bg-modal
+    position: fixed
+    width: 100%
+    height: 100%
+    z-index: 1
+    display: none
+    &._open
+        display: block
+
+.btn-all__filters
+    font-size: 10px
+    font-weight: 500
+    line-height: 13px
+    letter-spacing: 0.05em
+    cursor: pointer
+    position: relative
+    text-transform: uppercase
+    padding-left: 23px
+    padding-bottom: 17px
+    span
+        color: $black
+        transition: .28s
+    &:before
+        content: ""
+        position: absolute
+        left: 0
+        top: calc(50% - 14px)
+        width: 13px
+        height: 11px
+        transition: .25s
+        opacity: 1
+        background: transparent url("data:image/svg+xml,%3Csvg width='12' height='11' viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 8H12V9H0V8Z' fill='%231F2226'/%3E%3Cpath d='M7.75 9.75C7.05964 9.75 6.5 9.19036 6.5 8.5C6.5 7.80964 7.05964 7.25 7.75 7.25C8.44036 7.25 9 7.80964 9 8.5C9 9.19036 8.44036 9.75 7.75 9.75Z' fill='white' stroke='%231F2226'/%3E%3Cpath d='M0 1.99999L12 2V2.99999L0 2.99999V1.99999Z' fill='%231F2226'/%3E%3Cpath d='M4.25 3.75C3.55964 3.75 3 3.19036 3 2.5C3 1.80964 3.55964 1.25 4.25 1.25C4.94036 1.25 5.5 1.80964 5.5 2.5C5.5 3.19036 4.94036 3.75 4.25 3.75Z' fill='white' stroke='%231F2226'/%3E%3C/svg%3E%0A") center no-repeat
+        background-size: contain
+    &:after
+        content: ""
+        position: absolute
+        left: 0
+        top: calc(50% - 14px)
+        width: 13px
+        height: 11px
+        transition: .25s
+        opacity: 0
+        background: transparent url("data:image/svg+xml,%3Csvg width='12' height='11' viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 8H12V9H0V8Z' fill='%23EDBBD9'/%3E%3Cpath d='M7.75 9.75C7.05964 9.75 6.5 9.19036 6.5 8.5C6.5 7.80964 7.05964 7.25 7.75 7.25C8.44036 7.25 9 7.80964 9 8.5C9 9.19036 8.44036 9.75 7.75 9.75Z' fill='%23EDBBD9' stroke='%23EDBBD9'/%3E%3Cpath d='M0 1.99999L12 2V2.99999L0 2.99999V1.99999Z' fill='%23EDBBD9'/%3E%3Cpath d='M4.25 3.75C3.55964 3.75 3 3.19036 3 2.5C3 1.80964 3.55964 1.25 4.25 1.25C4.94036 1.25 5.5 1.80964 5.5 2.5C5.5 3.19036 4.94036 3.75 4.25 3.75Z' fill='%23EDBBD9' stroke='%23EDBBD9'/%3E%3C/svg%3E%0A") center no-repeat
+        background-size: contain
+    &:hover
+        span
+            color: $accent_pink
+            transition: .23s
+        &:before
+            opacity: 0
+            transition: .25s
+        &:after
+            opacity: 1
+            transition: .25s
+
+.btn-filters__dropdown
+    font-weight: 600
+    font-size: 12px
+    line-height: 15px
+    letter-spacing: 0.05em
+    text-transform: uppercase
+    padding-right: 10px
+    width: 100%
+    margin-bottom: 12px
+    position: relative
+    cursor: pointer
+    width: auto
+    span
+        color: $black
+        transition: 0.33s
+    &:hover
+        span
+            color: $accent_pink !important
+            transition: 0.33s
+        &:before
+            opacity: 0
+            transition: 0.25s
+        &:after
+            opacity: 1
+            transition: 0.25s
+    &:before
+        content: ""
+        position: absolute
+        right: -1px
+        top: calc(50% - 11px)
+        width: 8px
+        height: 4px
+        background-image: url(../img/icons/arrow-icon.svg)
+        background-repeat: no-repeat
+        -webkit-background-size: contain
+        background-size: contain
+        background-position: center
+        transition: 0.25s
+        pointer-events: none
+    &:after
+        opacity: 0
+        content: ""
+        position: absolute
+        right: -1px
+        top: calc(50% - 11px)
+        width: 8px
+        height: 4px
+        background-image: url(../img/icons/arrow-icon-pink.svg)
+        background-repeat: no-repeat
+        -webkit-background-size: contain
+        background-size: contain
+        background-position: center
+        transition: 0.25s
+        pointer-events: none
+
+.btn
+    color: $white
+    background: $black
+    box-shadow: none
+    font-weight: 600
+    font-size: 12px
+    font-family: Montserrat, "Open Sans", sans-serif
+    text-align: center
+    letter-spacing: 0.08em
+    line-height: 35px
+    text-transform: uppercase
+    outline: none
+    border: none
+    cursor: pointer
+    padding-left: 20px
+    padding-right: 20px
+    &:hover
+        background-color: $accent_pink
+        color: $black
+    &.btn-border
+        color: $black
+        background: none
+        border: 1px solid $black
+        &:hover
+            color: $accent_pink
+            background: none
+            border: 1px solid $accent_pink
+
+.input-holder
+    &.error
+        border-color: $error !important
+        .error-text
+            display: block !important
+
+.error-red
+    background-color: #FAEBF4
+    width: 100%
+    color: #000
+    font-size: 11px
+    line-height: 15px
+    padding: 3px 2px 1px
+    text-align: center
+
+.input-holder
+    width: 100%
+    font-size: 13px
+    line-height: 24px
+    border: none
+    border-bottom: 1px solid black
+    position: relative
+    color: $font_color2
+    padding: 0 0 6px
+    margin-bottom: 41px
+    &.input-holder__select
+        border-color: #CCCCCC
+
+input[type="text"], textarea
+    width: 100%
+    border: none
+    outline: none
+    line-height: 24px
+    &:focus, &:active, &:visited
+        outline: none
+        &::placeholder
+            color: transparent !important
+
+    &::placeholder
+        color: $innactive
+        font-size: 13px
+        line-height: 24px
+        text-align: left
+        transition: 0.25s
+
+.container
+    max-width: 1270px
+    width: 100%
+    margin: auto
+    padding: 0 25px
+    position: relative
+    z-index: 2
+    transition: none
+    @media (max-width: 520px)
+        padding: 0 12px
+
+.link-all
+    font-weight: 600
+
+._no-scroll
+    overflow: hidden
+
+._accent_pink
+    color: $accent_pink
+
+._white
+    color: $white
+
+._t-center
+    text-align: center
+
+._italic
+    font-style: italic
+    font-size: 15px
+    line-height: 27px
+
+._strong
+    font-weight: 600
+
+.section-title
+    font-weight: 600
+    font-size: 22px
+    line-height: 29px
+    text-align: center
+    letter-spacing: 0.05em
+    text-transform: uppercase
+    margin: 0 0 22px
+    @media (max-width: 1000px)
+        margin-bottom: 13px
+    @media (max-width: 520px)
+        margin-bottom: 17px
+
+.breadkrumbs
+    font-weight: 600
+    font-size: 10px
+    line-height: 12px
+    letter-spacing: 0.05em
+    text-transform: uppercase
+    color: #000000
+    //border-bottom: 1px $borders2 solid
+    padding-bottom: 12px
+    &:before
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 25px
+        right: 25px
+        height: 1px
+        background-color: $borders2
+
+    .breadkrumbs_item
+        margin-right: 6px
+        //display: initial
+        line-height: 20px
+        display: inline-block
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+        max-width: 255px
+        &:not(:first-child)
+            &:before
+                content: ""
+                width: 10px
+                height: 1px
+                display: inline-block
+                background-color: $innactive
+                vertical-align: middle
+                margin-bottom: 2px
+                margin-right: 9px
+        &._active
+            color: $innactive
+            cursor: default
+            pointer-events: none
+    @media (max-width: 520px)
+        padding-bottom: 33px
+        &:before
+            left: 12px
+            right: 12px
+
+.pagination
+    position: absolute
+    right: 0
+    top: calc(50% - 2px)
+    transform: translateY(-50%)
+    .page-number
+        margin-right: 8px
+        cursor: pointer
+        font-size: 11px
+        font-weight: 500
+        line-height: 15px
+        &:hover
+            color: #EDBBD9
+        &._active
+            color: #EDBBD9
+        &:last-of-type
+            margin-right: 0
+
+    .btn-pagination
+        outline: none
+        border: none
+        cursor: pointer
+        padding: 0
+        width: 12px
+        height: 10px
+        display: inline-block
+        background: transparent url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.89474 1.28938L4.18412 0.881627L3.36862 0.302872L3.07924 0.710622L3.89474 1.28938ZM1.00307 4.5L0.595321 4.21062C0.472322 4.38394 0.472322 4.61606 0.595321 4.78938L1.00307 4.5ZM3.07924 8.28938L3.36862 8.69713L4.18412 8.11837L3.89474 7.71062L3.07924 8.28938ZM11.4355 5L11.9355 5L11.9355 4L11.4355 4L11.4355 5ZM3.07924 0.710622L0.595321 4.21062L1.41082 4.78938L3.89474 1.28938L3.07924 0.710622ZM0.595321 4.78938L3.07924 8.28938L3.89474 7.71062L1.41082 4.21062L0.595321 4.78938ZM1.00307 5L11.4355 5L11.4355 4L1.00307 4L1.00307 5Z' fill='%231F2226'/%3E%3C/svg%3E%0A") center no-repeat
+        &:hover
+            background: transparent url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.89474 1.28938L4.18412 0.881627L3.36862 0.302872L3.07924 0.710622L3.89474 1.28938ZM1.00307 4.5L0.595321 4.21062C0.472322 4.38394 0.472322 4.61606 0.595321 4.78938L1.00307 4.5ZM3.07924 8.28938L3.36862 8.69713L4.18412 8.11837L3.89474 7.71062L3.07924 8.28938ZM11.4355 5L11.9355 5L11.9355 4L11.4355 4L11.4355 5ZM3.07924 0.710622L0.595321 4.21062L1.41082 4.78938L3.89474 1.28938L3.07924 0.710622ZM0.595321 4.78938L3.07924 8.28938L3.89474 7.71062L1.41082 4.21062L0.595321 4.78938ZM1.00307 5L11.4355 5L11.4355 4L1.00307 4L1.00307 5Z' fill='%23EDBBD9'/%3E%3C/svg%3E%0A") center no-repeat
+    .back-page
+        margin-right: 10px
+
+    .next-page
+        margin-left: 16px
+        transform: rotate(180deg)
+    @media (max-width: 1100px)
+        position: relative
+        top: auto
+        transform: translateY(0)
+        right: auto
+
+.swiper-button-prev, .swiper-button-next
+    outline: none
+    width: 33px
+    height: 24px
+    &.swiper-button-disabled
+        opacity: 0
+    svg:hover > *
+        fill: $accent_pink
+
+.top-slider .swiper-pagination
+    transform: translate3d(0, 0, 0) !important
+    right: auto
+    top: auto
+    bottom: 10px
+    left: 0 !important
+    z-index: 99
+    width: 100% !important
+
+    .swiper-pagination-bullet
+        transition: 1.2s all ease-in-out
+        pointer-events: auto
+        cursor: pointer
+        &:before
+            transition: 1.2s all ease-in-out
+
+.swiper-pagination-bullets-dynamic
+    transition: all 0.9s !important
+
+.slick-dots
+    display: flex
+
+.slick-active
+    .swiper-pagination-bullet
+        width: 20px
+        position: relative
+        overflow: hidden
+        transition: .9s all ease-in-out
+        cursor: auto
+        &:before
+            left: 0
+            right: 0
+            width: 100%
+            background-color: #EDBBD9
+            pointer-events: none
+            webkit-tap-highlight-color: transparent
+
+
+.swiper-pagination-bullet
+    width: 12px
+    height: 3px
+    border-radius: 0
+    background: #000
+    opacity: 1
+    margin: 0 5px !important
+    transition: .9s all ease-in-out !important
+    overflow: hidden
+    position: relative
+    display: inline-block !important
+    transform: scale(1) !important
+    left: 0 !important
+    webkit-tap-highlight-color: transparent
+    cursor: pointer
+    &:before
+        content: ''
+        position: absolute
+        top: 0
+        width: 0
+        transition: .9s all ease-in-out
+        height: 100%
+        pointer-events: none
+        webkit-tap-highlight-color: transparent
+    &.swiper-pagination-bullet-active-next, &.swiper-pagination-bullet-active-next-next
+        &:before
+            left: 0
+
+    &.swiper-pagination-bullet-active-prev, &.swiper-pagination-bullet-active-prev-prev
+        &:before
+            right: 0
+
+    &.swiper-pagination-bullet-active
+        width: 20px
+        position: relative
+        overflow: hidden
+        transition: .9s all ease-in-out
+        &:before
+            left: 0
+            right: 0
+            width: 100%
+            background-color: #EDBBD9
+            pointer-events: none
+            webkit-tap-highlight-color: transparent
+        &.slideNext
+            &:before
+                left: 0
+                right: auto
+                background-color: #EDBBD9
+                width: 100%
+                transition: .9s all ease-in-out
+                pointer-events: none
+                webkit-tap-highlight-color: transparent
+        &.slidePrev
+            &:before
+                right: 0
+                left: auto
+                background-color: #EDBBD9
+                width: 100%
+                transition: .9s all ease-in-out
+                pointer-events: none
+                webkit-tap-highlight-color: transparent
+
+.swiper-slide
+    opacity: 0.2
+    transition: 0.25s
+    &.swiper-slide-active
+        opacity: 1
+        transition: 0.25s
+
+.collection-video, .blog-video
+    position: relative
+    margin-bottom: 70px
+    //height: 501px
+    .player
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        z-index: 2
+        width: 100%
+        height: 100%
+        transition: none
+
+    .player-preload
+        position: relative
+        z-index: 3
+        height: 100%
+        width: 100%
+        background-position: center
+        background-size: cover
+        background-repeat: no-repeat
+        pointer-events: none
+        max-height: 510px
+
+    .player-btn
+        width: 252px
+        height: 90px
+        color: $white
+        display: flex
+        align-items: center
+        justify-content: center
+        position: absolute
+        left: 0
+        bottom: 0
+        z-index: 4
+        cursor: pointer
+        background-color: $black
+        font-family: Montserrat
+        font-weight: 600
+        font-size: 12px
+        letter-spacing: 0.05em
+        text-transform: uppercase
+        .icon
+            width: 50px
+            height: 50px
+            margin-right: 12px
+
+    @media (max-width: 520px)
+        .player-btn
+            width: 172px
+            height: 54px
+            font-size: 10px
+            .icon
+                width: 24px
+                height: 24px
+
+.row
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 144px
+    &:last-of-type
+        margin-bottom: 76px
+
+.row-col__1
+    width: 25.7%
+    padding-right: 62px
+    position: relative
+    z-index: 1
+
+.row-col__2
+    width: 74.3%
+    position: relative
+    z-index: 1
+
+.row__desc
+    //width: 68%
+    max-width: 596px
+    z-index: 2
+    position: relative
+    p
+        margin-bottom: 20px
+    a
+        display: inline
+
+.title-main__uppercase
+    font-weight: 600
+    font-size: 22px
+    line-height: 29px
+    letter-spacing: 0.05em
+    text-transform: uppercase
+    margin-top: 0
+    margin-bottom: 16px
+    padding-top: 5px
+
+.title-small__sub
+    font-size: 13px
+    color: $black
+    font-weight: 600
+    line-height: 24px
+
+.row__desc
+    color: $font_color
+    font-size: 13px
+    line-height: 24px
+    margin-bottom: 23px
+
+.title-main__sub
+    font-weight: 600
+    font-size: 18px
+    line-height: 24px
+
+.swiper-container-initialized,
+.swiper-slide
+    transition: none
+
+.gallery-small
+    overflow: hidden
+    max-width: 1220px
+    transition: none
+    .swiper-container
+        width: 100%
+        max-width: 592px
+        margin-bottom: 139px
+        overflow: visible
+        transition: none
+    //max-width: 1270px
+    .swiper-slide
+        height: 292px
+        width: 596px
+        transition: none
+        transition: opacity 0.8s
+        &.swiper-slide-duplicate-active
+            opacity: 1
+    .gallery-small__next
+        margin-top: 0
+        background-image: none
+        position: absolute
+        left: 50%
+        right: -50vw
+        top: 0
+        width: auto
+        height: 100%
+        cursor: pointer
+        svg
+            position: absolute
+            top: 50%
+            left: 280px
+            margin-top: -11px
+            opacity: 0
+            cursor: pointer
+        &:hover
+            svg
+                opacity: 1
+    .gallery-small__prev
+        margin-top: 0
+        background-image: none
+        position: absolute
+        right: 50%
+        left: -50vw
+        top: 0
+        width: auto
+        height: 100%
+        cursor: pointer
+        svg
+            position: absolute
+            top: 50%
+            right: 280px
+            margin-top: -11px
+            opacity: 0
+            cursor: pointer
+        &:hover
+            svg
+                opacity: 1
+
+.nice-select
+    border: none
+    width: 100%
+    padding-left: 0
+    height: auto
+    line-height: 24px
+    &:after
+        border: none
+        background-image: url("../img/icons/arrow-icon.svg")
+        background-position: center
+        background-repeat: no-repeat
+        width: 10px
+        height: 10px
+        right: 0
+        transform: none
+        transform-origin: 50%
+    &.open
+        &:after
+            transform: rotate(180deg)
+    .list
+        right: 0
+        left: auto
+        border-radius: 0
+        margin-top: 7px
+        transform: scale(1) translateY(0)
+        width: 100%
+    .option
+        font-size: 13px
+        line-height: 34px
+        max-height: 34px
+        &.selected
+            font-weight: 600
+
+.nice-select__mobile
+
+.social-list
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+    cursor: default
+    position: relative
+    margin-bottom: 74px
+
+.social-item
+    margin-right: 40px
+    position: relative
+    display: flex !important
+    align-items: center
+    height: 20px
+    cursor: pointer
+    border: none !important
+    &:last-child
+        margin-right: 0
+    svg, img
+        opacity: 1
+        width: auto
+        height: 100%
+        &.hover-icon
+            position: absolute
+            opacity: 0
+    &:hover
+        svg, img
+            opacity: 0
+            &.hover-icon
+                position: absolute
+                opacity: 1
+
+.go-shops, .go-blogs
+    font-weight: 500
+    font-size: 18px
+    line-height: 24px
+    box-shadow: inset 0 -1px 0 0 #404040
+    padding-bottom: 7px
+    margin-bottom: 72px
+    color: #1F2226
+    > *
+        vertical-align: middle
+    span
+        padding-right: 3px
+        color: $black
+    svg > *
+        fill: $black
+    &:hover
+        box-shadow: inset 0 -1px 0 0 $accent_pink
+        span
+            color: $accent_pink
+        svg
+            transform: translate(7px)
+            > *
+                fill: $accent_pink
+
+.top-slider .go-shops
+    box-shadow: none
+    &:hover
+        background-color: $accent_pink
+
+.filters-container
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    flex-wrap: wrap
+    .btn-filters
+        margin-right: 32px
+        white-space: nowrap
+        &:last-child
+            margin-right: 0
+
+.btn-selected__filters
+    position: relative
+    padding: 2px 10px 5px 10px
+    border: 1px solid #E6E6E6
+    margin-right: 1px
+    display: inline-block
+    margin-bottom: 5px
+    transition: .2s all
+
+    &:last-child
+        margin-right: 0
+    span
+        font-size: 11px
+        line-height: 15px
+        padding-right: 11px
+        color: #1F2226
+        font-weight: normal
+    .rem-filder
+        padding: 0
+        width: 8px
+        height: 8px
+        position: absolute
+        z-index: 2
+        right: 8px
+        margin-top: -1px
+        cursor: pointer
+        top: 50%
+        transform: translateY(-50%)
+        transition: .2s all
+        &:hover
+            background: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 7 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.82125 5.89L1 1.06875M1.11278 5.82125L5.93403 1' stroke='%23EDBBD9'/%3E%3C/svg%3E%0A") center no-repeat
+        &:before
+            content: ''
+            background: url("data:image/svg+xml,%3Csvg width='7' height='7' viewBox='0 0 7 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.82125 5.89L1 1.06875M1.11278 5.82125L5.93403 1' stroke='black'/%3E%3C/svg%3E%0A") center no-repeat
+            width: 100%
+            height: 100%
+            background-size: cover
+            position: absolute
+            left: 0
+            cursor: pointer
+            top: 0
+            transition: .2s all
+        &:after
+            opacity: 0
+            content: ''
+            width: 100%
+            height: 100%
+            background-size: cover
+            position: absolute
+            left: 0
+            cursor: pointer
+            top: 0
+            transition: .2s all
+            background: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 7 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.82125 5.89L1 1.06875M1.11278 5.82125L5.93403 1' stroke='%23EDBBD9'/%3E%3C/svg%3E%0A") center no-repeat
+        &:hover
+            &:before
+                opacity: 0
+                transition: .2s all
+            &:after
+                opacity: 1
+                transition: .2s all
+
+.btn-clear
+    font-weight: 600
+    font-size: 11px
+    line-height: 15px
+    color: #1F2226
+    margin-left: 11px
+    cursor: pointer
+
+.btn-show__more
+    width: 100%
+    height: 40px
+    text-align: center
+    background-color: transparent
+    border: 1px solid #E5E5E5
+    font-size: 11px
+    font-weight: 500
+    line-height: 13px
+    color: #1F2226
+    text-transform: initial
+    transition: .3s all ease-in-out
+    letter-spacing: 0
+    &:hover
+        border: 1px solid #1F2226
+        background-color: transparent
+
+.buy-now
+    opacity: 0
+    transition: .2s all ease
+    width: 100%
+    height: 40px
+    text-align: center
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: #EDBBD9
+    color: #ffffff
+    font-size: 12px
+    line-height: 15px
+    letter-spacing: 0.05em
+    text-transform: uppercase
+    font-weight: 600
+    position: absolute
+    bottom: -40px
+    left: 0
+    z-index: 2
+
+.up-btn
+    position: absolute
+    z-index: 99
+    top: -15px
+    right: 25px
+    font-family: Montserrat
+    font-size: 11px
+    line-height: 15px
+    color: #1f2226
+    transform: translateY(-100%)
+    cursor: pointer
+    display: none
+    > *
+        vertical-align: middle
+    span
+        padding-right: 4px
+    &:hover
+        span
+            color: $accent_pink
+        svg
+            > *
+                fill: $accent_pink
+
+    @media (max-width: 620px)
+        top: 30px
+        transform: none
+    @media (max-width: 520px)
+        right: 12px
+
+.item-catalog
+    max-width: 282px
+    width: calc(25% - 30px)
+    background-color: #fff
+    height: 100%
+    position: relative
+    margin-bottom: 44px
+    margin-right: 30px
+    z-index: 1
+    display: flex
+    flex-direction: column
+    transition: none
+    &:hover
+        .image-holder
+            box-shadow: inset 0 0 0 2px $accent_pink
+            transition: all 0.35s
+            .image-holder__img._hover
+                opacity: 1
+                z-index: -1 !important
+                transition: opacity 0.35s
+        .tittle-item
+            transition: all 0.25s
+            color: $accent_pink
+        .image-holder
+            transition: all 0.25s
+            img
+                position: relative
+                z-index: -2
+                .item-title
+                    color: $accent_pink
+    .item-title,
+    .item-catalog__container
+
+        display: block
+    .tag-item
+        text-transform: uppercase
+        font-size: 10px
+        color: #000
+        letter-spacing: 0.05em
+        margin-bottom: 2px
+        line-height: 15px
+        display: block
+    .image-holder
+        display: block
+        position: relative
+        margin-bottom: 17px
+        max-height: 460px
+        width: 100%
+        height: 460px
+        //overflow: visible
+        .image-holder__img
+            width: 100%
+            height: 100%
+            min-height: 100%
+            object-position: center 0
+
+        &:hover
+            .buy-now
+                bottom: 0
+                opacity: 1
+    .tittle-item
+        font-weight: 600
+        font-size: 13px
+        display: block
+        width: 100%
+        position: relative
+        margin-bottom: 10px
+        padding-right: 25px
+        line-height: 17px
+        color: #000
+        transition: all 0.25s
+        &:hover
+            color: #EDBBD9
+
+    .colors-item
+        display: block
+        width: 100%
+        font-size: 11px
+        color: #000
+        line-height: 15px
+        font-weight: normal
+        margin-bottom: 12px
+
+    .price-row
+        display: flex
+        flex-direction: row
+        justify-content: flex-start
+
+    .price-now
+        margin-right: 12px
+        font-size: 13px
+        color: #000
+        line-height: 17px
+        font-weight: normal
+
+    .price-old
+        text-decoration: line-through
+        font-size: 13px
+        color: #9DA2A6
+        line-height: 17px
+        font-weight: normal
+//@media (max-width: 520px)
+//    .input-holder
+//        height: 280px
+
+
+
+.catalog-items
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    //align-items: flex-start
+    margin-right: -30px
+    flex-wrap: wrap
+    transition: none
+
+.container-input
+    display: block
+    position: relative
+    padding-left: 20px
+    font-size: 13px
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    transition: .3s all ease-in-out
+    cursor: default
+    &.container-input__big
+        margin-bottom: 12px
+    span
+        cursor: pointer
+    input
+        position: absolute
+        opacity: 0
+        cursor: pointer
+        height: 0
+        width: 0
+
+.checkmark
+    position: absolute
+    top: 2px
+    left: 0
+    height: 12px
+    width: 12px
+    background-color: #fff
+    border: 1px solid #000
+    transition: .2s all ease-in-out
+    &:hover
+        color: $accent_pink
+
+.checkmark-big
+    height: 34px
+    width: auto
+    background-color: #fff
+
+.container-input
+    transition: .2s all ease-in-out
+    input:checked ~ .checkmark
+
+        transition: .2s all ease-in-out
+        opacity: 1
+
+.container-input__big
+    input:checked ~ .checkmark-big
+        border: 1px solid #1F2226
+        transition: .2s all ease-in-out
+        background-color: transparent
+        opacity: 1
+        &:hover
+            border-color: $accent_pink
+
+.checkmark:after
+    content: ""
+    position: absolute
+    background-color: #000
+    display: none
+    opacity: 0
+    transition: .3s all ease-in-out
+
+.checkmark-big:after
+    content: ""
+    position: absolute
+    background-color: transparent
+    display: none
+    opacity: 0
+    transition: .3s all ease-in-out
+
+.container-input
+    input:checked ~ .checkmark:after
+        display: block
+        opacity: 1
+        transition: .2s all ease-in-out
+        width: 8px
+        height: 8px
+        top: 1px
+        left: 1px
+
+.container-input__big
+    input:checked ~ .checkmark-big:after
+        display: block
+        opacity: 1
+        transition: .2s all ease-in-out
+
+.noUi-target
+    height: 1px
+    box-shadow: none
+    border: none
+
+.noUi-connect
+    background: #000
+    transition: none
+
+.noUi-horizontal
+    background: #E6E6E6
+    .noUi-handle
+        border-radius: 50px
+        overflow: hidden
+        width: 19px
+        height: 19px
+        top: -9px
+        border: none
+        outline: none
+        box-shadow: none
+        background-color: #000
+        &:before,
+        &:after
+            content: none
+
+.noUi-origin
+    transition: none
+
+.noUi-target
+    padding: 0 17px 0 0
+
+.close-modal__filters
+    max-width: 20px
+    max-height: 20px
+    position: absolute
+    right: 0
+    top: 2px
+
+.modal-filters, .modal-all__filters
+    position: absolute
+    top: 33px
+    left: 0
+    z-index: 25
+    background-color: #fff
+    width: 100%
+    max-width: 363px
+    height: auto
+    box-shadow: 0 2px 2px rgba(31, 34, 38, 0.1)
+    overflow: hidden
+    max-height: 0
+    transition: max-height .5s cubic-bezier(0, .7, .3, .8)
+
+    .nice-select
+        .current
+            font-size: 11px
+            white-space: initial
+            color: #9DA2A6
+            &.change
+                color: $black
+    .scroll-subcategory
+        background-color: #fff
+        overflow-y: auto
+        padding: 18px 25px 20px 25px
+        position: relative
+        //margin-bottom: 10px
+    .wrap-button__modal
+        position: relative
+        &:before
+            content: ''
+            position: absolute
+            height: 40px
+            top: -40px
+            left: 0
+            right: 10px
+            background: linear-gradient(to bottom, rgba(153, 153, 153, 0) 0%, rgba(255, 255, 255, 1) 65%)
+            pointer-events: none
+    .wrap-subcategory
+        height: 100%
+        padding-bottom: 10px
+    &._open
+        z-index: 26
+        max-height: 780px
+        transition: max-height 1s linear
+        transition-delay: 0
+
+    .subcategory-title
+        font-size: 10px
+        text-transform: uppercase
+        letter-spacing: 0.05em
+        color: #9DA2A6
+        font-weight: 500
+        line-height: 18px
+        margin-bottom: 5px
+
+    .btn-accept__filters
+        width: 100%
+        height: 40px
+
+    .wrap-button__modal
+        width: 100%
+        padding: 0 25px 20px 25px
+
+    .subcategory
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        height: 100%
+        width: 100%
+        margin-bottom: 7px
+        &:last-of-type
+            margin-bottom: 20px
+
+    .container-input__big
+        margin-right: 5px
+        height: 34px
+        margin-bottom: 6px
+        padding: 0
+
+    .checkmark-big
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: center
+        font-size: 11px
+        font-weight: 600
+        line-height: 15px
+        text-align: center
+        transition: .2s all ease-in-out
+        position: relative
+        top: auto
+        left: auto
+        background-color: transparent
+        min-width: 35px
+        border: 1px solid transparent
+
+.filters-modal__mobile
+    transform: translateX(-100%)
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    max-width: 320px
+    min-width: 280px
+    background-color: #fff
+    z-index: -1
+    height: 100vh
+    pointer-events: none
+    min-height: 100vh
+    transition: .3s all ease-in-out
+    &._open
+        transform: translateX(0)
+        z-index: 510
+        pointer-events: all
+        transition: .3s all ease-in-out
+
+    .title-mobile__filters
+        font-size: 18px
+        font-weight: 600
+        border-bottom: 1px solid #E6E6E6
+        padding: 60px 15px 15px 15px
+        line-height: 24px
+
+    .body-filters__mobile
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        height: calc(100% - 100px)
+        .range-price
+            width: 100%
+            margin: 35px 13px 0 8px
+
+    .main-body
+        padding: 10px 15px 20px 15px
+        overflow-y: auto
+
+    .wrap-btn__modal--footer
+        padding: 20px 15px
+        border-top: 1px solid #E6E6E6
+        position: relative
+        &:before
+            content: ''
+            position: absolute
+            left: 0
+            right: 5px
+            top: -1px
+            height: 48px
+            transform: translateY(-48px)
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) -123.08%, #FFFFFF 59.62%)
+            pointer-events: none
+        .btn-reset__all
+            &:hover
+                border: 1px solid #1f2226
+                background-color: transparent
+                color: #1f2226
+    .main-link
+        display: flex
+        flex-direction: row
+        align-items: center
+        height: 60px
+        justify-content: flex-start
+        border-bottom: 1px solid #E6E6E6
+        font-size: 13px
+        font-weight: 600
+        color: #1F2226
+        position: relative
+        &:before
+            content: ''
+            background: url("data:image/svg+xml,%3Csvg width='6' height='12' viewBox='0 0 6 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 11L5 6L1 1' stroke='%231F2226' stroke-width='1.5'/%3E%3C/svg%3E%0A") center no-repeat
+            -webkit-background-size: cover
+            background-size: cover
+            width: 6px
+            height: 12px
+            position: absolute
+            right: 5px
+            top: 50%
+            transform: translateY(-50%)
+            display: inline-block
+
+    &.filters-modal__mobile--child
+        .main-link
+            &:before
+                content: none
+
+        .checkmark
+            width: 16px
+            height: 16px
+            top: 0
+            border: 1px solid #9DA2A6
+
+        .container-input
+            padding-left: 30px
+            font-weight: 500
+            color: #1F2226
+            input:checked ~ .checkmark:after
+                width: 10px
+                height: 10px
+                top: 2px
+                left: 2px
+            input:checked ~ .checkmark
+                border: 1px solid #1F2226
+
+    .btn-reset__all
+        margin-bottom: 15px
+
+    .btn
+        width: 100%
+        max-width: 100%
+        height: 48px
+
+    .title-mobile__filters--back
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        position: relative
+        span
+            display: inline-block
+            position: relative
+            padding-left: 30px
+            &:after
+                content: ''
+                background: url("data:image/svg+xml,%3Csvg width='9' height='18' viewBox='0 0 9 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 1L1 9L8 17' stroke='%231F2226' stroke-width='1.5'/%3E%3C/svg%3E%0A") center no-repeat
+                width: 9px
+                height: 18px
+                -webkit-background-size: cover
+                background-size: cover
+                position: absolute
+                left: 0
+                top: 50%
+                transform: translateY(-50%)
+                display: inline-block
+
+    .close-modal__mobile
+        max-width: 16px
+        max-height: 16px
+        position: absolute
+        top: 22px
+        right: 22px
+        vertical-align: top
+        line-height: 1
+        z-index: 99
+
+    .subcategory
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        height: 100%
+        width: 100%
+        margin-bottom: 7px
+        &:last-of-type
+            margin-bottom: 20px
+
+    .container-input__big
+        height: 40px
+        margin-bottom: 6px
+        padding: 0
+
+    .checkmark-big
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: center
+        font-size: 11px
+        height: 100% !important
+        width: 100% !important
+        font-weight: 600
+        line-height: 15px
+        text-align: center
+        transition: .2s all ease-in-out
+        position: relative
+        top: auto
+        left: auto
+        background-color: transparent !important
+        min-width: 35px
+        border: 1px solid transparent !important
+
+    .container-input__big
+        input:checked ~ .checkmark-big
+            border: 1px solid #1F2226 !important
+            transition: .2s all ease-in-out
+            background-color: transparent
+            opacity: 1
+    .subcategory
+        &.main-body
+            height: auto
+            margin-left: -15px
+
+    .container-input__big
+        margin-bottom: 15px
+        margin-right: 0
+        margin-left: 15px
+        padding-left: 0 !important
+        width: 40px
+
+.btn-reset__all
+    border: 1px solid #1F2226
+    background-color: transparent
+    color: #1F2226
+    &:hover
+        border: 1px solid #EDBBD9
+        color: #EDBBD9
+        background-color: transparent
+        transition: .15s all ease
+
+.link-icon
+    color: #1F2226
+    font-weight: 500
+    font-size: 11px
+    vertical-align: middle
+    position: relative
+    display: inline-block
+    width: auto
+    span
+        padding-left: 5px
+        vertical-align: middle
+        transition: .25s color ease
+        color: #1F2226
+    svg
+        vertical-align: middle
+        opacity: 1
+        transition: .25s opacity ease
+        position: absolute
+        left: 0
+        top: 50%
+        transform: $translateY
+        &:last-of-type
+            opacity: 0
+    &:hover
+        span
+            transition: .25s color ease
+            color: $accent_pink
+        svg
+            opacity: 0
+            transition: .25s opacity ease
+            &:last-of-type
+                opacity: 1
+
+.svg-holder
+    width: 11px
+    height: 7px
+    display: inline-block
+
+.links-faq
+    display: flex
+    flex-direction: column
+    .link-icon
+        max-width: max-content
+        &:first-of-type
+            margin-bottom: 8px
+
+.tippy-backdrop
+    background-color: $white
+
+.tippy-tooltip
+    background-color: $white
+    color: $black
+    font-style: italic
+    font-weight: normal
+    font-size: 11px
+    line-height: 20px
+    transform: translateY(20px) !important
+
+.preloader
+    position: fixed
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    width: 100vw !important
+    height: 100vh !important
+    background: #fff
+    z-index: 1000
+    opacity: 1
+    visibility: visible
+    transition: all 0s, opacity .25s linear, visibility .25s linear
+    .circle
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        transition: none
+        svg
+            animation: preloader 1s infinite linear
+
+@keyframes preloader
+    0%
+        transform: rotate(0deg)
+
+    100%
+        transform: rotate(360deg)
+
+@-webkit-keyframes preloader
+    0%
+        -webkit-transform: rotate(0deg)
+
+    100%
+        -webkit-transform: rotate(360deg)
+
+@media (max-width: 1200px)
+    .about
+        .row-col__1
+            width: 30%
+            padding-right: 40px
+        .collection-row__col-2,
+        .row-col__2
+            width: 70%
+
+@media (max-width: 1000px)
+    .gallery-small
+        .swiper-container
+            margin: 0 auto 87px
+            width: 100%
+
+        .collection
+            padding-top: 0
+        .collection-row
+            padding-left: 82px
+            padding-right: 82px
+            margin-bottom: 58px
+            &:first-child
+                flex-direction: column-reverse
+                .collection-row__col-2
+                    width: auto
+                    margin: 0 -57px 33px
+
+        .collection-row__col-1,
+        .row-col__1
+            width: 100%
+            padding-right: 0
+        .collection-row__col-2
+        .row-col__2
+            width: 100%
+
+            .collection-row__desc
+                margin-bottom: 30px
+                max-width: 100%
+        .collection-row__title
+            margin-bottom: 18px
+    .key-images
+        padding-top: 43px
+        .collection-row__title
+            max-width: 100%
+            transform: none
+            margin-left: 0
+            top: 0
+            left: 0
+    .btn-block
+        margin-bottom: 76px
+        .to-shopping
+            width: calc(51.33% - 20px)
+
+@media (max-width: 840px)
+    .item-catalog
+        .image-holder
+            height: 310px
+@media (max-width: 680px)
+    .gallery-small
+        .swiper-container
+            margin: 44px auto 55px
+            max-width: calc(100% - 24px)
+        .swiper-slide
+            height: 240px
+        .gallery-small__next
+            display: none
+        .gallery-small__prev
+            display: none
+        .gallery-small__pagination
+            bottom: 15px
+
+/*modal*/
+
+.modal_wrapper
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 9999
+    background: $white
+    border: 5px #edbbd9 solid
+    //display: none
+    visibility: hidden
+    justify-content: center
+    align-items: center
+    opacity: 0
+    transition: none
+    transition: opacity 0.25s
+
+    //z-index: -9999
+
+    &.open
+        display: flex
+        opacity: 1
+        //z-index: 9999
+        visibility: visible
+
+    .modal_close
+        position: absolute
+        top: 25px
+        right: 25px
+        width: 26px
+        height: 26px
+        z-index: 9
+        cursor: pointer
+        background-color: transparent
+        outline: none
+        svg, img
+            pointer-events: none
+
+    .modal_content
+        //display: none
+        visibility: hidden
+        opacity: 0
+        position: relative
+        z-index: 2
+        text-align: center
+        padding: 40px 0
+        width: 100%
+        max-height: calc(100vh - 10px)
+        background: #FFFFFF
+        overflow: auto
+        transition: none
+        transition: opacity 0.25s
+        &.open
+            display: flex
+            opacity: 1
+            visibility: visible
+
+.subcategory.subcategory-price
+    align-content: flex-start
+
+.js-select2
+    width: 100%
+    display: none
+    visibility: hidden
+    cursor: pointer
+
+
+.select2-selection
+    border: none !important
+
+.select2
+    position: relative
+    &:before
+        content: ''
+        top: 50%
+        transform: translateY(-50%)
+        right: 0
+        position: absolute
+        background: url("data:image/svg+xml,%3Csvg width='8' height='4' viewBox='0 0 8 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L4 3L7 1' stroke='%231F2226' stroke-width='1.5'/%3E%3C/svg%3E%0A") center no-repeat
+        display: inline-block
+        width: 8px
+        height: 4px
+        transition: .2s all ease
+    input
+        text-align: left !important
+        &::placeholder
+            text-align: left !important
+            color: #9da2a6
+    &.select2-container--open
+        &:before
+            transform: rotate(180deg)
+            transition: .2s all ease
+            transform-origin: center
+            line-height: 1
+
+.select2-selection__arrow
+    background-image: url(../img/icons/arrow-icon.svg)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: 8px
+    b
+        display: none
+
+.select2-container--open .select2-selection__arrow
+    transform: rotate(180deg)
+//.select2-search
+    //display: none
+    //text-align: left
+.select2-search__field
+    width: 100% !important
+    //display: none
+    &::placeholder
+        text-align: left
+
+.select2-selection__choice
+    background: none !important
+    border: none !important
+    position: relative
+    //margin-right: 0!important
+    //margin-left: 0!important
+    margin-top: 5px
+    //padding: 0 0 0 0!important
+    &:after
+        content: ","
+    &:only-child:after
+        display: none
+    &:nth-last-child(2):after
+        display: none
+
+.select2-selection__choice__remove
+    display: none
+    visibility: hidden
+    pointer-events: none
+    width: 0
+    height: 0
+
+.select2-container--default .select2-results__option--highlighted[aria-selected]
+    background-color: #f6f6f6
+    color: $black
+
+.select2-container
+    width: 100% !important
+
+.select2-dropdown.select2-dropdown--below
+    transition: none
+
+.select2-results__options
+    &::-webkit-scrollbar
+        width: 2px
+        height: 5px
+    &::-webkit-scrollbar-button
+        display: none
+    &::-webkit-scrollbar-track
+        background-color: #999
+    &::-webkit-scrollbar-track-piece
+        background-color: #E4E9F5
+    &::-webkit-scrollbar-thumb
+        height: 20px
+        background-color: #1F2226
+    &::-webkit-scrollbar-corner
+        background-color: #E4E9F5
+    &::-webkit-resizer
+        background-color: #1F2226
+
+.select2-container--open .select2-dropdown
+    left: -5px
+    top: 2px
+    @media (max-width: 520px)
+        left: -3px
+        top: 4px
+
+.select2-container--default .select2-selection--multiple .select2-selection__rendered
+    padding-left: 0
+    cursor: pointer
+
+.select2-selection
+    cursor: pointer
+
+.select2-results__option
+    &.select2-results__option--highlighted
+        &:last-of-type
+            border-radius: 0 0 5px 5px
+@media (max-width: 450px)
+    .item-catalog
+        .image-holder
+            max-height: 280px
+
+
+.select2-container
+    cursor: pointer
+    .select2-selection--multiple
+        min-height: 20px
+        line-height: 1.2
+
+.select2-container--default
+    .select2-selection--multiple
+        .select2-selection__choice
+            padding: 0 5px 0 0 !important
+            cursor: pointer
+
+.select2-search__field
+    cursor: pointer

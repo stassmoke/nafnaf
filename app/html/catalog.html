@@ -1,0 +1,2061 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+//= head.html
+
+<script src="../js/common.js"></script>
+<link rel="stylesheet" href="../sass/_footer.sass">
+<link rel="stylesheet" href="../sass/main.sass">
+<body class="body-wrap">
+//= header.html
+<div class="bg-modal"></div>
+<div class="catalog">
+    <div class="bg-mobile__filters">
+        <div class="filters-modal__mobile filters-modal__mobile--main " id="filters-mobile">
+            <a href="#" class="close-modal__mobile  image-holder">
+                <img class="image-holder__img" src="/img/icons/close-modal__mobile.svg" alt="close">
+            </a>
+            <div class="title-mobile__filters">
+                Фильтры
+            </div>
+            <div class="body-filters__mobile">
+                <ul class="main-body">
+                    <li class="main-link">
+                        <a href="#">Вид товара</a>
+                    </li>
+                    <li class="main-link">
+                        <a href="#">Цвет</a>
+                    </li>
+                    <li class="main-link">
+                        <a href="#">Размер</a>
+                    </li>
+                    <li class="main-link">
+                        <a href="#">Цена</a>
+                    </li>
+                    <li class="main-link">
+                        <a href="#">Другие фильтры</a>
+                    </li>
+                </ul>
+                <div class="wrap-btn__modal--footer">
+                    <button class="btn btn-reset__all">сбросить все</button>
+                    <button class="btn btn-accept__filters">применить</button>
+                </div>
+            </div>
+        </div>
+        <div class="filters-modal__mobile filters-modal__mobile--type filters-modal__mobile--child ">
+            <a href="#" class="close-modal__mobile image-holder">
+                <img class="image-holder__img" src="/img/icons/close-modal__mobile.svg" alt="close">
+            </a>
+            <a href="#" class="title-mobile__filters title-mobile__filters--back">
+                <span>Вид товара</span>
+                <div class="btn-reset__filters">
+                    Сбросить
+                </div>
+            </a>
+            <div class="body-filters__mobile">
+                <ul class="main-body">
+                    <li class="main-link">
+                        <label class="container-input">
+                            Короткие платья
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </li>
+                    <li class="main-link">
+                        <label class="container-input">
+                            Длинные платья
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </li>
+                    <li class="main-link">
+                        <label class="container-input">
+                            Праздничные платья
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </li>
+                </ul>
+                <div class="wrap-btn__modal--footer">
+                    <button class="btn btn-accept__filters">применить</button>
+                </div>
+            </div>
+        </div>
+        <div class="filters-modal__mobile filters-modal__mobile--type filters-modal__mobile--child" id="color-2" >
+            <a href="#" class="close-modal__mobile image-holder">
+                <img class="image-holder__img" src="/img/icons/close-modal__mobile.svg" alt="close">
+            </a>
+            <a href="#" class="title-mobile__filters title-mobile__filters--back">
+                <span data-modal-type="back"> Колір </span>
+                <div class="btn-reset__filters" data-filter-reset="true">Скинути</div>
+            </a>
+            <div class="body-filters__mobile">
+                <div class="subcategory main-body" style="margin-left: 0;">
+                    <label class="container-input">
+                        <span class="color-icon" style="background: #FFFFFF; border: 1px solid #E5E5E5;"></span>
+                        <span>Белый</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container-input">
+                        <span class="color-icon" style="background: #FFE8BD;"></span>
+                        <span>Бежевый</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container-input">
+                        <span class="color-icon" style="background: #8FFFE4;"></span>
+                        <span>Бирюзовый</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container-input">
+                        <span class="color-icon" style="background: #FFFFFF; border: 1px solid #E5E5E5;"></span>
+                        <span>Белый</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container-input">
+                        <span class="color-icon" style="background: #FFE8BD;"></span>
+                        <span>Бежевый</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container-input">
+                        <span class="color-icon" style="background: #8FFFE4;"></span>
+                        <span>Бирюзовый</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container-input">
+                        <span class="color-icon" style="background: #FFFFFF; border: 1px solid #E5E5E5;"></span>
+                        <span>Белый</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container-input">
+                        <span class="color-icon" style="background: #FFE8BD;"></span>
+                        <span>Бежевый</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container-input">
+                        <span class="color-icon" style="background: #8FFFE4;"></span>
+                        <span>Бирюзовый</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container-input">
+                        <span class="color-icon" style="background: #FFFFFF; border: 1px solid #E5E5E5;"></span>
+                        <span>Белый</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container-input">
+                        <span class="color-icon" style="background: #FFE8BD;"></span>
+                        <span>Бежевый</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container-input">
+                        <span class="color-icon" style="background: #8FFFE4;"></span>
+                        <span>Бирюзовый</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+
+                </div>
+                <div class="wrap-btn__modal--footer"><button class="btn btn-accept__filters ajax-accept-filters">
+                    Застосувати
+                </button></div>
+            </div>
+        </div>
+        <div class="filters-modal__mobile filters-modal__mobile--size filters-modal__mobile--child ">
+            <a href="#" class="close-modal__mobile image-holder">
+                <img class="image-holder__img" src="/img/icons/close-modal__mobile.svg" alt="close">
+            </a>
+            <a href="#" class="title-mobile__filters title-mobile__filters--back">
+                <span>Размер</span>
+                <div class="btn-reset__filters">
+                    Сбросить
+                </div>
+            </a>
+            <div class="body-filters__mobile">
+                <div class="subcategory main-body">
+                    <label class="container-input container-input__big">
+                        <input type="checkbox" checked>
+                        <span class="checkmark checkmark-big">36</span>
+                    </label>
+                    <label class="container-input container-input__big">
+                        <input type="checkbox">
+                        <span class="checkmark checkmark-big">38</span>
+                    </label>
+                    <label class="container-input container-input__big">
+                        <input type="checkbox">
+                        <span class="checkmark checkmark-big">40</span>
+                    </label>
+                    <label class="container-input container-input__big">
+                        <input type="checkbox">
+                        <span class="checkmark checkmark-big">42</span>
+                    </label>
+                    <label class="container-input container-input__big">
+                        <input type="checkbox" checked>
+                        <span class="checkmark checkmark-big">44</span>
+                    </label>
+                    <label class="container-input container-input__big">
+                        <input type="checkbox">
+                        <span class="checkmark checkmark-big">46</span>
+                    </label>
+                    <label class="container-input container-input__big">
+                        <input type="checkbox" checked>
+                        <span class="checkmark checkmark-big">48</span>
+                    </label>
+                    <label class="container-input container-input__big">
+                        <input type="checkbox" checked>
+                        <span class="checkmark checkmark-big">50</span>
+                    </label>
+                    <label class="container-input container-input__big">
+                        <input type="checkbox" checked>
+                        <span class="checkmark checkmark-big">52</span>
+                    </label>
+                </div>
+                <div class="wrap-btn__modal--footer">
+                    <button class="btn btn-accept__filters">применить</button>
+                </div>
+            </div>
+        </div>
+        <div class="filters-modal__mobile filters-modal__mobile--other filters-modal__mobile--child">
+            <a href="#" class="close-modal__mobile image-holder">
+                <img class="image-holder__img" src="/img/icons/close-modal__mobile.svg" alt="close">
+            </a>
+            <a href="#" class="title-mobile__filters title-mobile__filters--back">
+                <span>Другие фильтры</span>
+                <div class="btn-reset__filters">
+                    Сбросить
+                </div>
+            </a>
+            <div class="body-filters__mobile">
+                <div class="subcategory main-body">
+                    <div class="input-holder ">
+                        <div class="label">
+                            Материал
+                        </div>
+                        <select class="js-select2" data-placeholder="Select a state" multiple="multiple">
+                            <option>Nothing</option>
+                            <option value="1">Some option</option>
+                            <option value="2">Another option</option>
+                            <option value="3" disabled>A disabled option</option>
+                            <option value="4">Potato</option>
+                            <option value="1">Some option</option>
+                            <option value="2">Another option</option>
+                            <option value="3" disabled>A disabled option</option>
+                            <option value="4">Potato</option>
+                        </select>
+                    </div>
+                    <div class="input-holder">
+                        <div class="label">
+                            Стиль
+                        </div>
+                        <select class="js-select2" data-placeholder="Select a state" multiple="multiple">
+                            <option>Nothing</option>
+                            <option value="1">Some option</option>
+                            <option value="2">Another option</option>
+                            <option value="3" disabled>A disabled option</option>
+                            <option value="4">Potato</option>
+                        </select>
+                    </div>
+                    <div class="input-holder">
+                        <div class="label">
+                            Материал
+                        </div>
+                        <select class="js-select2" data-placeholder="Select a state" multiple="multiple">
+                            <option>Nothing</option>
+                            <option value="1">Some option</option>
+                            <option value="2">Another option</option>
+                            <option value="3" disabled>A disabled option</option>
+                            <option value="4">Potato</option>
+                            <option value="1">Some option</option>
+                            <option value="2">Another option</option>
+                            <option value="3" disabled>A disabled option</option>
+                            <option value="4">Potato</option>
+                        </select>
+                    </div>
+                    <div class="input-holder">
+                        <div class="label">
+                            Длина
+                        </div>
+                        <select class="js-select2" data-placeholder="Select a state" multiple="multiple">
+                            <option>Nothing</option>
+                            <option value="1">Some option</option>
+                            <option value="2">Another option</option>
+                            <option value="3" disabled>A disabled option</option>
+                            <option value="4">Potato</option>
+                        </select>
+                    </div>
+                    <div class="input-holder">
+                        <div class="label">
+                            Рукав
+                        </div>
+                        <select class="js-select2" data-placeholder="Select a state" multiple="multiple">
+                            <option>Nothing</option>
+                            <option value="1">Some option</option>
+                            <option value="2">Another option</option>
+                            <option value="3" disabled>A disabled option</option>
+                            <option value="4">Potato</option>
+                        </select>
+                    </div>
+                    <div class="input-holder">
+                        <div class="label">
+                            Длина
+                        </div>
+                        <select class="js-select2" data-placeholder="Select a state" multiple="multiple">
+                            <option>Nothing</option>
+                            <option value="1">Some option</option>
+                            <option value="2">Another option</option>
+                            <option value="3" disabled>A disabled option</option>
+                            <option value="4">Potato</option>
+                        </select>
+                    </div>
+                    <div class="input-holder">
+                        <div class="label">
+                            Материал
+                        </div>
+                        <select class="js-select2" data-placeholder="Select a state" multiple="multiple">
+                            <option>Nothing</option>
+                            <option value="1">Some option</option>
+                            <option value="2">Another option</option>
+                            <option value="3" disabled>A disabled option</option>
+                            <option value="4">Potato</option>
+                            <option value="1">Some option</option>
+                            <option value="2">Another option</option>
+                            <option value="3" disabled>A disabled option</option>
+                            <option value="4">Potato</option>
+                        </select>
+                    </div>
+                    <div class="input-holder">
+                        <div class="label">
+                            Стиль
+                        </div>
+                        <select class="js-select2" data-placeholder="Select a state" multiple="multiple">
+                            <option>Nothing</option>
+                            <option value="1">Some option</option>
+                            <option value="2">Another option</option>
+                            <option value="3" disabled>A disabled option</option>
+                            <option value="4">Potato</option>
+                        </select>
+                    </div>
+                    <div class="input-holder">
+                        <div class="label">
+                            Материал
+                        </div>
+                        <select class="js-select2" data-placeholder="Select a state" multiple="multiple">
+                            <option>Nothing</option>
+                            <option value="1">Some option</option>
+                            <option value="2">Another option</option>
+                            <option value="3" disabled>A disabled option</option>
+                            <option value="4">Potato</option>
+                            <option value="1">Some option</option>
+                            <option value="2">Another option</option>
+                            <option value="3" disabled>A disabled option</option>
+                            <option value="4">Potato</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="wrap-btn__modal--footer">
+                    <button class="btn btn-accept__filters">применить</button>
+                </div>
+            </div>
+        </div>
+        <div class="filters-modal__mobile filters-modal__mobile--main__other">
+            <a href="#" class="close-modal__mobile image-holder">
+                <img class="image-holder__img" src="/img/icons/close-modal__mobile.svg" alt="close">
+            </a>
+            <div class="title-mobile__filters">
+                Фильтры
+            </div>
+            <div class="body-filters__mobile">
+                <ul class="main-body">
+                    <!--NOT ENDED-->
+                    <li class="main-link ">
+                        <div class="more-btn"><span>Вид товара</span><span class="icon-more"></span></div>
+                        <div class="text-more">
+                            <div class="subcategory">
+                                <label class="container-input">
+                                    Короткие платья
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container-input">
+                                    Длинные платья
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container-input">
+                                    Праздничные платья
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-link ">
+                        <div class="more-btn">
+                            <span>Цвет</span>
+                            <span class="icon-more"></span>
+                        </div>
+                        <div class="text-more">
+                            <div class="subcategory subcategory-color">
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark checkmark-big">Черный</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox">
+                                    <span class="checkmark checkmark-big">Белый</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox">
+                                    <span class="checkmark checkmark-big">Оранжевый</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox">
+                                    <span class="checkmark checkmark-big">Коричневый</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark checkmark-big">Зелёный</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox">
+                                    <span class="checkmark checkmark-big">Серый</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark checkmark-big">Синий</span>
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-link ">
+                        <div class="more-btn">
+                            <span>Размер</span>
+                            <span class="icon-more"></span>
+                        </div>
+                        <div class="text-more">
+                            <div class="subcategory subcategory-size">
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark checkmark-big">36</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox">
+                                    <span class="checkmark checkmark-big">38</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox">
+                                    <span class="checkmark checkmark-big">40</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox">
+                                    <span class="checkmark checkmark-big">42</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark checkmark-big">44</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox">
+                                    <span class="checkmark checkmark-big">46</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark checkmark-big">48</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark checkmark-big">50</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark checkmark-big">52</span>
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-link ">
+                        <div class="more-btn">
+                            <span>Цена</span>
+                            <span class="icon-more"></span>
+                        </div>
+                        <div class="text-more">
+                            <div class="subcategory subcategory-price">
+                                <div class="wrap-double__price">
+                                    <div class="input-holder">
+                                        <input type="number" placeholder="От">
+                                    </div>
+                                    <div class="input-holder">
+                                        <input type="number" placeholder="До">
+                                    </div>
+
+                                </div>
+                                <div class="range-price">
+                                    <div id="slider-snap"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-link ">
+                        <div class="more-btn"><span>Вид товара</span><span class="icon-more"></span></div>
+                        <div class="text-more">
+                            <div class="subcategory">
+                                <div class="input-holder">
+                                    <div class="label">
+                                        Материал
+                                    </div>
+                                    <select class="js-select2" data-placeholder="Select a state" multiple="multiple">
+                                        <option>Nothing</option>
+                                        <option value="1">Some option</option>
+                                        <option value="2">Another option</option>
+                                        <option value="3" disabled>A disabled option</option>
+                                        <option value="4">Potato</option>
+                                        <option value="1">Some option</option>
+                                        <option value="2">Another option</option>
+                                        <option value="3" disabled>A disabled option</option>
+                                        <option value="4">Potato</option>
+                                    </select>
+                                </div>
+                                <div class="input-holder">
+                                    <div class="label">
+                                        Стиль
+                                    </div>
+                                    <select class="js-select2" data-placeholder="Select a state" multiple="multiple">
+                                        <option>Nothing</option>
+                                        <option value="1">Some option</option>
+                                        <option value="2">Another option</option>
+                                        <option value="3" disabled>A disabled option</option>
+                                        <option value="4">Potato</option>
+                                    </select>
+                                </div>
+                                <div class="input-holder">
+                                    <div class="label">
+                                        Материал
+                                    </div>
+                                    <select class="js-select2" data-placeholder="Select a state" multiple="multiple">
+                                        <option>Nothing</option>
+                                        <option value="1">Some option</option>
+                                        <option value="2">Another option</option>
+                                        <option value="3" disabled>A disabled option</option>
+                                        <option value="4">Potato</option>
+                                        <option value="1">Some option</option>
+                                        <option value="2">Another option</option>
+                                        <option value="3" disabled>A disabled option</option>
+                                        <option value="4">Potato</option>
+                                    </select>
+                                </div>
+                                <div class="input-holder">
+                                    <div class="label">
+                                        Длина
+                                    </div>
+                                    <select class="js-select2" data-placeholder="Select a state" multiple="multiple">
+                                        <option data-display="Выбрать фильтр">Nothing</option>
+                                        <option value="1">Some option</option>
+                                        <option value="2">Another option</option>
+                                        <option value="3" disabled>A disabled option</option>
+                                        <option value="4">Potato</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!--NOT ENDED-->
+                </ul>
+                <div class="wrap-btn__modal--footer">
+                    <button class="btn btn-reset__all">сбросить все</button>
+                    <button class="btn btn-accept__filters">применить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="filters">
+            <div class="row-flex catalog-tittle__row">
+                <div class="catalog-title">
+                    Куртки и пальто
+                </div>
+                <div class="search-result">
+                    Найдено 144 модели
+                </div>
+            </div>
+            <div class="row-flex catalog-btns__filter--mobile">
+                <a href="#" class="btn-filter__mobile btn-filter__mobile--double js-modal__check"
+                   data-modal="filters-mobile">Фильтры</a>
+
+                <!--<a href="#" class="btn-filter__mobile btn-filter__mobile&#45;&#45;double js-modal__check" data-modal="sort-mobile">Сортировка</a>-->
+
+                <form method="post" name="filters" class="btn-filter__mobile btn-filter__mobile--double _hide-after">
+                    <select class="nice-select__mobile" name="sort" id="catalogFilterSortMoble" style="display: none;">
+                        <option data-display="Новинки" value="new" 1="">Новинки</option>
+                        <option data-display="Ціна за зростанням" value="min-max">Ціна за зростанням</option>
+                        <option data-display="Ціна за спаданням" value="max-min">Ціна за спаданням</option>
+                    </select>
+                </form>
+            </div>
+            <div class="row-flex catalog-btns__filter">
+
+                <div id="modal-size" class="modal-filters modal-size">
+                    <form>
+                        <div class="scroll-subcategory">
+                            <div class="subcategory-title">
+                                Одежда
+                            </div>
+                            <div class="subcategory">
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark checkmark-big">36</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox">
+                                    <span class="checkmark checkmark-big">38</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox">
+                                    <span class="checkmark checkmark-big">40</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox">
+                                    <span class="checkmark checkmark-big">42</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark checkmark-big">44</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox">
+                                    <span class="checkmark checkmark-big">46</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark checkmark-big">48</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark checkmark-big">50</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark checkmark-big">52</span>
+                                </label>
+                            </div>
+                            <div class="subcategory-title">
+                                Обувь
+                            </div>
+                            <div class="subcategory">
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark checkmark-big">35</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox">
+                                    <span class="checkmark checkmark-big">35.5</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox">
+                                    <span class="checkmark checkmark-big">36</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox">
+                                    <span class="checkmark checkmark-big">36.5</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark checkmark-big">37</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox">
+                                    <span class="checkmark checkmark-big">37.5</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark checkmark-big">38</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input id="s-50" type="checkbox">
+                                    <span class="checkmark checkmark-big">38.5</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark checkmark-big">39</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark checkmark-big">39.5</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox">
+                                    <span class="checkmark checkmark-big">40</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox">
+                                    <span class="checkmark checkmark-big">40.5</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox">
+                                    <span class="checkmark checkmark-big">41</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox">
+                                    <span class="checkmark checkmark-big">41.5</span>
+                                </label>
+                                <label class="container-input container-input__big">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark checkmark-big">42</span>
+                                </label>
+
+                            </div>
+                            <button class="btn btn-accept__filters">
+                                Применить
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div id="modal-color" class="modal-filters modal-color">
+                    <form>
+                        <div class="scroll-subcategory">
+                            <div class="wrap-subcategory">
+                                <div class="subcategory">
+                                    <label class="container-input">
+                                        <span class="color-icon"
+                                              style="background: #FFFFFF; border: 1px solid #E5E5E5;"></span>
+                                        <span>Белый</span>
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container-input">
+                                        <span class="color-icon" style="background: #FFE8BD;"></span>
+                                        <span>Бежевый</span>
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container-input">
+                                        <span class="color-icon" style="background: #8FFFE4;"></span>
+                                        <span>Бирюзовый</span>
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container-input">
+                                        <span class="color-icon"
+                                              style="background: #FFFFFF; border: 1px solid #E5E5E5;"></span>
+                                        <span>Белый</span>
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container-input">
+                                        <span class="color-icon" style="background: #FFE8BD;"></span>
+                                        <span>Бежевый</span>
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container-input">
+                                        <span class="color-icon" style="background: #8FFFE4;"></span>
+                                        <span>Бирюзовый</span>
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container-input">
+                                        <span class="color-icon"
+                                              style="background: #FFFFFF; border: 1px solid #E5E5E5;"></span>
+                                        <span>Белый</span>
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container-input">
+                                        <span class="color-icon" style="background: #FFE8BD;"></span>
+                                        <span>Бежевый</span>
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container-input">
+                                        <span class="color-icon" style="background: #8FFFE4;"></span>
+                                        <span>Бирюзовый</span>
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container-input">
+                                        <span class="color-icon"
+                                              style="background: #FFFFFF; border: 1px solid #E5E5E5;"></span>
+                                        <span>Белый</span>
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container-input">
+                                        <span class="color-icon" style="background: #FFE8BD;"></span>
+                                        <span>Бежевый</span>
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container-input">
+                                        <span class="color-icon" style="background: #8FFFE4;"></span>
+                                        <span>Бирюзовый</span>
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrap-button__modal">
+                            <button class="btn btn-accept__filters">
+                                Применить
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div id="modal-type" class="modal-filters modal-type">
+                    <form>
+                        <div class="scroll-subcategory">
+                            <div class="wrap-subcategory">
+                                <div class="subcategory-title">
+                                    Платья
+                                </div>
+                                <div class="subcategory">
+                                    <label class="container-input">
+                                        Короткие платья
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container-input">
+                                        Длинные платья
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container-input">
+                                        Праздничные платья
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="subcategory-title">
+                                    топы и блузки
+                                </div>
+                                <div class="subcategory">
+                                    <label class="container-input">
+                                        Топы
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container-input">
+                                        Длинные платья
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="subcategory-title">
+                                    Свитера и кардиганы
+                                </div>
+                                <div class="subcategory">
+                                    <label class="container-input">
+                                        Свитера
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container-input">
+                                        Кардиганы
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container-input">
+                                        Свитшоты
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container-input">
+                                        Джемпера
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="subcategory-title">
+                                    Юбки
+                                </div>
+                                <div class="subcategory">
+                                    <label class="container-input">
+                                        Короткие юбки
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container-input">
+                                        Длинные юбки
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+
+                                </div>
+                                <div class="subcategory-title">
+                                    Платья
+                                </div>
+                                <div class="subcategory">
+                                    <label class="container-input">
+                                        Короткие платья
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container-input">
+                                        Длинные платья
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container-input">
+                                        Праздничные платья
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="subcategory-title">
+                                    топы и блузки
+                                </div>
+                                <div class="subcategory">
+                                    <label class="container-input">
+                                        Топы
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container-input">
+                                        Длинные платья
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="subcategory-title">
+                                    Свитера и кардиганы
+                                </div>
+                                <div class="subcategory">
+                                    <label class="container-input">
+                                        Свитера
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container-input">
+                                        Кардиганы
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container-input">
+                                        Свитшоты
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container-input">
+                                        Джемпера
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="subcategory-title">
+                                    Юбки
+                                </div>
+                                <div class="subcategory">
+                                    <label class="container-input">
+                                        Короткие юбки
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container-input">
+                                        Длинные юбки
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="wrap-button__modal">
+                            <button class="btn btn-accept__filters">
+                                Применить
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div id="modal-price" class="modal-filters modal-price">
+                    <form>
+                        <div class="scroll-subcategory">
+                            <div class="wrap-double__price">
+                                <div class="input-holder">
+                                    <input type="number" placeholder="От">
+                                </div>
+                                <div class="input-holder">
+                                    <input type="number" placeholder="До">
+                                </div>
+
+                            </div>
+                            <div class="range-price">
+                                <div id="slider-snap"></div>
+                            </div>
+                            <button class="btn btn-accept__filters">
+                                Применить
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+                <div id="modal-all__filters" class="modal-all__filters">
+                    <div class="modal-all__filters--title">
+                        Все фильтры
+                    </div>
+                    <a href="#" class="close-modal__filters image-holder">
+                        <img class="image-holder__img" src="/img/icons/close-modal.svg" alt="close">
+                    </a>
+                    <form>
+                        <div class="wrap-col">
+                            <div class="all-filters__col col-type">
+                                <div class="scroll-subcategory">
+                                    <div class="row-title__reset">
+                                        <span class="name-category">Вид товара</span>
+                                        <span class="btn-reset__filters">Сбросить</span>
+                                    </div>
+                                    <div class="wrap-subcategory">
+                                        <div class="subcategory-title">
+                                            Платья
+                                        </div>
+                                        <div class="subcategory">
+                                            <label class="container-input">
+                                                Короткие платья
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container-input">
+                                                Длинные платья
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container-input">
+                                                Праздничные платья
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="subcategory-title">
+                                            топы и блузки
+                                        </div>
+                                        <div class="subcategory">
+                                            <label class="container-input">
+                                                Топы
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container-input">
+                                                Длинные платья
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="subcategory-title">
+                                            Свитера и кардиганы
+                                        </div>
+                                        <div class="subcategory">
+                                            <label class="container-input">
+                                                Свитера
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container-input">
+                                                Кардиганы
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container-input">
+                                                Свитшоты
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container-input">
+                                                Джемпера
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="subcategory-title">
+                                            Юбки
+                                        </div>
+                                        <div class="subcategory">
+                                            <label class="container-input">
+                                                Короткие юбки
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container-input">
+                                                Длинные юбки
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+
+                                        </div>
+                                        <div class="subcategory-title">
+                                            Платья
+                                        </div>
+                                        <div class="subcategory">
+                                            <label class="container-input">
+                                                Короткие платья
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container-input">
+                                                Длинные платья
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container-input">
+                                                Праздничные платья
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="subcategory-title">
+                                            топы и блузки
+                                        </div>
+                                        <div class="subcategory">
+                                            <label class="container-input">
+                                                Топы
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container-input">
+                                                Длинные платья
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="subcategory-title">
+                                            Свитера и кардиганы
+                                        </div>
+                                        <div class="subcategory">
+                                            <label class="container-input">
+                                                Свитера
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container-input">
+                                                Кардиганы
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container-input">
+                                                Свитшоты
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container-input">
+                                                Джемпера
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="subcategory-title">
+                                            Юбки
+                                        </div>
+                                        <div class="subcategory">
+                                            <label class="container-input">
+                                                Короткие юбки
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container-input">
+                                                Длинные юбки
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="all-filters__col">
+                                <div class="scroll-subcategory" style="min-height: 152px;">
+                                    <div class="row-title__reset">
+                                        <span class="name-category">Цена</span>
+                                        <span class="btn-reset__filters">Сбросить</span>
+                                    </div>
+                                    <div class="wrap-subcategory">
+                                        <div class="wrap-double__price">
+                                            <div class="input-holder">
+                                                <input type="number" placeholder="От">
+                                            </div>
+                                            <div class="input-holder">
+                                                <input type="number" placeholder="До">
+                                            </div>
+
+                                        </div>
+                                        <div class="range-price">
+                                            <div id="slider-snap2"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="color-multitag">
+                                    <div class="scroll-subcategory">
+                                        <div class="row-title__reset">
+                                            <span class="name-category">Цвет</span>
+                                            <span class="btn-reset__filters">Сбросить</span>
+                                        </div>
+                                        <div class="wrap-subcategory">
+                                            <div class="subcategory">
+                                                <label class="container-input">
+                                                    <span class="color-icon"
+                                                          style="background: #FFFFFF; border: 1px solid #E5E5E5;"></span>
+                                                    <span>Белый</span>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <label class="container-input">
+                                                    <span class="color-icon" style="background: #FFE8BD;"></span>
+                                                    <span>Бежевый</span>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <label class="container-input">
+                                                    <span class="color-icon" style="background: #8FFFE4;"></span>
+                                                    <span>Бирюзовый</span>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <label class="container-input">
+                                                    <span class="color-icon"
+                                                          style="background: #FFFFFF; border: 1px solid #E5E5E5;"></span>
+                                                    <span>Белый</span>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <label class="container-input">
+                                                    <span class="color-icon" style="background: #FFE8BD;"></span>
+                                                    <span>Бежевый</span>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <label class="container-input">
+                                                    <span class="color-icon" style="background: #8FFFE4;"></span>
+                                                    <span>Бирюзовый</span>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <label class="container-input">
+                                                    <span class="color-icon"
+                                                          style="background: #FFFFFF; border: 1px solid #E5E5E5;"></span>
+                                                    <span>Белый</span>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <label class="container-input">
+                                                    <span class="color-icon" style="background: #FFE8BD;"></span>
+                                                    <span>Бежевый</span>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <label class="container-input">
+                                                    <span class="color-icon" style="background: #8FFFE4;"></span>
+                                                    <span>Бирюзовый</span>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <label class="container-input">
+                                                    <span class="color-icon"
+                                                          style="background: #FFFFFF; border: 1px solid #E5E5E5;"></span>
+                                                    <span>Белый</span>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <label class="container-input">
+                                                    <span class="color-icon" style="background: #FFE8BD;"></span>
+                                                    <span>Бежевый</span>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <label class="container-input">
+                                                    <span class="color-icon" style="background: #8FFFE4;"></span>
+                                                    <span>Бирюзовый</span>
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="scroll-subcategory" style="margin-right: 4px; min-height: 160px;">
+                                    <div class="row-title__reset">
+                                        <span class="name-category">Размер</span>
+                                        <span class="btn-reset__filters">Сбросить</span>
+                                    </div>
+                                    <div class="wrap-subcategory">
+                                        <div class="subcategory-title">
+                                            Одежда
+                                        </div>
+                                        <div class="subcategory">
+                                            <label class="container-input container-input__big">
+                                                <input type="checkbox" checked>
+                                                <span class="checkmark checkmark-big">36</span>
+                                            </label>
+                                            <label class="container-input container-input__big">
+                                                <input type="checkbox">
+                                                <span class="checkmark checkmark-big">38</span>
+                                            </label>
+                                            <label class="container-input container-input__big">
+                                                <input type="checkbox">
+                                                <span class="checkmark checkmark-big">40</span>
+                                            </label>
+                                            <label class="container-input container-input__big">
+                                                <input type="checkbox">
+                                                <span class="checkmark checkmark-big">42</span>
+                                            </label>
+                                            <label class="container-input container-input__big">
+                                                <input type="checkbox" checked>
+                                                <span class="checkmark checkmark-big">44</span>
+                                            </label>
+                                            <label class="container-input container-input__big">
+                                                <input type="checkbox">
+                                                <span class="checkmark checkmark-big">46</span>
+                                            </label>
+                                            <label class="container-input container-input__big">
+                                                <input type="checkbox" checked>
+                                                <span class="checkmark checkmark-big">48</span>
+                                            </label>
+                                            <label class="container-input container-input__big">
+                                                <input type="checkbox" checked>
+                                                <span class="checkmark checkmark-big">50</span>
+                                            </label>
+                                            <label class="container-input container-input__big">
+                                                <input type="checkbox" checked>
+                                                <span class="checkmark checkmark-big">52</span>
+                                            </label>
+                                        </div>
+                                        <div class="subcategory-title">
+                                            Обувь
+                                        </div>
+                                        <div class="subcategory">
+                                            <label class="container-input container-input__big">
+                                                <input type="checkbox" checked>
+                                                <span class="checkmark checkmark-big">35</span>
+                                            </label>
+                                            <label class="container-input container-input__big">
+                                                <input type="checkbox">
+                                                <span class="checkmark checkmark-big">35.5</span>
+                                            </label>
+                                            <label class="container-input container-input__big">
+                                                <input type="checkbox">
+                                                <span class="checkmark checkmark-big">36</span>
+                                            </label>
+                                            <label class="container-input container-input__big">
+                                                <input type="checkbox">
+                                                <span class="checkmark checkmark-big">36.5</span>
+                                            </label>
+                                            <label class="container-input container-input__big">
+                                                <input type="checkbox" checked>
+                                                <span class="checkmark checkmark-big">37</span>
+                                            </label>
+                                            <label class="container-input container-input__big">
+                                                <input type="checkbox">
+                                                <span class="checkmark checkmark-big">37.5</span>
+                                            </label>
+                                            <label class="container-input container-input__big">
+                                                <input type="checkbox" checked>
+                                                <span class="checkmark checkmark-big">38</span>
+                                            </label>
+                                            <label class="container-input container-input__big">
+                                                <input id="s-50" type="checkbox">
+                                                <span class="checkmark checkmark-big">38.5</span>
+                                            </label>
+                                            <label class="container-input container-input__big">
+                                                <input type="checkbox" checked>
+                                                <span class="checkmark checkmark-big">39</span>
+                                            </label>
+                                            <label class="container-input container-input__big">
+                                                <input type="checkbox" checked>
+                                                <span class="checkmark checkmark-big">39.5</span>
+                                            </label>
+                                            <label class="container-input container-input__big">
+                                                <input type="checkbox">
+                                                <span class="checkmark checkmark-big">40</span>
+                                            </label>
+                                            <label class="container-input container-input__big">
+                                                <input type="checkbox">
+                                                <span class="checkmark checkmark-big">40.5</span>
+                                            </label>
+                                            <label class="container-input container-input__big">
+                                                <input type="checkbox">
+                                                <span class="checkmark checkmark-big">41</span>
+                                            </label>
+                                            <label class="container-input container-input__big">
+                                                <input type="checkbox">
+                                                <span class="checkmark checkmark-big">41.5</span>
+                                            </label>
+                                            <label class="container-input container-input__big">
+                                                <input type="checkbox" checked>
+                                                <span class="checkmark checkmark-big">42</span>
+                                            </label>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="all-filters__col">
+                                <div class="other-filters">
+                                    <div class="scroll-subcategory">
+                                        <div class="row-title__reset">
+                                            <span class="name-category">Другие фильтры</span>
+                                            <span class="btn-reset__filters">Сбросить</span>
+                                        </div>
+                                        <div class="wrap-subcategory">
+                                            <div class="input-holder input-holder__select">
+                                                <div class="label">
+                                                    Материал
+                                                </div>
+                                                <select class="js-select2" data-placeholder="Выбрать фильтр"
+                                                        multiple="multiple">
+                                                    <option value="1">Some option</option>
+                                                    <option value="2">Another option</option>
+                                                    <option value="3" disabled>A disabled option</option>
+                                                    <option value="4">Potato</option>
+                                                    <option value="2">Another option</option>
+                                                    <option value="3" disabled>A disabled option</option>
+                                                    <option value="4">Potato</option>
+                                                </select>
+                                            </div>
+                                            <div class="input-holder input-holder__select">
+                                                <div class="label">
+                                                    Стиль
+                                                </div>
+                                                <select class="js-select2" data-placeholder="Выбрать фильтр"
+                                                        multiple="multiple">
+                                                    <option value="1">Some option</option>
+                                                    <option value="2">Another option</option>
+                                                    <option value="3" disabled>A disabled option</option>
+                                                    <option value="4">Potato</option>
+                                                </select>
+                                            </div>
+                                            <div class="input-holder input-holder__select">
+                                                <div class="label">
+                                                    Материал
+                                                </div>
+                                                <select class="js-select2" data-placeholder="Выбрать фильтр"
+                                                        multiple="multiple">
+                                                    <option value="1">Some option</option>
+                                                    <option value="2">Another option</option>
+                                                    <option value="3" disabled>A disabled option</option>
+                                                    <option value="4">Potato</option>
+                                                    <option value="1">Some option</option>
+                                                    <option value="2">Another option</option>
+                                                    <option value="3" disabled>A disabled option</option>
+                                                    <option value="4">Potato</option>
+                                                </select>
+                                            </div>
+                                            <div class="input-holder input-holder__select">
+                                                <div class="label">
+                                                    Длина
+                                                </div>
+                                                <select class="js-select2" data-placeholder="Выбрать фильтр"
+                                                        multiple="multiple">
+                                                    <option value="1">Some option</option>
+                                                    <option value="2">Another option</option>
+                                                    <option value="3" disabled>A disabled option</option>
+                                                    <option value="4">Potato</option>
+                                                </select>
+                                            </div>
+                                            <div class="input-holder input-holder__select">
+                                                <div class="label">
+                                                    Рукав
+                                                </div>
+                                                <select class="js-select2" data-placeholder="Выбрать фильтр"
+                                                        multiple="multiple">
+                                                    <option value="1">Some option</option>
+                                                    <option value="2">Another option</option>
+                                                    <option value="3" disabled>A disabled option</option>
+                                                    <option value="4">Potato</option>
+                                                </select>
+                                            </div>
+                                            <div class="input-holder input-holder__select">
+                                                <div class="label">
+                                                    Длина
+                                                </div>
+                                                <select class="js-select2" data-placeholder="Выбрать фильтр"
+                                                        multiple="multiple">
+                                                    <option value="1">Some option</option>
+                                                    <option value="2">Another option</option>
+                                                    <option value="3" disabled>A disabled option</option>
+                                                    <option value="4">Potato</option>
+                                                </select>
+                                            </div>
+                                            <div class="input-holder input-holder__select">
+                                                <div class="label">
+                                                    Материал
+                                                </div>
+                                                <select class="js-select2" data-placeholder="Выбрать фильтр"
+                                                        multiple="multiple">
+                                                    <option value="1">Some option</option>
+                                                    <option value="2">Another option</option>
+                                                    <option value="3" disabled>A disabled option</option>
+                                                    <option value="4">Potato</option>
+                                                </select>
+                                            </div>
+                                            <div class="input-holder input-holder__select">
+                                                <div class="label">
+                                                    Стиль
+                                                </div>
+                                                <select class="js-select2" data-placeholder="Выбрать фильтр"
+                                                        multiple="multiple">
+                                                    <option>Выбрать фильтр</option>
+                                                    <option value="1">Some option</option>
+                                                    <option value="2">Another option</option>
+                                                    <option value="3" disabled>A disabled option</option>
+                                                    <option value="4">Potato</option>
+                                                </select>
+                                            </div>
+                                            <div class="input-holder input-holder__select">
+                                                <div class="label">
+                                                    Материал
+                                                </div>
+                                                <select class="js-select2" data-placeholder="Выбрать фильтр"
+                                                        multiple="multiple">
+                                                    <option>Выбрать фильтр</option>
+                                                    <option value="1">Some option</option>
+                                                    <option value="2">Another option</option>
+                                                    <option value="3" disabled>A disabled option</option>
+                                                    <option value="4">Potato</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="all-filters__double">
+                            <button class="btn btn-reset__all">сбросить все</button>
+                            <button class="btn btn-accept__filters--all">применить</button>
+                        </div>
+                    </form>
+
+                </div>
+
+                <div class="filters-container">
+                    <div class="btn-filters btn-filters__dropdown js-modal__check" data-modal="modal-type">
+                        <span>вид товара</span>
+                    </div>
+                    <div class="btn-filters btn-filters__dropdown js-modal__check" data-modal="modal-price">
+                        <span>цена</span>
+                    </div>
+                    <div class="btn-filters btn-filters__dropdown js-modal__check" data-modal="modal-color">
+                        <span>цвет</span>
+                    </div>
+                    <div class="btn-filters btn-filters__dropdown js-modal__check" data-modal="modal-size">
+                        <span>размер</span>
+                    </div>
+                    <div class="btn-filters btn-all__filters js-modal__check" data-modal="modal-all__filters">
+                        <span>все фильтры</span>
+                    </div>
+                </div>
+                <div class="sort-by">
+                    <span class="text-grey__sort">Сортировать</span>
+                    <select class="js-nice_select">
+                        <option data-display="Новинки">Nothing</option>
+                        <option value="1">Some option</option>
+                        <option value="2">Another option</option>
+                        <option value="3" disabled>A disabled option</option>
+                        <option value="4">Potato</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row-flex__start catalog-selected__filters">
+                <div class="selected-filters__text">
+                    Выбранные фильтры
+                </div>
+                <div class="selected-filters__row">
+                    <div class="btn-selected__filters">
+                        <span>40</span>
+                        <span class="rem-filder"></span>
+                    </div>
+                    <div class="btn-selected__filters">
+                        <span>42</span>
+                        <span class="rem-filder"></span>
+                    </div>
+                    <div class="btn-selected__filters">
+                        <span>44</span>
+                        <span class="rem-filder"></span>
+                    </div>
+                    <div class="btn-selected__filters">
+                        <span>Черный</span>
+                        <span class="rem-filder"></span>
+                    </div>
+                    <div class="btn-selected__filters">
+                        <span>Белый</span>
+                        <span class="rem-filder"></span>
+                    </div>
+                    <div class="btn-selected__filters">
+                        <span>Бежевый</span>
+                        <span class="rem-filder"></span>
+                    </div>
+                    <div class="btn-selected__filters">
+                        <span>Мультиколор</span>
+                        <span class="rem-filder"></span>
+                    </div>
+                    <div class="btn-selected__filters">
+                        <span>Однотонный</span>
+                        <span class="rem-filder"></span>
+                    </div>
+                    <div class="btn-selected__filters">
+                        <span>Клетка</span>
+                        <span class="rem-filder"></span>
+                    </div>
+                    <div class="btn-selected__filters">
+                        <span>Короткая</span>
+                        <span class="rem-filder"></span>
+                    </div>
+                    <div class="btn-selected__filters">
+                        <span>Длинная</span>
+                        <span class="rem-filder"></span>
+                    </div>
+                </div>
+                <div class="btn-clear js-clear">
+                    Очистить все
+                </div>
+            </div>
+        </div>
+        <div class="catalog-items">
+            <div class="item-catalog">
+                <a href="product.html" class="image-holder">
+                    <img src="img/catalog-3.png" alt="catalog-item" class="image-holder__img">
+                    <img src="img/catalog-2.png" alt="catalog-item" class="image-holder__img _hover">
+                </a>
+                <div class="item-catalog__container">
+                    <div class="tag-item">
+                        новинки
+                    </div>
+                    <a href="#" class="tittle-item">
+                        Искусственная куртка-дублёнка ручной работы
+                    </a>
+                    <div class="colors-item">Цветов: 2</div>
+                    <div class="price-row">
+                        <div class="price-now">3 999 грн</div>
+                        <div class="price-old">7 300 грн</div>
+                    </div>
+                    <!-- like-item add class _active for like-->
+                    <button class="like-item">
+                    </button>
+                </div>
+            </div>
+            <div class="item-catalog">
+                <a href="product.html" class="image-holder">
+                    <img src="img/catalog-1.png" alt="catalog-item" class="image-holder__img">
+                    <img src="img/catalog-2.png" alt="catalog-item" class="image-holder__img _hover">
+                </a>
+                <div class="item-catalog__container">
+                    <div class="tag-item">
+                        новинки
+                    </div>
+                    <a href="#" class="tittle-item">
+                        Деструктурированное пальто, чистая шерсть
+                    </a>
+                    <div class="price-row">
+                        <div class="price-now">5 080 грн</div>
+                        <!--<span class="price-old">7 300 грн</span>-->
+                    </div>
+                    <!-- like-item add class _active for like-->
+                    <button class="like-item">
+                    </button>
+                </div>
+            </div>
+            <div class="item-catalog">
+                <a href="product.html" class="image-holder">
+                    <img src="img/catalog-2.png" alt="catalog-item" class="image-holder__img">
+                    <img src="img/catalog-1.png" alt="catalog-item" class="image-holder__img _hover">
+                </a>
+                <div class="item-catalog__container">
+                    <div class="tag-item">
+                        скидки
+                    </div>
+                    <a href="#" class="tittle-item">
+                        Пальто ручной работы
+                    </a>
+                    <div class="price-row">
+                        <div class="price-now">4 999 грн</div>
+                        <div class="price-old">7 300 грн</div>
+                    </div>
+                    <button class="like-item _active">
+                    </button>
+                </div>
+            </div>
+            <div class="item-catalog">
+                <a href="product.html" class="image-holder">
+                    <img src="img/catalog-4.png" alt="catalog-item" class="image-holder__img">
+                    <img src="img/catalog-3.png" alt="catalog-item" class="image-holder__img _hover">
+                </a>
+                <div class="item-catalog__container">
+                    <div class="tag-item">
+                        скидки
+                    </div>
+                    <a href="#" class="tittle-item">
+                        Пальто без подплечников, с шерстью
+                    </a>
+                    <div class="price-row">
+                        <div class="price-now">5 300 грн</div>
+                        <span class="price-old">6 200 грн</span>
+                    </div>
+                    <!-- like-item add class _active for like-->
+                    <button class="like-item">
+                    </button>
+                </div>
+            </div>
+            <div class="item-catalog">
+                <a href="product.html" class="image-holder">
+                    <img src="img/catalog-5.png" alt="catalog-item" class="image-holder__img">
+                    <img src="img/catalog-4.png" alt="catalog-item" class="image-holder__img _hover">
+                </a>
+                <div class="item-catalog__container">
+                    <a href="#" class="tittle-item">
+                        Стеганый анорак-пуховик
+                    </a>
+                    <div class="price-row">
+                        <div class="price-now">1 200 грн</div>
+                    </div>
+                    <!-- like-item add class _active for like-->
+                    <button class="like-item">
+                    </button>
+                </div>
+            </div>
+            <div class="item-catalog">
+                <a href="product.html" class="image-holder">
+                    <img src="img/catalog-6.png" alt="catalog-item" class="image-holder__img">
+                    <img src="img/catalog-5.png" alt="catalog-item" class="image-holder__img _hover">
+                </a>
+                <div class="item-catalog__container">
+                    <div class="tag-item">
+                        новинки
+                    </div>
+                    <a href="#" class="tittle-item">
+                        Анорак-пуховик со съемным капюшоном
+                    </a>
+                    <div class="colors-item">Цветов: 3</div>
+                    <div class="price-row">
+                        <div class="price-now">5 030 грн</div>
+                        <!--<span class="price-old">7 300 грн</span>-->
+                    </div>
+                    <!-- like-item add class _active for like-->
+                    <button class="like-item">
+                    </button>
+                </div>
+            </div>
+            <div class="item-catalog">
+                <a href="product.html" class="image-holder">
+                    <img src="img/catalog-7.png" alt="catalog-item" class="image-holder__img">
+                    <img src="img/catalog-2.png" alt="catalog-item" class="image-holder__img _hover">
+                </a>
+                <div class="item-catalog__container">
+                    <a href="#" class="tittle-item">
+                        Куртка утепленная Графит
+                    </a>
+                    <div class="colors-item">Цветов: 2</div>
+                    <div class="price-row">
+                        <div class="price-now">3 700 грн</div>
+                    </div>
+                    <button class="like-item _active">
+                    </button>
+                </div>
+            </div>
+            <div class="item-catalog">
+                <a href="product.html" class="image-holder">
+                    <img src="img/catalog-8.png" alt="catalog-item" class="image-holder__img">
+                    <img src="img/catalog-6.png" alt="catalog-item" class="image-holder__img _hover">
+                </a>
+                <div class="item-catalog__container">
+                    <div class="tag-item">
+                        скидки
+                    </div>
+                    <a href="#" class="tittle-item">
+                        Куртка утепленная
+                    </a>
+                    <div class="price-row">
+                        <div class="price-now">5 070 грн</div>
+                        <span class="price-old">9 700 грн</span>
+                    </div>
+                    <!-- like-item add class _active for like-->
+                    <button class="like-item">
+                    </button>
+                </div>
+            </div>
+            <div class="item-catalog">
+                <a href="product.html" class="image-holder">
+                    <img src="img/catalog-3.png" alt="catalog-item" class="image-holder__img">
+                    <img src="img/catalog-1.png" alt="catalog-item" class="image-holder__img _hover">
+                </a>
+                <div class="item-catalog__container">
+                    <div class="tag-item">
+                        новинки
+                    </div>
+                    <a href="#" class="tittle-item">
+                        Искусственная куртка-дублёнка ручной работы
+                    </a>
+                    <div class="colors-item">Цветов: 2</div>
+                    <div class="price-row">
+                        <div class="price-now">3 999 грн</div>
+                        <div class="price-old">7 300 грн</div>
+                    </div>
+                    <!-- like-item add class _active for like-->
+                    <button class="like-item">
+                    </button>
+                </div>
+            </div>
+            <div class="item-catalog">
+                <a href="product.html" class="image-holder">
+                    <img src="img/catalog-1.png" alt="catalog-item" class="image-holder__img">
+                    <img src="img/catalog-7.png" alt="catalog-item" class="image-holder__img _hover">
+                </a>
+                <div class="item-catalog__container">
+                    <div class="tag-item">
+                        новинки
+                    </div>
+                    <a href="#" class="tittle-item">
+                        Деструктурированное пальто, чистая шерсть
+                    </a>
+                    <div class="price-row">
+                        <div class="price-now">5 080 грн</div>
+                        <!--<span class="price-old">7 300 грн</span>-->
+                    </div>
+                    <!-- like-item add class _active for like-->
+                    <button class="like-item">
+                    </button>
+                </div>
+            </div>
+            <div class="item-catalog">
+                <a href="product.html" class="image-holder">
+                    <img src="img/catalog-2.png" alt="catalog-item" class="image-holder__img">
+                    <img src="img/catalog-7.png" alt="catalog-item" class="image-holder__img _hover">
+                </a>
+                <div class="item-catalog__container">
+                    <div class="tag-item">
+                        скидки
+                    </div>
+                    <a href="#" class="tittle-item">
+                        Пальто ручной работы
+                    </a>
+                    <div class="price-row">
+                        <div class="price-now">4 999 грн</div>
+                        <div class="price-old">7 300 грн</div>
+                    </div>
+                    <button class="like-item _active">
+                    </button>
+                </div>
+            </div>
+            <div class="item-catalog">
+                <a href="product.html" class="image-holder">
+                    <img src="img/catalog-4.png" alt="catalog-item" class="image-holder__img">
+                    <img src="img/catalog-7.png" alt="catalog-item" class="image-holder__img _hover">
+                </a>
+                <div class="item-catalog__container">
+                    <div class="tag-item">
+                        скидки
+                    </div>
+                    <a href="#" class="tittle-item">
+                        Пальто без подплечников, с шерстью
+                    </a>
+                    <div class="price-row">
+                        <div class="price-now">5 300 грн</div>
+                        <span class="price-old">6 200 грн</span>
+                    </div>
+                    <!-- like-item add class _active for like-->
+                    <button class="like-item">
+                    </button>
+                </div>
+            </div>
+            <div class="item-catalog">
+                <a href="product.html" class="image-holder">
+                    <img src="img/catalog-5.png" alt="catalog-item" class="image-holder__img">
+                    <img src="img/catalog-7.png" alt="catalog-item" class="image-holder__img _hover">
+                </a>
+                <div class="item-catalog__container">
+                    <a href="#" class="tittle-item">
+                        Стеганый анорак-пуховик
+                    </a>
+                    <div class="price-row">
+                        <div class="price-now">1 200 грн</div>
+                    </div>
+                    <!-- like-item add class _active for like-->
+                    <button class="like-item">
+                    </button>
+                </div>
+            </div>
+            <div class="item-catalog">
+                <a href="product.html" class="image-holder">
+                    <img src="img/catalog-6.png" alt="catalog-item" class="image-holder__img">
+                    <img src="img/catalog-7.png" alt="catalog-item" class="image-holder__img _hover">
+                </a>
+                <div class="item-catalog__container">
+                    <div class="tag-item">
+                        новинки
+                    </div>
+                    <a href="#" class="tittle-item">
+                        Анорак-пуховик со съемным капюшоном
+                    </a>
+                    <div class="colors-item">Цветов: 3</div>
+                    <div class="price-row">
+                        <div class="price-now">5 030 грн</div>
+                        <!--<span class="price-old">7 300 грн</span>-->
+                    </div>
+                    <!-- like-item add class _active for like-->
+                    <button class="like-item">
+                    </button>
+                </div>
+            </div>
+            <div class="item-catalog">
+                <a href="product.html" class="image-holder">
+                    <img src="img/catalog-7.png" alt="catalog-item" class="image-holder__img">
+                    <img src="img/catalog-4.png" alt="catalog-item" class="image-holder__img _hover">
+                </a>
+                <div class="item-catalog__container">
+                    <a href="#" class="tittle-item">
+                        Куртка утепленная Графит
+                    </a>
+                    <div class="colors-item">Цветов: 2</div>
+                    <div class="price-row">
+                        <div class="price-now">3 700 грн</div>
+                    </div>
+                    <button class="like-item _active">
+                    </button>
+                </div>
+            </div>
+            <div class="item-catalog">
+                <a href="product.html" class="image-holder">
+                    <img src="img/catalog-8.png" alt="catalog-item" class="image-holder__img">
+                    <img src="img/catalog-7.png" alt="catalog-item" class="image-holder__img _hover">
+                </a>
+                <div class="item-catalog__container">
+                    <div class="tag-item">
+                        скидки
+                    </div>
+                    <a href="#" class="tittle-item">
+                        Куртка утепленная
+                    </a>
+                    <div class="price-row">
+                        <div class="price-now">5 070 грн</div>
+                        <span class="price-old">9 700 грн</span>
+                    </div>
+                    <!-- like-item add class _active for like-->
+                    <button class="like-item">
+                    </button>
+                </div>
+            </div>
+            <div class="item-catalog">
+                <a href="product.html" class="image-holder">
+                    <img src="img/catalog-3.png" alt="catalog-item" class="image-holder__img">
+                    <img src="img/catalog-7.png" alt="catalog-item" class="image-holder__img _hover">
+                </a>
+                <div class="item-catalog__container">
+                    <div class="tag-item">
+                        новинки
+                    </div>
+                    <a href="#" class="tittle-item">
+                        Искусственная куртка-дублёнка ручной работы
+                    </a>
+                    <div class="colors-item">Цветов: 2</div>
+                    <div class="price-row">
+                        <div class="price-now">3 999 грн</div>
+                        <div class="price-old">7 300 грн</div>
+                    </div>
+                    <!-- like-item add class _active for like-->
+                    <button class="like-item">
+                    </button>
+                </div>
+            </div>
+            <div class="item-catalog">
+                <a href="product.html" class="image-holder">
+                    <img src="img/catalog-1.png" alt="catalog-item" class="image-holder__img">
+                    <img src="img/catalog-7.png" alt="catalog-item" class="image-holder__img _hover">
+                </a>
+                <div class="item-catalog__container">
+                    <div class="tag-item">
+                        новинки
+                    </div>
+                    <a href="#" class="tittle-item">
+                        Деструктурированное пальто, чистая шерсть
+                    </a>
+                    <div class="price-row">
+                        <div class="price-now">5 080 грн</div>
+                        <!--<span class="price-old">7 300 грн</span>-->
+                    </div>
+                    <!-- like-item add class _active for like-->
+                    <button class="like-item">
+                    </button>
+                </div>
+            </div>
+            <div class="item-catalog">
+                <a href="product.html" class="image-holder">
+                    <img src="img/catalog-2.png" alt="catalog-item" class="image-holder__img">
+                    <img src="img/catalog-7.png" alt="catalog-item" class="image-holder__img _hover">
+                </a>
+                <div class="item-catalog__container">
+                    <div class="tag-item">
+                        скидки
+                    </div>
+                    <a href="#" class="tittle-item">
+                        Пальто ручной работы
+                    </a>
+                    <div class="price-row">
+                        <div class="price-now">4 999 грн</div>
+                        <div class="price-old">7 300 грн</div>
+                    </div>
+                    <button class="like-item _active">
+                    </button>
+                </div>
+            </div>
+            <div class="item-catalog">
+                <a href="product.html" class="image-holder">
+                    <img src="img/catalog-4.png" alt="catalog-item" class="image-holder__img">
+                    <img src="img/catalog-7.png" alt="catalog-item" class="image-holder__img _hover">
+                </a>
+                <div class="item-catalog__container">
+                    <div class="tag-item">
+                        скидки
+                    </div>
+                    <a href="#" class="tittle-item">
+                        Пальто без подплечников, с шерстью
+                    </a>
+                    <div class="price-row">
+                        <div class="price-now">5 300 грн</div>
+                        <span class="price-old">6 200 грн</span>
+                    </div>
+                    <!-- like-item add class _active for like-->
+                    <button class="like-item">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row-footer__items">
+            <button class="btn btn-show__more">
+                Показать еще
+            </button>
+            <div class="pagination">
+                <button class="btn-pagination back-page">
+                </button>
+                <span class="page-number _active">1</span>
+                <span class="page-number">2</span>
+                <span class="page-number">3</span>
+                <span class="page-number">...</span>
+                <span class="page-number">10</span>
+                <button class="btn-pagination next-page">
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--<div class="container">-->
+<div class="breadkrumbs container">
+    <a class="breadkrumbs_item" href="/">Каталог</a>
+    <a class="breadkrumbs_item _active" href="#">кртки и пальто</a>
+</div>
+<!--</div>-->
+
+//= footer.html
+
+//= script.html
+</body>
+</html>

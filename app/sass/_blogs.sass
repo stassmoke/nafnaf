@@ -1,0 +1,211 @@
+.blogs-wrap
+    display: flex
+    padding-top: 40px
+    margin-bottom: 56px
+    .blogs-col-1
+        width: 315px
+        padding-right: 65px
+    .blogs-col-2
+        width: calc(100% - 315px)
+        padding-top: 11px
+    .section-title
+        text-align: left
+        margin-bottom: 14px
+    .blogs-text
+        line-height: 24px
+        font-size: 13px
+        margin-bottom: 32px
+    .categories-tabs-title
+        font-weight: 500
+        font-size: 10px
+        line-height: 12px
+        letter-spacing: 0.05em
+        text-transform: uppercase
+        margin-bottom: 17px
+    .categories-tabs-item
+        font-weight: 600
+        font-size: 13px
+        line-height: 17px
+        border-bottom: 1px solid #1F2226
+        padding-bottom: 6px
+        margin-right: 16px
+        margin-bottom: 16px
+        &._active
+            color: $accent_pink
+            border-color: transparent
+            pointer-events: none
+        &:hover
+            color: $accent_pink
+            border-color: transparent
+    .categories-list
+        display: flex
+        flex-wrap: wrap
+        margin-left: -30px
+        margin-bottom: 20px
+    .categories-item
+        width: calc(50% - 30px)
+        margin-left: 30px
+        margin-bottom: 52px
+        &:hover
+            .categories-tatle
+                color: $accent_pink
+    .categories-image
+        margin-bottom: 29px
+        max-height: 216px
+        display: block
+    .categories-label
+        position: absolute
+        bottom: 10px
+        background-color: rgba(237, 187, 217, 0.9)
+        font-weight: 600
+        font-size: 11px
+        line-height: 15px
+        padding: 6px 10px
+        color: $white
+        pointer-events: none
+    .categories-date
+        font-weight: 500
+        font-size: 11px
+        line-height: 15px
+        margin-bottom: 7px
+    .categories-tatle
+        font-weight: 600
+        font-size: 18px
+        line-height: 24px
+        max-width: 408px
+        margin-bottom: 16px
+    .categories-desc
+        font-size: 13px
+        line-height: 24px
+        max-width: 400px
+        display: -webkit-box
+        max-height: 96px
+        -webkit-line-clamp: 4
+        -webkit-box-orient: vertical
+        overflow: hidden
+        -o-text-overflow: ellipsis
+        text-overflow: ellipsis
+
+    .row-footer__items
+        position: relative
+        text-align: center
+        margin-bottom: 12px
+    .btn-show__more
+        max-width: 398px
+
+    @media (max-width: 1000px)
+        .blogs-col-1
+            width: 280px
+            padding-right: 35px
+        .blogs-col-2
+            width: calc(100% - 280px)
+            max-width: 100%
+    @media (max-width: 1100px)
+        .row-footer__items
+            justify-content: space-between
+        .pagination
+            margin-top: 46px
+    @media (max-width: 860px)
+        padding-left: 86px
+        padding-right: 86px
+        flex-wrap: wrap
+        .blogs-col-1
+            width: 100%
+            padding-right: 0
+        .blogs-col-2
+            width: 100%
+        .blogs-text
+            margin-bottom: 35px
+        .categories-tabs-title, .categories-tabs-item
+            margin-bottom: 19px
+        .categories-tabs-list
+            margin-bottom: 20px
+        .categories-list
+            margin-left: 0
+        .categories-item
+            width: 100%
+            margin-left: 0
+            margin-bottom: 65px
+            &:last-of-type
+                margin-bottom: 44px
+        .categories-image
+            max-height: 294px
+        .btn-show__more
+            max-width: 100%
+        .pagination
+            margin-top: 40px
+            align-items: center
+            display: flex
+            justify-content: center
+            .page-number
+                font-weight: 500
+                font-size: 18px
+                line-height: 22px
+                margin-right: 18px
+            .back-page
+                margin-right: 30px
+            .btn-pagination
+                width: 22px
+                height: 16px
+                background: transparent url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.89474 1.28938L4.18412 0.881627L3.36862 0.302872L3.07924 0.710622L3.89474 1.28938ZM1.00307 4.5L0.595321 4.21062C0.472322 4.38394 0.472322 4.61606 0.595321 4.78938L1.00307 4.5ZM3.07924 8.28938L3.36862 8.69713L4.18412 8.11837L3.89474 7.71062L3.07924 8.28938ZM11.4355 5L11.9355 5L11.9355 4L11.4355 4L11.4355 5ZM3.07924 0.710622L0.595321 4.21062L1.41082 4.78938L3.89474 1.28938L3.07924 0.710622ZM0.595321 4.78938L3.07924 8.28938L3.89474 7.71062L1.41082 4.21062L0.595321 4.78938ZM1.00307 5L11.4355 5L11.4355 4L1.00307 4L1.00307 5Z' fill='%231F2226'/%3E%3C/svg%3E%0A") center no-repeat
+                background-size: 20px
+                &:hover
+                    background: transparent url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.89474 1.28938L4.18412 0.881627L3.36862 0.302872L3.07924 0.710622L3.89474 1.28938ZM1.00307 4.5L0.595321 4.21062C0.472322 4.38394 0.472322 4.61606 0.595321 4.78938L1.00307 4.5ZM3.07924 8.28938L3.36862 8.69713L4.18412 8.11837L3.89474 7.71062L3.07924 8.28938ZM11.4355 5L11.9355 5L11.9355 4L11.4355 4L11.4355 5ZM3.07924 0.710622L0.595321 4.21062L1.41082 4.78938L3.89474 1.28938L3.07924 0.710622ZM0.595321 4.78938L3.07924 8.28938L3.89474 7.71062L1.41082 4.21062L0.595321 4.78938ZM1.00307 5L11.4355 5L11.4355 4L1.00307 4L1.00307 5Z' fill='%23EDBBD9'/%3E%3C/svg%3E%0A") center no-repeat
+                    background-size: 20px
+
+    @media (max-width: 520px)
+        margin-bottom: 25px
+        padding-left: 12px
+        padding-right: 12px
+        padding-top: 14px
+        .section-title
+            margin-bottom: 18px
+        .categories-tabs-list
+            margin-bottom: 9px
+        .categories-tabs-item
+            font-size: 14px
+            padding-bottom: 4px
+
+        .categories-tabs-title
+            margin-bottom: 20px
+        .categories-item
+            margin-bottom: 42px
+            &:last-of-type
+                margin-bottom: 22px
+        .categories-image
+            height: 200px
+            margin-bottom: 14px
+        .categories-date
+            font-size: 10px
+            margin-bottom: 3px
+        .categories-tatle
+            font-size: 13px
+            line-height: 21px
+            margin-bottom: 12px
+        .categories-desc
+            font-size: 11px
+            line-height: 16px
+            max-height: 64px
+        .row-footer__items
+            display: flex
+
+        .btn-show__more
+            max-width: 140px
+
+        .pagination
+            margin-top: 0
+            .page-number
+                margin-right: 11px
+                font-size: 11px
+                line-height: 15px
+            .btn-pagination
+                width: 12px
+                height: 10px
+                background: transparent url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.89474 1.28938L4.18412 0.881627L3.36862 0.302872L3.07924 0.710622L3.89474 1.28938ZM1.00307 4.5L0.595321 4.21062C0.472322 4.38394 0.472322 4.61606 0.595321 4.78938L1.00307 4.5ZM3.07924 8.28938L3.36862 8.69713L4.18412 8.11837L3.89474 7.71062L3.07924 8.28938ZM11.4355 5L11.9355 5L11.9355 4L11.4355 4L11.4355 5ZM3.07924 0.710622L0.595321 4.21062L1.41082 4.78938L3.89474 1.28938L3.07924 0.710622ZM0.595321 4.78938L3.07924 8.28938L3.89474 7.71062L1.41082 4.21062L0.595321 4.78938ZM1.00307 5L11.4355 5L11.4355 4L1.00307 4L1.00307 5Z' fill='%231F2226'/%3E%3C/svg%3E%0A") center no-repeat
+                &:hover
+                    background: transparent url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.89474 1.28938L4.18412 0.881627L3.36862 0.302872L3.07924 0.710622L3.89474 1.28938ZM1.00307 4.5L0.595321 4.21062C0.472322 4.38394 0.472322 4.61606 0.595321 4.78938L1.00307 4.5ZM3.07924 8.28938L3.36862 8.69713L4.18412 8.11837L3.89474 7.71062L3.07924 8.28938ZM11.4355 5L11.9355 5L11.9355 4L11.4355 4L11.4355 5ZM3.07924 0.710622L0.595321 4.21062L1.41082 4.78938L3.89474 1.28938L3.07924 0.710622ZM0.595321 4.78938L3.07924 8.28938L3.89474 7.71062L1.41082 4.21062L0.595321 4.78938ZM1.00307 5L11.4355 5L11.4355 4L1.00307 4L1.00307 5Z' fill='%23EDBBD9'/%3E%3C/svg%3E%0A") center no-repeat
+            .back-page
+                margin-right: 8px
+
+            .next-page
+                margin-left: 18px

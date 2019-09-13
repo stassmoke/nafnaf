@@ -1,0 +1,171 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+.help-wrap
+    display: flex
+    padding-top: 40px
+    margin-bottom: 56px
+    .help-col-1
+        width: 315px
+        padding-right: 65px
+    .help-col-2
+        width: calc(100% - 315px)
+        max-width: 593px
+    .section-title
+        text-align: left
+        margin-bottom: 14px
+    .help-text
+        line-height: 24px
+        font-size: 13px
+    .help-search
+        padding-top: 37px
+        .input-holder
+            width: 100%
+            border: none
+            border-bottom: 1px solid black
+            position: relative
+            color: $font_color2
+            padding: 0 0 4px
+            margin-bottom: 58px
+        input[type="text"]
+            width: 100%
+            border: none
+            outline: none
+            font-size: 18px
+            line-height: 33px
+            &:focus, &:active, &:visited
+                outline: none
+            &::placeholder
+                color: $innactive
+                font-size: 18px
+                line-height: 33px
+                text-align: left
+
+.help-more-list
+    //padding-bottom: 22px
+    margin-bottom: 20px
+    border-bottom: 1px solid #000000
+    &:last-child
+        border: none
+        margin-bottom: 13px
+
+    .help-more-wrap
+        position: relative
+        .help-more-wrap
+            padding-left: 18px
+            &:first-of-type
+                .more-btn
+                    padding-top: 26px
+        .more-btn
+            font-weight: 500
+            font-size: 18px
+            line-height: 24px
+            cursor: pointer
+            border: 1px solid #E6E6E6
+            margin-bottom: -1px
+            padding: 12px 35px 12px 17px
+            position: relative
+            .icon-more
+                position: absolute
+                z-index: 2
+                top: 25px
+                right: 20px
+                width: 10px
+                height: 2px
+                background-color: $black
+                display: inline-block
+                cursor: pointer
+                &:before
+                    position: absolute
+                    content: ""
+                    top: -4px
+                    right: 4px
+                    height: 10px
+                    width: 2px
+                    background-color: black
+                    display: inline-block
+                    opacity: 1
+                    transition: 0.25s
+
+            &._open
+                border: 1px solid $accent_pink
+                z-index: 2
+                .icon-more
+                    &:before
+                        opacity: 0
+                        transition: 0.25s
+            &._open, &:hover
+                border: 1px solid $accent_pink
+                z-index: 2
+
+        .text-more
+            font-size: 11px
+            line-height: 20px
+            height: 100%
+            display: none
+            //max-height: 0
+            //margin-top: 13px
+            overflow: hidden
+            //visibility: hidden
+            //transition: max-height 1.2s cubic-bezier(0, 1, 0, 1)
+            &._open
+                //max-height: 3000px
+                visibility: visible
+                transition: max-height 2s linear
+
+            .help-more-wrap
+                .text-more
+                    > :first-child
+                        padding-top: 10px
+                &:last-of-type
+                    margin-bottom: 50px
+            .text-more
+                padding-bottom: 0
+            .more-btn
+                padding-left: 0
+                font-weight: 600
+                font-size: 13px
+                line-height: 17px
+                border: none
+                border-bottom: 1px solid #E6E6E6
+                .icon-more
+                    position: relative
+                    top: -5px
+                    right: -9px
+                    height: 2px
+                    width: 8px
+                    &:before
+                        height: 8px
+                        top: -3px
+                        right: 3px
+            ul
+                padding-left: 20px
+                li
+                    list-style: disc
+                    margin-bottom: 23px
+
+
+@media (max-width: 1000px)
+    .help-wrap
+        .help-col-1
+            width: 280px
+            padding-right: 35px
+        .help-col-2
+            width: calc(100% - 280px)
+            max-width: 100%
+@media (max-width: 860px)
+    .help-wrap
+        padding-left: 86px
+        padding-right: 86px
+        flex-wrap: wrap
+        .help-col-1
+            width: 100%
+            padding-right: 0
+        .help-col-2
+            width: 100%
+@media (max-width: 520px)
+    .help-wrap
+        padding-left: 12px
+        padding-right: 12px
+

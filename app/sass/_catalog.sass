@@ -1,0 +1,718 @@
+.catalog
+    padding-top: 26px
+    padding-bottom: 72px
+    #filters-mobile
+        left: 0!important
+    .row-flex
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        width: 100%
+        align-items: center
+
+    .row-flex__start
+        display: flex
+        flex-direction: row
+        justify-content: flex-start
+        align-items: center
+        width: 100%
+
+
+    .catalog-title
+        font-weight: 600
+        font-size: 18px
+        line-height: 24px
+        color: #1F2226
+
+    .search-result
+        font-size: 11px
+        color: #9DA2A6
+        line-height: 15px
+        font-weight: normal
+
+    .catalog-tittle__row
+        margin-bottom: 19px
+
+    .btn-filters__dropdown
+        font-size: 10px
+        font-weight: 500
+        letter-spacing: 0.05em
+        color: #1F2226
+        padding-bottom: 17px
+
+    .btn-filters
+        margin-bottom: 0
+
+    .catalog-btns__filter
+        border-bottom: 1px solid #F5F5F5
+        align-items: center
+        //padding-bottom: 17px
+        margin-bottom: 17px
+        position: relative
+
+    .text-grey__sort
+        font-size: 11px
+        color: #9DA2A6
+        font-weight: normal
+        margin-right: 10px
+
+    .sort-by
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: flex-start
+        padding-bottom: 17px
+        .nice-select
+            padding-right: 15px
+            font-size: 11px
+            .list
+                width: max-content
+
+    .btn-sort
+        margin-bottom: 0
+        text-transform: capitalize
+        font-size: 11px
+
+    .selected-filters__text
+        font-size: 11px
+        line-height: 15px
+        color: #1F2226
+        font-weight: normal
+        margin-right: 8px
+        margin-bottom: 5px
+    .filters
+        margin-bottom: 30px
+
+    .like-item
+        position: absolute
+        top: 4px
+        right: -2px
+        z-index: 50
+        cursor: pointer
+        border: none
+        display: none
+        pointer-events: none
+        outline: none
+        background: transparent
+        &:before
+            content: ''
+            background: url("data:image/svg+xml,%3Csvg width='16' height='15' viewBox='0 0 16 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 3.46245L7.27886 3.66849C7.37085 3.99047 7.66514 4.21245 8 4.21245C8.33486 4.21245 8.62915 3.99047 8.72114 3.66849L8 3.46245ZM8 12.7124C8.0236 12.7124 7.93149 12.7072 7.68247 12.6109C7.46168 12.5256 7.17694 12.3924 6.84861 12.2099C6.19234 11.8454 5.39614 11.3034 4.62908 10.6071C3.08029 9.20127 1.75 7.26244 1.75 4.96244H0.25C0.25 7.86245 1.91971 10.1736 3.62092 11.7178C4.47886 12.4965 5.37016 13.1045 6.12014 13.5212C6.49493 13.7294 6.84301 13.8946 7.14175 14.0101C7.41226 14.1146 7.7264 14.2124 8 14.2124V12.7124ZM1.75 4.96244C1.75 3.86815 2.07495 3.11687 2.51294 2.62562C2.95519 2.12958 3.56013 1.8451 4.21097 1.77C5.54743 1.6158 6.89942 2.34044 7.27886 3.66849L8.72114 3.25641C8.10058 1.08445 5.95257 0.0590979 4.03903 0.27989C3.06487 0.392293 2.10731 0.826564 1.39331 1.6274C0.675047 2.43302 0.25 3.55673 0.25 4.96244H1.75ZM8 14.2124C8.2736 14.2124 8.58774 14.1146 8.85825 14.0101C9.15699 13.8946 9.50507 13.7294 9.87986 13.5212C10.6298 13.1045 11.5211 12.4965 12.3791 11.7178C14.0803 10.1736 15.75 7.86245 15.75 4.96244H14.25C14.25 7.26244 12.9197 9.20127 11.3709 10.6071C10.6039 11.3034 9.80766 11.8454 9.15139 12.2099C8.82306 12.3924 8.53832 12.5256 8.31753 12.6109C8.06851 12.7072 7.9764 12.7124 8 12.7124V14.2124ZM15.75 4.96244C15.75 3.55673 15.325 2.43302 14.6067 1.6274C13.8927 0.826564 12.9351 0.392293 11.961 0.27989C10.0474 0.0590979 7.89942 1.08445 7.27886 3.25641L8.72114 3.66849C9.10058 2.34044 10.4526 1.6158 11.789 1.77C12.4399 1.8451 13.0448 2.12958 13.4871 2.62562C13.925 3.11687 14.25 3.86815 14.25 4.96244H15.75Z' fill='%231F2226'/%3E%3C/svg%3E%0A") center no-repeat
+            -webkit-background-size: cover
+            background-size: cover
+            width: 14px
+            height: 13px
+            display: inline-block
+        &._active
+            &:before
+                background: url("data:image/svg+xml,%3Csvg width='14' height='13' viewBox='0 0 14 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4.32576C1 8.69024 6.03593 11.46 6.87525 11.46C7.71458 11.46 12.7505 8.69024 12.7505 4.32576C12.7505 0.12916 7.71458 0.129158 6.87525 3.06679C6.03593 0.129158 1 0.12916 1 4.32576Z' fill='%23EDBBD9'/%3E%3Cpath d='M6.87525 3.06679L6.15411 3.27283C6.2461 3.5948 6.54039 3.81679 6.87525 3.81679C7.21011 3.81679 7.5044 3.5948 7.5964 3.27283L6.87525 3.06679ZM6.87525 10.71C6.91894 10.71 6.85946 10.713 6.65219 10.6329C6.47313 10.5637 6.23923 10.4544 5.96739 10.3034C5.4241 10.0016 4.76347 9.55197 4.12696 8.97422C2.83927 7.80539 1.75 6.208 1.75 4.32576H0.25C0.25 6.80801 1.67869 8.77773 3.1188 10.0849C3.84619 10.7451 4.60192 11.2608 5.23892 11.6146C5.55723 11.7915 5.85446 11.9327 6.11146 12.032C6.34024 12.1205 6.62173 12.21 6.87525 12.21V10.71ZM1.75 4.32576C1.75 3.43232 2.0147 2.83167 2.35979 2.44461C2.70915 2.05276 3.18856 1.82603 3.70885 1.76599C4.78421 1.64191 5.85501 2.22597 6.15411 3.27283L7.5964 2.86075C7.05618 0.969978 5.18935 0.0852166 3.53691 0.275881C2.6933 0.373221 1.86127 0.749748 1.24017 1.44639C0.614793 2.14782 0.25 3.1209 0.25 4.32576H1.75ZM6.87525 12.21C7.12877 12.21 7.41027 12.1205 7.63904 12.032C7.89604 11.9327 8.19328 11.7915 8.51158 11.6146C9.14859 11.2608 9.90431 10.7451 10.6317 10.0849C12.0718 8.77773 13.5005 6.80801 13.5005 4.32576H12.0005C12.0005 6.208 10.9112 7.80539 9.62355 8.97422C8.98704 9.55197 8.32641 10.0016 7.78312 10.3034C7.51127 10.4544 7.27738 10.5637 7.09832 10.6329C6.89104 10.713 6.83156 10.71 6.87525 10.71V12.21ZM13.5005 4.32576C13.5005 3.1209 13.1357 2.14782 12.5103 1.44639C11.8892 0.749748 11.0572 0.373221 10.2136 0.275881C8.56116 0.0852166 6.69433 0.969978 6.15411 2.86075L7.5964 3.27283C7.8955 2.22597 8.96629 1.64191 10.0417 1.76599C10.5619 1.82603 11.0414 2.05276 11.3907 2.44461C11.7358 2.83167 12.0005 3.43232 12.0005 4.32576H13.5005Z' fill='%23EDBBD9'/%3E%3C/svg%3E") center no-repeat
+
+    .item-catalog__container
+        position: relative
+
+    .btn-show__more
+        max-width: 595px
+
+    .btn-clear
+        min-width: 88px
+        margin-bottom: 5px
+        &:hover
+            color: $accent_pink
+
+    .row-footer__items
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        position: relative
+
+    .catalog-selected__filters
+        margin-bottom: -5px
+
+
+    .catalog-btns__filter--mobile
+        display: none
+
+    .modal-color
+        //left: 183px
+        .checkmark
+
+            &.checkmark-big
+                padding: 0 8px
+
+    //.modal-size
+    //    left: 258px
+
+    .modal-type, .modal-color
+        .scroll-subcategory
+            overflow-y: auto
+            max-height: 440px
+        .subcategory
+            flex-direction: column
+            margin-bottom: 20px
+            &:last-of-type
+                margin-bottom: 0
+        .container-input
+            margin-bottom: 12px
+            &:last-of-type
+                margin-bottom: 20px
+        &._open
+            //overflow: visible
+            //transition: max-height 0.5s linear
+            .wrap-subcategory
+                height: 100%
+    .modal-color, .color-multitag, .body-filters__mobile
+        max-width: 250px
+        .scroll-subcategory
+            max-height: 262px
+            padding-right: 0
+            margin-right: 25px
+            margin-bottom: 24px
+        .wrap-button__modal:before
+            right: 30px
+        .container-input
+            margin-bottom: 16px
+        span
+            vertical-align: top
+        .color-icon
+            width: 13px
+            height: 13px
+            display: inline-block
+            border-radius: 50%
+            background-color: red
+            margin-left: 4px
+            margin-right: 5px
+            margin-top: 2px
+        .subcategory
+            .container-input
+                width: 100%
+    .filters-modal__mobile
+        .body-filters__mobile
+            max-width: 100%
+
+    .modal-all__filters
+        .color-multitag
+            max-width: 100%
+            margin-bottom: 10px
+            .container-input
+                width: 100%
+                &:last-child
+                    margin-bottom: 0
+            .wrap-subcategory
+                padding-bottom: 0
+
+
+    //.modal-price
+        //left: 93px
+    .wrap-double__price
+        display: flex
+        flex-direction: row
+        align-items: flex-start
+        justify-content: space-between
+
+
+        .input-holder
+            width: calc(50% - 20px)
+            margin-bottom: 0
+
+
+
+    .modal-all__filters
+        max-width: 100%
+        left: 0!important
+        top: -48px
+        max-height: 0
+        right: 0
+        height: auto
+        overflow: hidden
+        box-shadow: none
+        padding: 0 28px 0 4px
+        transition: max-height 0.5s linear
+        &._open
+            max-height: calc(100vh - 136px)
+            transition: max-height 0.5s linear
+        .modal-all__filters--title
+            margin-bottom: 20px
+            text-align: center
+            width: 100%
+            font-size: 18px
+            font-weight: 500
+            color: #1F2226
+            line-height: 24px
+        .wrap-col
+            display: flex
+            flex-direction: row
+            //align-items: flex-start
+            width: 100%
+            height: 100%
+            padding-bottom: 14px
+        .all-filters__col
+            width: 33%
+            margin-right: 30px
+            max-height: calc(100vh - 294px)
+            overflow-y: auto
+            overflow-x: hidden
+            display: flex
+            flex-direction: column
+            position: relative
+            //padding-bottom: 14px
+            &:before
+                content: ''
+                position: absolute
+                z-index: 2
+                left: 0
+                right: 10px
+                bottom: 0
+                height: 52px
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0) -123.08%, #FFFFFF 59.62%)
+                pointer-events: none
+                opacity: 0.7
+            &:last-of-type
+                margin-right: 12px
+            .wrap-subcategory
+                height: auto
+            .range-price
+                margin: 35px 0 0
+            .color-multitag
+                .input-holder
+                    margin-bottom: 10px
+            > div:last-of-type
+                padding-bottom: 0
+        .scroll-subcategory
+            overflow-y: auto
+            max-height: calc(100vh - 296px)
+            padding: 0 31px 20px 31px
+
+        .container-input
+            margin-bottom: 12px
+        .col-type
+            .subcategory
+                flex-direction: column
+    .all-filters__double
+        padding: 20px 8px 20px 31px
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        .btn
+            width: 100%
+            max-width: 49.5%
+            height: 60px
+
+    input[type="number"], textarea
+        width: 100%
+        border: none
+        outline: none
+        line-height: 24px
+        font-family: Montserrat, "Open Sans", sans-serif
+        &:focus,
+        &:active,
+        &:visited
+            outline: none
+        &::placeholder
+            color: $innactive
+            font-size: 13px
+            line-height: 24px
+            text-align: left
+            font-family: Montserrat, "Open Sans", sans-serif
+
+    .range-price
+        margin: 35px 0
+
+    .scroll-subcategory,
+    .subcategory,
+    .all-filters__col
+        //scrollbar-color: #0A4C95 #C2D2E4
+        //scrollbar-width: thin
+        &::-webkit-scrollbar
+            width: 2px
+            height: 5px
+        &::-webkit-scrollbar-button
+            display: none
+        &::-webkit-scrollbar-track
+            background-color: #999
+        &::-webkit-scrollbar-track-piece
+            background-color: #E4E9F5
+        &::-webkit-scrollbar-thumb
+            height: 20px
+            background-color:  #1F2226
+        &::-webkit-scrollbar-corner
+            background-color: #E4E9F5
+        &::-webkit-resizer
+                background-color:  #1F2226
+
+
+        @-moz-document url-prefix(http://),url-prefix(https://)
+            scrollbar
+                -moz-appearance: none !important
+                background: rgb(0,255,0) !important
+            thumb,scrollbarbutton
+                -moz-appearance: none !important
+                background-color: rgb(0,0,255) !important
+            thumb:hover,scrollbarbutton:hover
+                -moz-appearance: none !important
+                background-color: rgb(255,0,0) !important
+            scrollbarbutton
+                display: none !important
+            scrollbar[orient="vertical"]
+                min-width: 15px !important
+
+    .input-holder
+        margin-bottom: 25px
+        .nice-select
+            float: none
+        input
+            text-align: center
+            &::placeholder
+                text-align: center
+
+        .label
+            font-size: 11px
+            font-weight: 600
+            color: #1F2226
+            line-height: 20px
+            margin-bottom: 12px
+
+    .row-title__reset
+        padding-bottom: 7px
+        margin-bottom: 20px
+        border-bottom: 1px solid #E6E6E6
+        display: flex
+        flex-direction: row
+        width: 100%
+        justify-content: space-between
+        align-items: center
+    .name-category
+        font-size: 13px
+        font-weight: 600
+        color: #1F2226
+        line-height: 24px
+    .btn-reset__filters
+        font-size: 11px
+        font-weight: normal
+        color: #1F2226
+        line-height: 20px
+        cursor: pointer
+        transition: .2s all ease
+        &:hover
+            color: #EDBBD9
+            transition: .2s all ease
+    .color-multitag
+        .scroll-subcategory
+            overflow-y: visible
+            max-height: 160px
+            overflow-x: auto
+            margin-right: 4px
+            padding-bottom: 0
+            .subcategory
+                margin-bottom: 0
+
+    .filters-modal__mobile--other
+        .body-filters__mobile
+            padding-right: 4px
+        .input-holder
+            margin-bottom: 30px
+            .label
+                margin-bottom: 10px
+        .subcategory
+            &.main-body
+                margin: 0
+                overflow-y: auto
+                max-height: calc(100vh - 100px)
+        .current
+            font-size: 11px
+            white-space: pre-wrap
+            font-weight: normal
+            text-transform: capitalize
+
+    .filters-modal__mobile--main__other
+        .main-link
+            min-height: 60px
+            height: auto
+            flex-direction: column
+            align-items: flex-start
+            justify-content: center
+            padding: 20px 0
+        .more-btn
+            width: 100%
+            display: flex
+            justify-content: space-between
+            align-items: center
+            &._open
+                margin-bottom: 15px
+            .icon-more
+                position: relative
+                z-index: 2
+                width: 10px
+                height: 2px
+                background-color: $black
+                display: inline-block
+                cursor: pointer
+                &:before
+                    position: absolute
+                    content: ""
+                    top: -4px
+                    right: 4px
+                    height: 10px
+                    width: 2px
+                    background-color: black
+                    display: inline-block
+                    opacity: 1
+                    transition: 0.25s
+        .main-link
+            &:before
+                content: none
+        .text-more
+            font-size: 11px
+            line-height: 20px
+            height: 100%
+            max-height: 0
+            //margin-top: 13px
+            overflow: hidden
+            visibility: hidden
+            transition: max-height 0.7s cubic-bezier(0, 1, 0, 1)
+            &._open
+                max-height: 3000px
+                visibility: visible
+                transition: max-height 1.5s linear
+                max-width: 93%
+
+        .subcategory
+            flex-direction: column
+            flex-wrap: nowrap
+            margin-bottom: 0
+
+        .checkmark
+            width: 16px
+            height: 16px
+            top: 2px
+            border: 1px solid #9DA2A6
+
+
+        .container-input
+            font-size: 13px
+            padding-left: 30px
+            font-weight: 500
+            color: #1F2226
+            margin-bottom: 15px
+            &:last-of-type
+                margin-bottom: 0
+            input:checked ~  .checkmark:after
+                width: 10px
+                height: 10px
+                top: 2px
+                left: 2px
+            input:checked~.checkmark
+                border: 1px solid #1F2226
+
+        .subcategory-color
+            flex-direction: row
+            flex-wrap: wrap
+            .container-input__big
+                width: auto
+                &:last-of-type
+                    margin-bottom: 15px
+            .checkmark-big
+                padding: 0 5px
+
+        .subcategory-size
+            flex-direction: row
+            flex-wrap: wrap
+            .container-input__big
+                &:last-of-type
+                    margin-bottom: 15px
+
+        .subcategory-price
+            padding: 0 10px
+
+@media (max-width: 1335px)
+    .catalog
+        .close-modal__filters
+            right: 0
+            top: 2px
+
+@media (max-width: 1200px)
+    .catalog-items
+        margin-right: -15px
+
+    .item-catalog
+        margin-right: 15px
+        width: calc(25% - 15px)
+
+@media (max-width: 1020px)
+    .catalog
+        .modal-all__filters
+            .scroll-subcategory
+                padding: 0 20px 20px 20px
+@media (max-width: 976px)
+    .catalog
+        .row-footer__items
+            justify-content: space-between
+
+        .pagination
+            position: relative
+            top: auto
+            transform: translateY(0)
+            right: auto
+
+
+@media (max-width: 950px)
+    .catalog
+        .modal-all__filters
+            padding: 0
+            .scroll-subcategory
+                padding: 0 15px 20px 15px
+                margin-left: -7px
+                overflow-x: hidden
+        .modal-all__filters .all-filters__col
+            margin-right: 16px
+
+@media (max-width: 820px)
+    .catalog
+        .btn-show__more
+            max-width: 350px
+
+@media (max-width: 768px)
+    .catalog-items
+        margin-right: -25px
+    .item-catalog
+        width: calc(33% - 16px)
+
+
+@media (max-width: 700px)
+    .catalog
+        .bg-mobile__filters
+            position: fixed
+            width: 100vw
+            height: 100vh
+            overflow: hidden
+            background: rgba(31, 34, 38, 0.65)
+            opacity: 0
+            pointer-events: none
+            left: 0
+            top: 0
+            z-index: -1
+            transition: .3s all ease-in-out
+            &._open
+                opacity: 1
+                pointer-events: auto
+                z-index: 500
+                transition: .3s all ease-in-out
+        .row-flex__start
+            flex-wrap: wrap
+        .selected-filters__row
+            order: 2
+            width: 100%
+            margin: 0
+
+        .selected-filters__text,
+        .btn-clear
+            width: 50%
+            order: 1
+            margin: 0 0 15px 0
+        .btn-clear
+            text-align: right
+        .catalog-btns__filter--mobile
+            display: flex
+            justify-content: space-between
+            margin-bottom: 20px
+
+
+
+        .btn-filter__mobile
+            border: 1px solid #E5E5E5
+            height: 40px
+            border-radius: 0
+            display: flex
+            width: 100%
+            align-items: center
+            padding: 0 15px 0 12px
+            text-transform: uppercase
+            background-color: transparent
+            position: relative
+            font-size: 10px
+            font-weight: 600
+            color: #1F2226
+            letter-spacing: 0.05em
+            outline: none
+            &:after
+                content: ''
+                border: none
+                position: absolute
+                background-image: url("../img/icons/arrow-icon.svg")
+                background-position: center
+                background-repeat: no-repeat
+                width: 10px
+                height: 10px
+                transform: none
+                transform-origin: 50%
+                right: 20px
+            &._hide-after
+                &:after
+                    display: none
+                .list
+                    width: calc(100% + 27px)
+                    right: -15px
+                    min-width: max-content
+
+            .list
+                li
+                    font-size: 11px
+
+        .btn-filter__mobile--double
+            width: 49%
+
+        .current
+            position: relative
+            text-transform: uppercase
+            font-size: 10px
+            font-weight: 600
+            overflow: hidden
+            max-width: 100%
+            text-overflow: ellipsis
+            display: block
+            &:before
+                content: ''
+
+        .catalog-btns__filter
+            display: none
+
+        .catalog-tittle__row
+            padding-bottom: 20px
+            border-bottom: 1px solid #F5F5F5
+
+        .item-catalog
+            .image-holder
+                margin-bottom: 10px
+            .tittle-item
+                margin-bottom: 5px
+            .colors-item
+                margin-bottom: 10px
+        .catalog-items
+            margin-bottom: 7px
+
+@media (max-width: 563px)
+    .catalog
+        .btn-show__more
+            max-width: 160px
+
+@media (max-width: 522px)
+    .catalog
+        padding-bottom: 34px
+        .wrap-double__price
+            width: 100%
+            padding: 20px 13px 0 8px
+    .item-catalog
+        width: calc(50% - 10px)
+        margin-right: 10px
+        margin-bottom: 30px
+    .catalog-items
+        margin-right: -10px
+
+
+@media (max-width: 350px)
+    .catalog
+        .row-footer__items
+            flex-direction: column
+        .btn-show__more
+            max-width: 100%
+            margin-bottom: 20px

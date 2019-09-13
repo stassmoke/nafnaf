@@ -1,0 +1,258 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+.blog-wrap
+    ._align-center
+        align-items: center
+        display: flex
+        .title-main__sub
+            margin-top: 40px
+    .row
+        margin-bottom: 23px
+    .row__desc p
+        margin-bottom: 23px
+    .image-blog
+        position: relative
+        .image-holder
+            max-width: 908px
+            margin: 35px auto 46px
+            //max-height: 446px
+            img
+                max-height: 446px
+                object-fit: contain
+    .blog-label
+        position: absolute
+        bottom: 0
+        background: rgba(237, 187, 217, 0.9)
+        left: 25.7%
+        font-weight: 600
+        font-size: 13px
+        line-height: 17px
+        padding: 6px 12px
+        color: $white
+    .blog-date
+        font-weight: 500
+        font-size: 13px
+        line-height: 17px
+        margin-bottom: 14px
+    .blog-title
+        font-weight: 600
+        font-size: 22px
+        line-height: 29px
+        letter-spacing: 0.05em
+        text-transform: uppercase
+        max-width: 600px
+        margin-bottom: 18px
+    .blog-video
+        margin-bottom: 49px
+
+    .banner-double__img
+        margin: 74px 0 86px
+        display: flex
+        justify-content: space-between
+
+    .banner-double__img
+        .image-holder
+            max-width: 282px
+            height: 100%
+            display: inline-block
+            &:first-child
+                margin-top: -60px
+                margin-right: 28px
+    .other-blog
+        margin-top: 103px
+        margin-bottom: 82px
+        .title-main__sub
+            font-weight: 600
+            font-size: 22px
+            line-height: 29px
+            letter-spacing: 0.05em
+            text-transform: uppercase
+
+    .categories-list
+        display: flex
+        flex-wrap: wrap
+        margin-top: 65px
+        overflow: hidden
+    .categories-item
+        opacity: 1
+        &:hover
+            .categories-tatle
+                color: $accent_pink
+    .categories-image
+        margin-bottom: 29px
+        max-height: 216px
+    .categories-label
+        position: absolute
+        bottom: 10px
+        background-color: $accent_pink
+        font-weight: 600
+        font-size: 11px
+        line-height: 15px
+        padding: 6px 10px
+        color: $white
+    .categories-date
+        font-weight: 500
+        font-size: 11px
+        line-height: 15px
+        margin-bottom: 7px
+    .categories-tatle
+        font-weight: 600
+        font-size: 18px
+        line-height: 24px
+        max-width: 408px
+        margin-bottom: 16px
+    .categories-desc
+        font-size: 13px
+        line-height: 24px
+        max-width: 400px
+        max-height: 96px
+        -webkit-line-clamp: 4
+        -webkit-box-orient: vertical
+        overflow: hidden
+        -o-text-overflow: ellipsis
+        text-overflow: ellipsis
+
+    .other-blog-next
+        background: none
+        top: 24px
+        right: 0
+        opacity: 1
+    .other-blog-prev
+        background: none
+        top: 24px
+        right: 50px
+        left: auto
+        opacity: 1
+    .btn-block
+        margin-bottom: 0
+        &._mobile
+            display: none
+
+    @media (max-width: 1200px)
+        .row-col__1
+            width: 30%
+            padding-right: 40px
+        .row-col__2
+            width: 70%
+
+    @media (max-width: 1000px)
+        .row
+            padding-left: 82px
+        .row-col__1
+            width: 100%
+            padding-right: 0
+        .row-col__2
+            width: 100%
+        .row__desc
+            margin-bottom: 30px
+        .image-blog
+            .image-holder
+                margin: 0 auto 41px
+        .blog-label
+            left: 70px
+        .blog-date
+            margin-bottom: 18px
+        .blog-title
+            margin-bottom: 30px
+        .title-main__sub
+            margin-bottom: 28px
+
+        .banner-double__img
+            margin: 48px 0 77px
+
+        .blog-video
+            margin-bottom: 33px
+            margin-left: -58px
+            margin-top: 4px
+        .other-blog
+            margin-top: 43px
+            margin-bottom: 40px
+            .row-col__1
+                margin-left: -58px
+        .categories-list
+            margin-top: 14px
+        .other-blog-next, .other-blog-prev
+            top: -33px
+
+
+    @media (max-width: 768px)
+
+
+        .categories-image
+            max-height: 294px
+        .categories-image, .categories-date, .categories-tatle, .categories-desc
+            max-width: 595px
+        .categories-date
+            margin-bottom: 9px
+        .btn-block
+
+            &._mobile
+                display: block
+
+    @media(max-width: 520px)
+        .row
+            padding-left: 12px
+            margin-bottom: 3px
+        .image-blog
+            padding: 0
+            .image-holder
+                margin: 0 auto 29px
+        .blog-label
+            left: 12px
+        .blog-date
+            margin-bottom: 11px
+        .blog-title
+            text-transform: none
+            letter-spacing: 0
+            margin-bottom: 18px
+
+        .title-main__sub
+            margin-bottom: 17px
+        .banner-double__img
+            margin: 36px 0 37px
+            .image-holder:first-child
+                margin-top: -28px
+                margin-right: 12px
+        .blog-video
+            margin-left: 0
+            margin-bottom: 22px
+        .other-blog
+            margin-top: 12px
+            margin-bottom: 40px
+            .row-col__1
+                margin-left: 0
+            .title-main__sub
+                font-size: 18px
+                letter-spacing: 0
+        .categories-list
+            margin-top: 0
+        .categories-image
+            margin-bottom: 16px
+        .other-blog-next, .other-blog-prev
+            top: -21px
+        .other-blog-prev
+            right: 43px
+        .categories-date
+            font-size: 10px
+            line-height: 13px
+            margin-bottom: 4px
+        .categories-tatle
+            font-size: 13px
+            line-height: 21px
+            margin-bottom: 12px
+        .categories-desc
+            font-size: 11px
+            line-height: 16px
+            max-height: 64px
+
+    @media(max-width: 415px)
+
+        .image-blog
+            .image-holder
+                height: 200px
+        .categories-image
+            height: 200px
+        .btn-block._mobile
+            display: none

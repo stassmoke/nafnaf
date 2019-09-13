@@ -1,0 +1,467 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+.collection
+    padding-top: 37px
+
+    .collection-row
+        display: flex
+        flex-wrap: wrap
+        margin-bottom: 144px
+        &:last-of-type
+            margin-bottom: 76px
+    .collection-row__col-1
+        width: 25.7%
+        padding-right: 62px
+    .collection-row__col-2
+        width: 74.3%
+
+        .collection-row__desc
+            //width: 68%
+            max-width: 596px
+            p
+                margin-bottom: 20px
+            a
+                display: inline
+    .collection-title
+        //color: $black
+        font-weight: 600
+        font-size: 22px
+        line-height: 29px
+        letter-spacing: 0.05em
+        text-transform: uppercase
+        margin-top: 0
+        margin-bottom: 16px
+        padding-top: 5px
+
+    .collection-row__title
+        font-weight: 600
+        font-size: 18px
+        line-height: 24px
+
+    .collection-row__desc
+        color: $font_color
+        font-size: 13px
+        line-height: 24px
+        margin-bottom: 23px
+        ul
+            padding-left: 20px
+            margin-bottom: 50px
+            li
+                list-style: disc
+                margin-bottom: 23px
+
+    .get-collection
+        display: flex
+        align-items: center
+        font-weight: 600
+        font-size: 12px
+        line-height: 15px
+        letter-spacing: 0.05em
+        text-transform: uppercase
+        margin-bottom: 30px
+        img
+            width: 51px
+            margin-right: 7px
+            margin-top: 7px
+    .gallery-small
+        margin-top: -31px
+
+.key-images
+    position: relative
+    overflow: hidden
+    max-width: 1220px
+    .swiper-container
+        margin: -26px auto 55px
+        max-width: 398px
+        width: 100%
+        overflow: visible
+        transition: none
+    .collection-row__title
+        position: absolute
+        z-index: 2
+        top: 50%
+        left: 30px
+        max-width: 200px
+        transform: translateY(-50%)
+    .swiper-slide
+        position: relative
+        opacity: 0.2
+        height: auto
+        max-height: 686px
+        transition: none
+        transition: opacity 0.8s
+        transition-delay: 0.1s
+        &.swiper-slide-active
+            opacity: 1
+            transition: none
+            transition: opacity 0.8s
+            transition-delay: 0.1s
+        &.swiper-slide-duplicate-active
+            opacity: 1
+
+    .key-images-next
+        margin-top: 0
+        background-image: none
+        position: absolute
+        left: 50%
+        right: -50vw
+        top: 0
+        width: auto
+        height: 100%
+        cursor: pointer
+        svg
+            position: absolute
+            top: 50%
+            left: 185px
+            margin-top: -11px
+            opacity: 0
+            cursor: pointer
+        &:hover
+            svg
+                opacity: 1
+    .key-images-prev
+        margin-top: 0
+        background-image: none
+        position: absolute
+        right: 50%
+        left: -50vw
+        top: 0
+        width: auto
+        height: 100%
+        cursor: pointer
+        svg
+            position: absolute
+            top: 50%
+            right: 185px
+            margin-top: -11px
+            opacity: 0
+            cursor: pointer
+        &:hover
+            svg
+                opacity: 1
+
+
+.btn-block
+    text-align: center
+    margin-bottom: 82px
+    width: 100%
+    .to-shopping
+        line-height: 60px
+        width: 398px
+        font-weight: 600
+        font-size: 12px
+        letter-spacing: 0.05em
+        text-transform: uppercase
+
+.all-collection
+    font-weight: 600
+    font-size: 12px
+    line-height: 15px
+    letter-spacing: 0.05em
+    text-transform: uppercase
+    color: $font_color2
+    transition: .25s
+
+.all-collection-gallery
+    position: relative
+    transition: none
+    height: 446px!important
+    .slick-slide,
+    .slick-2
+        height: 446px!important
+    .slick-dots
+        width: auto!important
+        left: 35px!important
+        bottom: 16px!important
+        transform: none!important
+    .swiper-slide
+        opacity: 1
+        position: relative
+        transition: none!important
+    .image-holder
+        height: 100%
+    .collection-text
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        padding: 50px 40px
+        &:hover
+            .collection-name
+                color: $accent_pink
+
+    .collection-name
+        font-weight: 600
+        font-size: 18px
+        line-height: 24px
+        max-width: 308px
+        margin-bottom: 10px
+    .collection-desc
+        color: $font_color
+        font-size: 13px
+        line-height: 24px
+        max-width: 308px
+
+    .all-collection-next, .all-collection-prev
+        background-image: none
+        background-color: #ffffff
+        width: 60px
+        height: 60px
+        display: flex
+        align-items: center
+        justify-content: center
+        top: auto
+        bottom: -1px
+        position: absolute
+        cursor: pointer
+
+        &.swiper-button-disabled
+            opacity: 0.4
+    .all-collection-next
+        right: -1px
+    .all-collection-prev
+        left: auto
+        right: 58px
+    .all-collection-pagination
+        width: auto!important
+        left: 35px!important
+        bottom: 16px!important
+        transform: none!important
+
+
+.other_collections
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 144px
+    &:last-of-type
+        margin-bottom: 76px
+        margin-top: -66px
+    .collection-row__col-1
+        width: 25.7%
+        padding-right: 62px
+    .collection-row__col-2
+        width: 74.3%
+
+@media (max-width: 1200px)
+    .collection,
+    .other_collections,
+    .about
+        .collection-row__col-1,
+        .row-col__1
+            width: 30%
+            padding-right: 40px
+        .collection-row__col-2,
+        .row-col__2
+            width: 70%
+
+@media (max-width: 1000px)
+    .collection,
+    .other_collections,
+    .about,
+    .policy
+        padding-top: 0
+        .collection-row,
+        .row
+            padding-left: 82px
+            padding-right: 82px
+            margin-bottom: 58px
+            &:first-child
+                flex-direction: column-reverse
+                .collection-row__col-2,
+                .row-col__2
+                    width: auto
+                    margin: 0 -57px 33px
+
+        .collection-row__col-1,
+        .row-col__1
+            width: 100%
+            padding-right: 0
+        .collection-row__col-2,
+        .row-col__2
+            width: 100%
+
+        .collection-row__desc,
+        .row__desc
+            margin-bottom: 30px
+            max-width: 100% !important
+            ul
+                margin-bottom: 72px
+        .collection-row__title,
+        .title-main__sub
+            margin-bottom: 18px
+        .get-collection
+
+            &._mobile-hiden
+                display: none
+    .other_collections:last-of-type
+        margin-top: 0
+    .collection .gallery-small
+        margin-top: 0
+
+    .key-images
+        .swiper-container
+            padding-top: 43px
+            max-width: 364px
+        .collection-row__title
+            max-width: 100%
+            transform: none
+            top: 0
+            left: 82px
+        .key-images-next svg
+            left: 168px
+        .key-images-prev svg
+            right: 168px
+    .btn-block
+        margin-bottom: 76px
+        .to-shopping
+            width: 364px
+
+
+    .collection-video
+        margin: 0 -58px 7px
+    .other_collections
+        .collection-row__desc
+            margin-bottom: 23px
+        .all-collection
+            margin-bottom: 40px
+    .all-collection-gallery
+        .collection-text
+            padding: 40px 30px
+        .all-collection-next
+            width: 50px
+            height: 50px
+            svg
+                width: 24px
+        .all-collection-prev
+            width: 50px
+            height: 50px
+            right: 48px
+            svg
+                width: 24px
+        .all-collection-pagination
+            left: 26px
+            bottom: 11px
+
+@media (max-width: 768px)
+    .all-collection-gallery
+        height: 348px
+    .key-images
+        .swiper-container
+            margin-bottom: 0
+        .key-images-next, .key-images-prev
+            svg
+                opacity: 1
+                *
+                    fill: $black!important
+
+@media (max-width: 520px)
+    .collection,
+    .other_collections,
+    .about,
+    .policy
+        padding-top: 24px
+        &:last-of-type
+            margin-bottom: 57px
+        .collection-row,
+        .row
+            padding-left: 12px
+            padding-right: 12px
+            margin-bottom: 16px
+            &:first-child
+                flex-direction: column
+                .collection-row__col-2,
+                .row-col__2
+                    width: auto
+                    margin: 40px -12px 24px
+        .collection-row__title,
+        .title-main__sub
+            padding-right: 5%
+        .collection-row__desc,
+        .row__desc
+            margin-bottom: 18px
+            ul
+                li
+                    margin-bottom: 10px
+        ._italic
+            font-size: 14px
+            line-height: 26px
+        .get-collection._mobile-hiden
+            display: inline-block
+
+    .key-images
+        padding-top: 61px
+        .swiper-container
+            max-width: 295px
+        .swiper-slide
+            //width: 295px
+        .key-images-next
+            display: none
+        .key-images-prev
+            display: none
+        .key-pagination
+            bottom: 22px
+        .collection-row__title
+            max-width: 100%
+            transform: none
+            top: 5px
+            left: 12px
+    .btn-block
+        margin-bottom: 56px
+        .to-shopping
+            width: 295px
+            line-height: 48px
+
+    .row-container__btn--mob
+        .btn-block
+            .to-shopping
+                width: 100%
+
+    .collection-video
+        margin: 27px 0 14px
+
+    .other_collections
+        .collection-row__desc
+            margin-bottom: 10px
+        .all-collection
+            margin-bottom: 30px
+
+    .all-collection-gallery
+        height: 420px
+        .swiper-slide
+
+        .image-holder
+            height: 100%
+        .collection-text
+            padding: 52px 40% 52px 15px
+        .collection-name
+            margin-bottom: 16px
+        .collection-desc
+            font-size: 12px
+            line-height: 18px
+        .all-collection-pagination
+            left: 16px
+            bottom: 15px
+        .all-collection-prev
+            width: 60px
+            height: 60px
+            right: 58px
+            background: inherit
+            svg
+                width: 33px
+                *
+                    fill: #fff
+        .all-collection-next
+            width: 60px
+            height: 60px
+            background: inherit
+            svg
+                width: 33px
+                *
+                    fill: #fff
+

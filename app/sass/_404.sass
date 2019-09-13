@@ -1,0 +1,115 @@
+
+.error-wrap
+    display: flex
+    margin-bottom: -12px
+    .error-main
+        width: 50%
+        max-width: 550px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        padding-left: 15px
+        padding-right: 40px
+        margin-bottom: 98px
+
+    .error-img
+        width: 50%
+        padding-top: 46px
+        text-align: right
+
+        img
+            width: auto
+    .error-title
+        font-style: italic
+        font-size: 90px
+        line-height: 110px
+        color: $accent_pink
+        margin-bottom: 18px
+        &._mobile
+            display: none
+    .error-text
+        max-width: 420px
+        font-size: 18px
+        line-height: 24px
+        margin-bottom: 16px
+    .error-text-smal
+        font-size: 13px
+        line-height: 24px
+        max-width: 420px
+    .btns
+        margin-top: 20px
+        display: flex
+        justify-content: space-between
+        a
+            line-height: 38px
+            width: 100%
+            margin-right: 10px
+
+    @media (max-width: 1200px)
+        .error-title
+            font-size: 80px
+
+    @media (max-width: 1100px)
+        .error-title
+            font-size: 74px
+
+    @media (max-width: 1000px)
+        flex-direction: column-reverse
+        justify-content: flex-start
+        align-items: center
+        .error-img
+            width: 100%
+            padding-top: 0
+            padding-right: 32px
+            text-align: center
+        .error-main
+            width: 100%
+            padding: 23px 30px 0
+            align-items: center
+            margin-bottom: 0
+            flex-grow: 1
+        .error-title
+            font-size: 90px
+            text-align: center
+            display: none
+            &._mobile
+                display: block
+        .error-text, .error-text-smal
+            text-align: center
+        .btns
+            width: 100%
+            a
+                margin-right: 0
+                width: calc(50% - 5px)
+
+    @media (max-width: 520px)
+        margin-bottom: -33px
+        .error-img
+            padding: 30px 0 0 44%
+            img
+                width: 100%
+
+        .error-main
+            align-items: flex-start
+            padding: 76px 0 0
+        .error-title
+            font-size: 60px
+            line-height: 73px
+        .error-text
+            font-size: 14px
+            line-height: 19px
+            text-align: left
+            padding-right: 25%
+            margin-bottom: 13px
+        .error-text-smal
+            text-align: left
+            padding-right: 20%
+
+    @media (max-width: 380px)
+        .btns
+            width: 100%
+            flex-direction: column
+
+            a
+                width: 100%
+                margin-bottom: 15px

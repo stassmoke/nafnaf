@@ -1,0 +1,562 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+.top-slider
+    margin-bottom: 94px
+    height: 500px
+    .top-slider-content
+        position: absolute
+        bottom: 79px
+        left: 50%
+        z-index: 14
+        transform: translate(-50%)
+        text-align: center
+
+    .top-slide-title
+        font-weight: 600
+        font-size: 22px
+        line-height: 29px
+        text-align: center
+        letter-spacing: 0.05em
+        text-transform: uppercase
+        color: #FFFFFF
+        margin-bottom: 13px
+    .go-shops
+        font-weight: 600
+        font-size: 12px
+        line-height: 40px
+        letter-spacing: 0.05em
+        text-transform: uppercase
+        color: #FFFFFF
+        background: #1F2226
+        text-align: center
+        min-width: 200px
+        margin-bottom: 0
+        padding: 0
+
+    .swiper-slide
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        visibility: hidden
+        transition: visibility 2.5s ease
+        will-change: visibility
+        .image-holder__img
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            transition: clip 1.5s ease
+            will-change: clip
+            clip: rect(0, 100vw, 100vw, 100vw)
+
+
+        &.init-slide
+            visibility: visible
+            .image-holder__img
+                clip: rect(0, 100vw, 100vw, 0)
+                transition: none
+                //width: 0
+        &.prev_slide
+            .image-holder__img
+                width: 0
+                clip: rect(0, 100vw, 100vw, 0)
+        &.current
+            visibility: visible
+            .image-holder__img
+                clip: rect(0, 100vw, 100vw, 0)
+                //width: 100%
+
+
+
+.slick-slider__top
+    position: relative
+    margin-bottom: 94px
+    height: 600px
+    .top-slider-content
+        position: absolute
+        bottom: 79px
+        left: 50%
+        z-index: 14
+        transform: translate(-50%)
+        text-align: center
+
+    .top-slide-title
+        font-weight: 600
+        font-size: 22px
+        line-height: 29px
+        text-align: center
+        letter-spacing: 0.05em
+        text-transform: uppercase
+        color: #FFFFFF
+        margin-bottom: 13px
+    .go-shops
+        font-weight: 600
+        font-size: 12px
+        line-height: 40px
+        letter-spacing: 0.05em
+        text-transform: uppercase
+        color: #FFFFFF
+        background: #1F2226
+        text-align: center
+        min-width: 200px
+        margin-bottom: 0
+        padding: 0
+    .slick-slide
+        width: 100%
+        opacity: 1!important
+        transition: none!important
+        height: 600px
+
+        .image-holder__img
+            position: absolute
+            top: 0
+            right: 0
+            width: 100%
+            height: 100%
+        &.slick-current
+            .image-holder__img
+                animation: anim 1.5s ease
+
+    .top-slider-next
+        margin-top: 0
+        background-image: none
+        position: absolute
+        left: 50%
+        right: 0
+        top: 0
+        width: auto
+        height: 100%
+        cursor: pointer
+        opacity: 1!important
+        pointer-events: auto!important
+        visibility: visible!important
+        svg
+            position: absolute
+            top: 50%
+            right: 44px
+            margin-top: -11px
+            opacity: 0
+            cursor: pointer
+            transform: translateY(-50%)
+        &:hover
+            svg
+                opacity: 1
+    .slick-dots
+        position: absolute
+        bottom: 15px
+        transform: translateX(-50%)
+        left: 50%
+        z-index: 50
+
+
+    .top-slider-prev
+        margin-top: 0
+        background-image: none
+        position: absolute
+        right: 50%
+        left: 0
+        top: 0
+        width: auto
+        height: 100%
+        cursor: pointer
+        opacity: 1!important
+        pointer-events: auto!important
+        visibility: visible!important
+        svg
+            position: absolute
+            top: 50%
+            left: 44px
+            opacity: 0
+            cursor: pointer
+            transform: translateY(-50%)
+        &:hover
+            svg
+                opacity: 1
+
+    .swiper-pagination-bullet
+        webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+@keyframes anim
+    0%
+        //clip: inherit
+        width: 0
+
+    100%
+        //clip: rect(0, 100vw, 100vw, 0)
+        width: 100%
+
+
+.new-arrivals
+    margin-bottom: 150px
+    .section-title
+        margin-bottom: 33px
+    .new-arrivals-list
+        display: flex
+        margin-left: -10px
+    .new-arrivals-item
+        width: calc(33.33% - 10px)
+        margin-left: 10px
+        max-height: 660px
+        &:hover
+            .new-arrivals-title, .new-arrivals-text
+                color: $accent_pink!important
+    .new-arrivals-desc
+        position: absolute
+        top: 0
+        bottom: 25px
+        right: 0
+        left: 0
+        z-index: 2
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: flex-end
+        padding: 0 36px
+    .new-arrivals-title
+        font-weight: 600
+        font-size: 18px
+        line-height: 22px
+        color: #14171A
+        margin-bottom: 14px
+        &._white
+            color: $white
+    .new-arrivals-text
+        font-size: 13px
+        line-height: 17px
+        color: #3D454D
+        margin-bottom: 21px
+        &._white
+            color: $white
+    .go-shops
+        border: none
+        box-shadow: none
+        font-weight: 600
+        font-size: 13px
+        line-height: 40px
+        min-width: 200px
+        color: $white
+        margin: 0
+        padding: 0
+        &:hover
+            color: #ffffff
+
+.models
+    .row
+        margin-bottom: 70px
+    .row-col__1
+        padding-right: 64px
+    .models-list
+        display: flex
+        flex-wrap: wrap
+        width: calc(74.3% + 30px)
+        margin-left: -30px
+    .models-item
+        width: calc(33.33% - 30px)
+        margin-left: 30px
+        margin-bottom: 72px
+        &:hover
+            .image-holder
+                box-shadow: inset 0px 0px 0px 2px #EDBBD9
+                transition: all 0.35s
+            .image-holder__img._hover
+                opacity: 1
+                z-index: -1!important
+                transition: opacity 0.35s
+            .models-title
+                color: $accent_pink
+    .image-holder
+        margin-bottom: 24px
+        .image-holder__img
+            position: relative
+            z-index: -2
+    .models-title
+        font-weight: 600
+        font-size: 12px
+        line-height: 15px
+        letter-spacing: 0.05em
+        text-transform: uppercase
+        margin-bottom: 15px
+    .models-text
+        font-size: 13px
+        line-height: 24px
+        color: #3D454D
+        padding-right: 2%
+        display: -webkit-box
+        max-height: 96px
+        -webkit-line-clamp: 3
+        -webkit-box-orient: vertical
+        overflow: hidden
+        text-overflow: ellipsis
+
+    .go-shops
+        font-weight: 600
+        font-size: 12px
+        line-height: 15px
+        letter-spacing: 0.05em
+        text-transform: uppercase
+        box-shadow: none
+        border: none
+        &:hover
+            color: $accent_pink
+
+.trend
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 100px
+    .section-title
+        width: 100%
+        text-align: center
+        margin-bottom: 13px
+    .section-text
+        width: 100%
+        text-align: center
+        padding: 0 10%
+        font-size: 13px
+        line-height: 24px
+        color: #3D454D
+        margin-bottom: 28px
+    .go-social
+        width: 33.33%
+        height: 400px
+        padding-right: 8px
+        &:hover
+            .social-text
+                opacity: 1
+            .social-title, .social-hash
+                color: $accent_pink
+    .subscription-content
+        width: 33.33%
+        height: 400px
+        padding: 0 40px
+        justify-content: center
+        input::placeholder
+            text-align: center
+    .social-text
+        position: absolute
+        top: 0
+        bottom: 12px
+        right: 0
+        left: 0
+        z-index: 2
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: flex-end
+        padding: 0 16px
+        opacity: 0.8
+    .social-title
+        font-weight: 600
+        font-size: 12px
+        line-height: 15px
+        letter-spacing: 0.05em
+        text-transform: uppercase
+        color: #FFFFFF
+        margin-bottom: 6px
+    .social-hash
+        font-size: 13px
+        line-height: 24px
+        color: #FFFFFF
+
+
+.all-collection-gallery
+    .collection-text
+        opacity: 0
+        transition: .3s opacity ease
+    .slick-active
+        .collection-text
+            opacity: 1
+            transition: .3s opacity ease
+
+@media (max-width: 1000px)
+    .slick-slider__top
+        height: 420px
+        margin-bottom: 85px
+        .slick-slide
+            height: 420px
+        .top-slider-content
+            bottom: 39px
+
+    .new-arrivals
+        margin-bottom: 89px
+        .section-title
+            margin-bottom: 23px
+        .new-arrivals-text
+            display: none
+        .new-arrivals-desc
+            bottom: 16px
+            padding: 0 14px
+    .models
+        .row
+            margin-bottom: 30px
+        .row-col__1
+            width: 33.8%
+        .models-list
+            width: calc(66.2% + 10px)
+            margin-left: -10px
+        .models-item
+            width: calc(50% - 10px)
+            margin-left: 10px
+            margin-bottom: 53px
+        .image-holder
+            margin-bottom: 29px
+    .other_collections
+        margin-bottom: 84px
+    .home
+        .other_collections
+            .collection-row__col-1
+                width: 33.8%
+                padding-right: 40px
+            .collection-row__col-2
+                width: 66.2%
+        .all-collection-gallery
+            height: 230px
+    .trend
+        margin-bottom: 41px
+        justify-content: space-between
+        .section-title
+            margin-bottom: 15px
+        .section-text
+            margin-bottom: 32px
+        .go-social
+            width: calc(50% - 5px)
+            height: 350px
+            padding-right: 0
+        .subscription-content
+            width: 100%
+            margin-top: 10px
+            height: 340px
+            max-width: 100%
+
+@media (max-width: 768px)
+    .top-slider
+        height: 348px
+    .slick-slider__top
+        height: 348px
+        .slick-slide
+            height: 348px
+@media (max-width: 720px)
+
+    .new-arrivals
+        .go-shops
+            width: 90%
+            min-width: auto
+    .models
+        .row-col__1
+            padding-right: 20px
+    .home
+        .other_collections
+            .collection-row__col-1
+                width: 100%
+                padding-right: 0
+            .collection-row__col-2
+                width: 100%
+        .all-collection-gallery
+            height: 446px
+
+@media (max-width: 560px)
+
+    .top-slider
+        margin-top: 30px
+        margin-bottom: 39px
+        //.swiper-slide
+        height: 460px
+        .top-slider-content
+            bottom: 60px
+            width: 100%
+            padding: 0 25px
+    .slick-slider__top
+        height: 460px
+        .slick-slide
+            height: 460px
+        .top-slider-content
+            bottom: 60px
+            width: 100%
+            padding: 0 25px
+
+        .top-slider-prev, .top-slider-next
+            //display: none
+            svg
+                display: none
+        .swiper-slide
+            .image-holder__img
+                clip: rect(0, 100vw, 200vw, 100vw)
+            &.current
+                visibility: visible
+                .image-holder__img
+                    clip: rect(0, 100vw, 200vw, 0)
+            &.init-slide
+                visibility: visible
+                .image-holder__img
+                    clip: rect(0, 100vw, 200vw, 0)
+                    transition: none
+            &.prev_slide
+                .image-holder__img
+                    clip: rect(0, 0, 200vw, 0)
+
+    .new-arrivals
+        margin-bottom: 18px
+        .new-arrivals-list
+            flex-wrap: wrap
+            margin-left: 0
+        .new-arrivals-item
+            width: 100%
+            margin-left: 0
+            max-height: 420px
+            margin-bottom: 15px
+        .new-arrivals-desc
+            bottom: 36px
+        .new-arrivals-text
+            display: block
+        .go-shops
+            width: auto
+            min-width: 200px
+    .models
+        flex-wrap: wrap
+        .row
+            margin-bottom: 0
+        .row-col__1
+            width: 100%
+        .row__desc
+            margin-bottom: 10px
+        .go-shops
+            margin-bottom: 23px
+        .models-list
+            width: calc(100% + 10px)
+        .models-item
+            margin-bottom: 35px
+        .image-holder
+            max-height: 265px
+            margin-bottom: 13px
+        .models-title
+            margin-bottom: 9px
+        .models-text
+            font-size: 11px
+            line-height: 16px
+    .other_collections
+        margin-bottom: 39px
+        padding-top: 1px
+        .title-main__uppercase
+            margin-bottom: 17px
+        .row__desc
+            margin-bottom: 9px
+    .trend
+        margin-bottom: 71px
+        .section-title
+            margin-bottom: 20px
+        .section-text
+            margin-bottom: 24px
+        .go-social
+            width: 100%
+            padding-right: 0
+            height: 345px
+            margin-bottom: 15px
+        .subscription-content
+            margin-top: 15px
+            height: 400px
+
+
+
